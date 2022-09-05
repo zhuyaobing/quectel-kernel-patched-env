@@ -1,0 +1,16 @@
+Package: iproute2
+Version: 4.1.1-r0
+Description: TCP / IP networking and traffic control utilities
+ Iproute2 is a collection of utilities for controlling TCP / IP networking
+ and traffic control in Linux.  Of the utilities ip and tc are the most
+ important.  ip controls IPv4 and IPv6 configuration and tc stands for
+ traffic control.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: iproute2
+Homepage: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
+Depends: update-alternatives-opkg, libc6 (>= 2.22)
+Source: http://kernel.org/pub/linux/utils/net/iproute2/iproute2-4.1.1.tar.xz file://configure-cross.patch file://0001-iproute2-de-bash-scripts.patch

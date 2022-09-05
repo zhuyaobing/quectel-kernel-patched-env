@@ -1,0 +1,84 @@
+From 6634e158ff21260d6b24d9b4ad1aef8b9584b61d Mon Sep 17 00:00:00 2001
+From: Mihir Shete <smihir@codeaurora.org>
+Date: Mon, 14 Oct 2013 00:54:40 +0530
+Subject: cfg80211: export regulatory_hint_user() API
+
+This is to help the hardware configured in world
+roaming mode to save power when not connected to
+any AP.
+
+CRs-Fixed: 542802
+Change-Id: Ia643d0e9848dcd486832973bd6dd186edd7bd4ea
+Signed-off-by: Mihir Shete <smihir@codeaurora.org>
+---
+ include/net/cfg80211.h | 26 ++++++++++++++++++++++++++
+ net/wireless/reg.c     |  1 +
+ net/wireless/reg.h     |  3 ---
+ 3 files changed, 27 insertions(+), 3 deletions(-)
+
+diff --git a/include/net/cfg80211.h b/include/net/cfg80211.h
+index e227c10..fcbd2faa 100644
+--- a/include/net/cfg80211.h
++++ b/include/net/cfg80211.h
+@@ -3557,6 +3557,32 @@ const u8 *cfg80211_find_vendor_ie(unsigned int oui, u8 oui_type,
+ int regulatory_hint(struct wiphy *wiphy, const char *alpha2);
+ 
+ /**
++ * regulatory_hint_user - hint to the wireless core a regulatory domain
++ * which the driver has received from an application
++ * @alpha2: the ISO/IEC 3166 alpha2 the driver claims its regulatory domain
++ *	should be in. If @rd is set this should be NULL. Note that if you
++ *	set this to NULL you should still set rd->alpha2 to some accepted
++ *	alpha2.
++ * @user_reg_hint_type: the type of user regulatory hint.
++ *
++ * Wireless drivers can use this function to hint to the wireless core
++ * the current regulatory domain as specified by trusted applications,
++ * it is the driver's responsibilty to estbalish which applications it
++ * trusts.
++ *
++ * The wiphy should be registered to cfg80211 prior to this call.
++ * For cfg80211 drivers this means you must first use wiphy_register(),
++ * for mac80211 drivers you must first use ieee80211_register_hw().
++ *
++ * Drivers should check the return value, its possible you can get
++ * an -ENOMEM or an -EINVAL.
++ *
++ * Return: 0 on success. -ENOMEM, -EINVAL.
++ */
++int regulatory_hint_user(const char *alpha2,
++			 enum nl80211_user_reg_hint_type user_reg_hint_type);
++
++/**
+  * wiphy_apply_custom_regulatory - apply a custom driver regulatory domain
+  * @wiphy: the wireless device we want to process the regulatory domain on
+  * @regd: the custom regulatory domain to use for this wiphy
+diff --git a/net/wireless/reg.c b/net/wireless/reg.c
+index 338794e..9e32e01 100644
+--- a/net/wireless/reg.c
++++ b/net/wireless/reg.c
+@@ -1845,6 +1845,7 @@ int regulatory_hint_user(const char *alpha2,
+ 
+ 	return 0;
+ }
++EXPORT_SYMBOL(regulatory_hint_user);
+ 
+ /* Driver hints */
+ int regulatory_hint(struct wiphy *wiphy, const char *alpha2)
+diff --git a/net/wireless/reg.h b/net/wireless/reg.h
+index 02bd8f4..7f0e616 100644
+--- a/net/wireless/reg.h
++++ b/net/wireless/reg.h
+@@ -23,9 +23,6 @@ bool is_world_regdom(const char *alpha2);
+ bool reg_supported_dfs_region(enum nl80211_dfs_regions dfs_region);
+ enum nl80211_dfs_regions reg_get_dfs_region(struct wiphy *wiphy);
+ 
+-int regulatory_hint_user(const char *alpha2,
+-			 enum nl80211_user_reg_hint_type user_reg_hint_type);
+-
+ int reg_device_uevent(struct device *dev, struct kobj_uevent_env *env);
+ void wiphy_regulatory_register(struct wiphy *wiphy);
+ void wiphy_regulatory_deregister(struct wiphy *wiphy);
+-- 
+cgit v1.1
+

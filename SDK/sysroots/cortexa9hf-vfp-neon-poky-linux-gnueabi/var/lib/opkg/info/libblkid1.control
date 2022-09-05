@@ -1,0 +1,13 @@
+Package: libblkid1
+Version: 2.29.1-r0
+Description: util-linux libblkid
+ util-linux libblkid
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1+ & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: util-linux
+Depends: libuuid1 (>= 2.29.1), libc6 (>= 2.22)
+Provides: util-linux-libblkid
+Source: http://kernel.org/pub/linux/utils/util-linux/v2.29/util-linux-2.29.1.tar.xz file://configure-sbindir.patch file://runuser.pamd file://runuser-l.pamd file://ptest.patch file://run-ptest file://display_testname_for_subtest.patch file://avoid_parallel_tests.patch file://uuid-test-error-api.patch

@@ -1,0 +1,13 @@
+Package: bc
+Version: 1.06-r3
+Description: Arbitrary precision calculator language
+ Arbitrary precision calculator language.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: bc
+Homepage: http://www.gnu.org/software/bc/bc.html
+Depends: update-alternatives-opkg, libc6 (>= 2.22)
+Source: http://ftp.gnu.org/gnu/bc/bc-1.06.tar.gz file://fix-segment-fault.patch

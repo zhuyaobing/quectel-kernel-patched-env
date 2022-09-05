@@ -1,0 +1,11 @@
+Package: kbd-keymaps
+Version: 2.0.2-r0
+Description: Keytable files and keyboard utilities
+ Keytable files and keyboard utilities.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: kbd
+Source: http://kernel.org/pub/linux/utils/kbd/kbd-2.0.2.tar.xz file://uclibc-stdarg.patch file://0003-Only-inluclude-kernel-headers-with-glibc.patch

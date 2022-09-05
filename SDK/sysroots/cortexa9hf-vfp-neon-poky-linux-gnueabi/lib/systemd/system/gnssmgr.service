@@ -1,0 +1,14 @@
+[Unit]
+Description=Alexandra gnssmgr
+Requires=alex-boot.target
+Wants=alex-boot.target
+After=alex-boot.target
+
+[Service]
+ExecStart=/usr/bin/gnssmgr
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=alex-core.target
+

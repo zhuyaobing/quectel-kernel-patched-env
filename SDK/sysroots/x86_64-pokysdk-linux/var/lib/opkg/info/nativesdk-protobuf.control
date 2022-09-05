@@ -1,0 +1,15 @@
+Package: nativesdk-protobuf
+Version: 2.6.1+git0+bba83652e1-r0
+Description: Protocol Buffers - structured data serialisation mechanism
+ Protocol Buffers are a way of encoding structured data in an efficient
+ yet extensible format. Google uses Protocol Buffers for almost all of its
+ internal RPC protocols and file formats.
+Section: console/tools
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-3-Clause
+Architecture: x86_64-nativesdk
+OE: nativesdk-protobuf
+Homepage: https://github.com/google/protobuf
+Depends: nativesdk-libz1 (>= 1.2.8), nativesdk-libc6 (>= 2.22), nativesdk-libgcc1 (>= 4.9.3), nativesdk-libstdc++6 (>= 4.9.3)
+Source: git://github.com/google/protobuf.git

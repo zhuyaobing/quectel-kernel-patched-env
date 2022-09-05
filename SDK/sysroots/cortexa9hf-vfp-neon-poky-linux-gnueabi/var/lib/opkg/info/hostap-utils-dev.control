@@ -1,0 +1,17 @@
+Package: hostap-utils-dev
+Version: 0.4.7-r4
+Description: User mode helpers for the hostap driver - Development files
+ The hostap driver supports Host AP mode, it allows for IEEE 802.11
+ management functions on the host computer and allows the system to act as
+ an access point.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: hostap-utils
+Homepage: http://hostap.epitest.fi
+Depends: hostap-utils (= 0.4.7-r4)
+Recommends: libc6-dev
+Source: http://hostap.epitest.fi/releases/hostap-utils-0.4.7.tar.gz file://hostap-fw-load.patch file://0001-Define-_u32-__s32-__u16-__s16-__u8-in-terms-of-c99-t.patch file://ldflags.patch

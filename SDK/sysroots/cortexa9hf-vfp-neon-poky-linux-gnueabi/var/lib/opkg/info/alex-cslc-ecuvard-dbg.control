@@ -1,0 +1,14 @@
+Package: alex-cslc-ecuvard-dbg
+Version: 13.3.0-r0
+Description: ecuvard - Daemon which stores one-shot variables - Debugging files
+ ecuvard - Stores system variables which are only sent once from the RT
+ side  This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-ecuvard
+Recommends: libstdc++-dbg, sre-ipcd-lib-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libc6-dbg, libmosquittopp1-dbg
+Source: None

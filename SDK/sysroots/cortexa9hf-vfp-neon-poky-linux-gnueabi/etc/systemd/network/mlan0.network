@@ -1,0 +1,6 @@
+[Match]
+Name=mlan0
+Driver=wlan_sdio
+
+[Network]
+DHCP=ipv4

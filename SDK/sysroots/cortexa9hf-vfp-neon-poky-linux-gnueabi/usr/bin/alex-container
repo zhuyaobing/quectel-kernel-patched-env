@@ -1,0 +1,186 @@
+#!/bin/bash
+
+#
+# Author: Armin Widegreen <armin.widegreen@stoneridge.com>
+#
+
+PROGRAM_NAME=$(basename $0)
+
+default_args="--private-users=pick -j --register=no --keep-unit --link-journal=host --kill-signal=SIGTERM"
+default_libs=(libsreproto
+      libcslclapi.so
+      libstdc++
+      libmosquittopp
+      libmosquitto
+      libprotobuf
+      liblzma
+      libssl
+      libcares
+      libboost_system.so
+      libboost_filesystem.so)
+
+default_bind_ro=(/lib
+         /etc/hosts
+         /etc/nsswitch.conf
+         /etc/alex/libcslclapi_rtsupport.so
+         /dev/p4_time
+         /dev/log)
+
+trap "exit 0" SIGTERM
+
+help()
+{
+cat << EOF
+USAGE
+    $PROGRAM_NAME [-h] [-v] [-m MACHINE] [-p NSPAWN_PARAM]... [-l LIB]... [-b BIND]... [-r BIND_RO]... APP APP_ARGS
+
+ARGUMENTS
+    APP      The application that should be executed in a container
+
+    APP_ARGS The arguments which should be passed to the APP
+
+OPTIONS
+    -l LIB   Specify an additional library which should be made
+             available in the container and is required by the app.
+             Either an absolute path or relative to /usr/lib
+
+    -b BIND  Bind additional files or directories in to the container.
+             see systemd-nspawn(1) --bind for more information
+
+    -r BIND_RO
+             Bind additional readonly files or directories in to the
+             container. see systemd-nspawn(1) --bind-ro for more
+             information.
+
+    -p NSPAWN_PARAM
+             Provide additional parameter to the systemd-nspawn
+             execution command, see systemd-nspawn(1) for details.
+             NOTE: make sure to put the parameter in quotes!
+
+    -m MACHINE
+             Instead of derive the machine name from APP, use this name.
+
+    -v       Verbose output
+
+    -h       This help message
+
+EXAMPLES
+    Start app in container without additional parameter:
+        $PROGRAM_NAME myapp
+
+    Start app in container with additional library:
+        $PROGRAM_NAME -l /usr/lib/libmy.so myapp
+        $PROGRAM_NAME -l /usr/lib/libfoo.so -l libbar.so myapp
+        $PROGRAM_NAME -l libfoo myapp   # will find libfoo.so
+
+    Start app in container with additional nspawn parameter:
+        $PROGRAM_NAME -p \"--chdir=/home/app\" myapp
+
+DEFAULTS
+    Libraries available within a container:
+        ${default_libs[@]}
+
+    Bind readonly available within a container:
+        ${default_bind_ro[@]}
+
+EOF
+}
+
+find_lib()
+{
+   local lib=${1:?"lib name required"}
+   lib=${lib%.so}".so"
+   ldconfig -p | grep $lib | awk '{print $NF}'
+}
+
+MACHINES_DIR="/var/lib/machines"
+MACHINE_ID_FILE="etc/machine-id"
+
+verbose=
+
+while getopts "vhm:l:p:b:r:" opt; do
+   case $opt in
+      l) libs+=("$OPTARG");;
+      p) nspawn_params+=("$OPTARG");;
+      b) bind_params+=("$OPTARG");;
+      r) bindro_params+=("$OPTARG");;
+      m) machine_name="$OPTARG";;
+      v) verbose=1;;
+      h) help; exit 0;;
+   esac
+done
+
+shift $((OPTIND -1))
+
+libs+=( "${default_libs[@]}" )
+bind_ro+=( "${default_bind_ro[@]}" )
+
+APP=${1?"A application needs to be specified, see -h"}
+
+APP=`which $APP 2>/dev/null`
+if [ "$?" -ne 0 ] || [ ! -x $APP ]; then
+   printf "Application %s doesn't exists or is not executable\n", $APP
+   help
+   exit 1
+fi
+
+[ -z "$machine_name" ] && machine_name="$(basename $APP)"
+
+machine_dir="$MACHINES_DIR/$machine_name"
+if [ ! -d "$machine_dir" ]; then
+   echo "Create machine directory $machine_dir"
+   mkdir -p "$machine_dir/usr"
+   mkdir -p "$machine_dir/etc"
+   echo -n "$machine_name" | sha256sum | cut -c -32 > "$machine_dir/$MACHINE_ID_FILE"
+fi
+echo "Use machine_id $(cat $machine_dir/$MACHINE_ID_FILE) for $machine_name"
+
+# shift appname out!
+shift
+# the rest of the parameter are considered application parameter
+app_parameter="$*"
+
+# handle bind args
+for arg in "${bind_params[@]}"; do
+   bind_args="$bind_args --bind=$arg"
+done
+
+# create specific bind mount directory
+app_data_dir="/common/appdata/$machine_name"
+mkdir -p $app_data_dir
+chmod o+w $app_data_dir
+
+# append additional libs to bind_ro
+for lib in "${libs[@]}"; do
+   fl_out=( $(find_lib "$lib") )
+   bind_ro+=( "${fl_out[@]}" )
+done
+
+# handle additional bind_ro params
+for arg in "${bindro_params[@]}"; do
+   bind_ro_args="$bind_ro_args --bind-ro=$arg"
+done
+
+# prepare bind-ro arguments based on bind_ro array
+for arg in "${bind_ro[@]}"; do
+   bind_ro_args="$bind_ro_args --bind-ro=$arg"
+done
+# append app to bind-ro since it explicitly need to be put in container fs tree
+bind_ro_args="$bind_ro_args --bind-ro=$APP"
+
+# prepare additional nspawn parameter
+for arg in "${nspawn_params[@]}"; do
+   nspawn_params_args="$nspawn_params_args $arg"
+done
+
+echo "Execute $APP in container"
+
+[ $verbose ] &&
+   echo "/usr/bin/systemd-nspawn --machine=$machine_name $default_args $nspawn_params_args $bind_args $bind_ro_args $APP $app_parameter"
+
+set -e
+
+/usr/bin/systemd-nspawn --machine=$machine_name $default_args $nspawn_params_args $bind_args $bind_ro_args $APP $app_parameter
+
+[ $verbose ] && echo "$machine_name exited successfully!"
+

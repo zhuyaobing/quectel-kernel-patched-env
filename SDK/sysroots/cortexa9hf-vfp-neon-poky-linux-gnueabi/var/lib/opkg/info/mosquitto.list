@@ -1,0 +1,5 @@
+/etc/mosquitto/mosquitto.conf
+/usr/bin/mosquitto_passwd
+/usr/sbin/mosquitto
+/etc/mosquitto/
+/lib/systemd/system/mosquitto.service

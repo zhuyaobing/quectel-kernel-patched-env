@@ -1,0 +1,12 @@
+Package: alsa-conf
+Version: 1.0.29-r0
+Description: ALSA sound library
+ ALSA sound library.
+Section: libs/multimedia
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1 & GPLv2+
+Architecture: cortexa9hf-vfp-neon-mx6qdl
+OE: alsa-lib
+Homepage: http://www.alsa-project.org
+Source: ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.29.tar.bz2 file://Check-if-wordexp-function-is-supported.patch file://0001-build-Do-not-try-to-detect-cross-compiler.patch file://0001-add-conf-for-multichannel-support-in-imx.patch

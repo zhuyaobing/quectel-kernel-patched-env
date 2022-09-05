@@ -1,0 +1,14 @@
+Package: nfs-tele-server-dev
+Version: 1.0-r0
+Description: Configure NFS server - Development files
+ Configure NFS server on telematics partition  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: nfs-tele-server
+Depends: nfs-tele-server (= 1.0-r0)
+Source: file://exports

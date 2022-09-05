@@ -1,0 +1,97 @@
+From dc8a840ee81c7adefc26334f29178114fd114ca2 Mon Sep 17 00:00:00 2001
+From: Jouni Malinen <j@w1.fi>
+Date: Wed, 15 Jan 2014 00:01:08 +0200
+Subject: cfg80211: Advertise maximum associated STAs in AP mode
+
+This allows drivers to advertise the maximum number of associated
+stations they support in AP mode (including P2P GO). User space
+applications can use this for cleaner way of handling the limit (e.g.,
+hostapd rejecting IEEE 802.11 authentication without manual
+configuration of the limit) or to figure out what type of use cases can
+be executed with multiple devices before trying and failing.
+
+CRs-Fixed: 605665
+Change-Id: Ie3545c5fc9c82262232ae8dc0373c1a903fbada3
+Signed-off-by: Jouni Malinen <j@w1.fi>
+Signed-off-by: Johannes Berg <johannes.berg@intel.com>
+Git-commit: b43504cf75b8b8773ee70c90bcd691282e151b9a
+Git-repo: git://git.kernel.org/pub/scm/linux/kernel/git/linville/wireless-testing.git
+[ppotte@codeaurora.org: manually solved merge conflicts]
+Signed-off-by: Pradeep Reddy POTTETI <ppotte@codeaurora.org>
+---
+ include/net/cfg80211.h       | 7 +++++++
+ include/uapi/linux/nl80211.h | 9 +++++++++
+ net/wireless/nl80211.c       | 5 +++++
+ 3 files changed, 21 insertions(+)
+
+diff --git a/include/net/cfg80211.h b/include/net/cfg80211.h
+index 6914e8d..4538d81 100644
+--- a/include/net/cfg80211.h
++++ b/include/net/cfg80211.h
+@@ -2887,6 +2887,11 @@ struct wiphy_vendor_command {
+  * @n_vendor_commands: number of vendor commands
+  * @vendor_events: array of vendor events supported by the hardware
+  * @n_vendor_events: number of vendor events
++ *
++ * @max_ap_assoc_sta: maximum number of associated stations supported in AP mode
++ *	(including P2P GO) or 0 to indicate no such limit is advertised. The
++ *	driver is allowed to advertise a theoretical limit that it can reach in
++ *	some cases, but may not always reach.
+  */
+ struct wiphy {
+ 	/* assign these fields before you register the wiphy */
+@@ -3002,6 +3007,8 @@ struct wiphy {
+ 	const struct nl80211_vendor_cmd_info *vendor_events;
+ 	int n_vendor_commands, n_vendor_events;
+ 
++	u16 max_ap_assoc_sta;
++
+ 	char priv[0] __aligned(NETDEV_ALIGN);
+ };
+ 
+diff --git a/include/uapi/linux/nl80211.h b/include/uapi/linux/nl80211.h
+index 9f37026..4b3aed5 100644
+--- a/include/uapi/linux/nl80211.h
++++ b/include/uapi/linux/nl80211.h
+@@ -1568,6 +1568,13 @@ enum nl80211_commands {
+  * @NL80211_ATTR_MAC_HINT: MAC address recommendation as initial BSS
+  * @NL80211_ATTR_WIPHY_FREQ_HINT: frequency of the recommended initial BSS
+  *
++ * @NL80211_ATTR_MAX_AP_ASSOC_STA: Device attribute that indicates how many
++ *	associated stations are supported in AP mode (including P2P GO); u32.
++ *	Since drivers may not have a fixed limit on the maximum number (e.g.,
++ *	other concurrent operations may affect this), drivers are allowed to
++ *	advertise values that cannot always be met. In such cases, an attempt
++ *	to add a new station entry with @NL80211_CMD_NEW_STATION may fail.
++ *
+  * @NL80211_ATTR_MAX: highest attribute number currently defined
+  * @__NL80211_ATTR_AFTER_LAST: internal use
+  */
+@@ -1899,6 +1906,8 @@ enum nl80211_attrs {
+ 	NL80211_ATTR_MAC_HINT,
+ 	NL80211_ATTR_WIPHY_FREQ_HINT,
+ 
++	NL80211_ATTR_MAX_AP_ASSOC_STA,
++
+ 	/* add attributes here, update the policy in nl80211.c */
+ 
+ 	__NL80211_ATTR_AFTER_LAST,
+diff --git a/net/wireless/nl80211.c b/net/wireless/nl80211.c
+index 913ed22..3f4d593 100644
+--- a/net/wireless/nl80211.c
++++ b/net/wireless/nl80211.c
+@@ -1549,6 +1549,11 @@ static int nl80211_send_wiphy(struct cfg80211_registered_device *dev,
+ 				dev->wiphy.max_acl_mac_addrs))
+ 			goto nla_put_failure;
+ 
++		if (dev->wiphy.max_ap_assoc_sta &&
++		    nla_put_u32(msg, NL80211_ATTR_MAX_AP_ASSOC_STA,
++				dev->wiphy.max_ap_assoc_sta))
++			goto nla_put_failure;
++
+ 		/*
+ 		 * Any information below this point is only available to
+ 		 * applications that can deal with it being split. This
+-- 
+cgit v1.1
+

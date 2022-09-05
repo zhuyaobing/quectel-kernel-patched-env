@@ -1,0 +1,14 @@
+Package: alex-cslc-udsifd-dbg
+Version: 13.1.1-r0
+Description: udsifd - Daemon which handles UDS interface allocations and requests - Debugging files
+ udsifd - Daemon which handles UDS interface allocations and requests
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-udsifd
+Recommends: libmosquittopp1-dbg, sre-ipcd-lib-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libc6-dbg, libstdc++-dbg
+Source: None

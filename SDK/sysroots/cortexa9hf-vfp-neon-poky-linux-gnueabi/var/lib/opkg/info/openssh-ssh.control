@@ -1,0 +1,16 @@
+Package: openssh-ssh
+Version: 7.1p2-r0
+Description: Secure rlogin/rsh/rcp/telnet replacement
+ Secure rlogin/rsh/rcp/telnet replacement (OpenSSH) Ssh (Secure Shell) is
+ a program for logging into a remote machine and for executing commands on
+ a remote machine.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: openssh
+Homepage: http://openssh.org
+Depends: libcrypto1.0.0 (>= 1.0.2h), update-alternatives-opkg, libz1 (>= 1.2.8), libc6 (>= 2.22)
+Provides: ssh
+Source: ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.1p2.tar.gz file://sshd_config file://ssh_config file://init file://sshd.socket file://sshd@.service file://sshdgenkeys.service file://volatiles.99_sshd file://add-test-support-for-busybox.patch file://run-ptest file://CVE-2016-1907_upstream_commit.patch file://CVE-2016-1907_2.patch file://CVE-2016-1907_3.patch file://CVE-2016-3115.patch file://CVE-2016-6210.patch file://CVE-2016-6210_p2.patch file://CVE-2016-6210_p3.patch file://CVE-2016-6515.patch file://CVE-2015-8325.patch

@@ -1,0 +1,12 @@
+Package: nativesdk-imx-usb-loader
+Version: 1.0+0+349286e25c-r0
+Description: nativesdk-imx-usb-loader version 1.0+AUTOINC+349286e25c-r0
+ i.MX/Vybrid recovery utility
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1
+Architecture: x86_64-nativesdk
+OE: nativesdk-imx-usb-loader
+Depends: nativesdk-libusb-1.0-0 (>= 1.0.19), nativesdk-libc6 (>= 2.22)
+Source: git://github.com/boundarydevices/imx_usb_loader.git;protocol=http

@@ -1,0 +1,5 @@
+/usr/include/sysfs/dlist.h
+/usr/include/sysfs/
+/lib/libsysfs.la
+/lib/libsysfs.so
+/usr/include/sysfs/libsysfs.h

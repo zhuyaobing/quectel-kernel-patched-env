@@ -1,0 +1,5 @@
+-include arch/p4/arch-$(SUBARCH)/include/asm/Kbuild
+
+generic-y += exec.h
+generic-y += switch_to.h
+generic-y += irq_regs.h

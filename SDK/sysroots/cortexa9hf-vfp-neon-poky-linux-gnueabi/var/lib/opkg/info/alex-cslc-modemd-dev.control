@@ -1,0 +1,15 @@
+Package: alex-cslc-modemd-dev
+Version: 13.1.0-r0
+Description: Control the modem hardware - Development files
+ Controls the modem on an alexandra board  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-modemd
+Depends: alex-cslc-modemd (= 13.1.0-r0)
+Recommends: libmosquittopp1-dev, sre-lapi-dev, libgcc-s-dev, ppp-chat-dev, libstdc++-dev, libc6-dev, protobuf-dev, sre-systemd-target-dev, alex-cslc-ecuvarc-dev
+Source: None

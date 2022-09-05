@@ -1,0 +1,12 @@
+Package: emmy-w1-driver-tools-dbg
+Version: 1.0-r0.alex1
+Description: SD8887 Tools for EMMY-W1 - Debugging files
+ SD8887 Tools for EMMY-W1.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: emmy-w1-driver-tools
+Source: file://configure_wifi.service file://configure_wifi.sh file://reset_wifi.service file://reset_wifi.sh

@@ -1,0 +1,6 @@
+/usr/bin/spider
+/lib/systemd/system-shutdown/spider
+/var/spool/spider/
+/lib/systemd/system/spider.service
+/etc/alex/spider.conf
+/var/spool/spider/updates/

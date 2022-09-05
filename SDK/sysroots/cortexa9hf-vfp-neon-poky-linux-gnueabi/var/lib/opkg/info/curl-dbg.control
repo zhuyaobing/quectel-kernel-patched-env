@@ -1,0 +1,14 @@
+Package: curl-dbg
+Version: 7.44.0-r0.alex0
+Description: Command line tool and library for client-side URL transfers - Debugging files
+ Command line tool and library for client-side URL transfers.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: curl
+Homepage: http://curl.haxx.se/
+Recommends: libc6-dbg, libz-dbg, libcrypto-dbg, libcurl-dbg, libssl-dbg
+Source: http://curl.haxx.se/download/curl-7.44.0.tar.bz2 file://pkgconfig_fix.patch file://configure_ac.patch file://CVE-2016-5421.patch file://CVE-2016-5420.patch file://CVE-2016-5419.patch file://CVE-2016-0754.patch file://CVE-2016-0755.patch

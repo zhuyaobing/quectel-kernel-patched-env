@@ -1,0 +1,13 @@
+Package: packagegroup-base-usbhost
+Version: 1.0-r83.alex2
+Description: USB host support
+ Merge machine and distro options to create a basic machine task/package.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Depends: usbutils
+Recommends: kernel-module-usbmouse, kernel-module-mousedev, kernel-module-scsi-mod, kernel-module-uhci-hcd, kernel-module-usbhid, kernel-module-usb-storage, kernel-module-usbcore, kernel-module-ohci-hcd, kernel-module-ehci-hcd, kernel-module-sd-mod, kernel-module-usbnet, kernel-module-usbserial
+Source: None

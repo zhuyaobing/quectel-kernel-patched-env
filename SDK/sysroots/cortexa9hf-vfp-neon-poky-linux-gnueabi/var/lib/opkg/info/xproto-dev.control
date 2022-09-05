@@ -1,0 +1,15 @@
+Package: xproto-dev
+Version: 1:7.0.28-r0
+Description: Xlib: C Language X interface headers - Development files
+ This package provides the basic headers for the X Window System.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: xproto
+Homepage: http://www.x.org
+Recommends: util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/proto/xproto-7.0.28.tar.bz2 file://xproto_fix_for_x32.patch

@@ -1,0 +1,17 @@
+/etc/warnquota.conf
+/usr/sbin/quotaoff
+/etc/quotagrpadmins
+/usr/bin/quota
+/usr/sbin/rpc.rquotad
+/usr/bin/quotasync
+/usr/sbin/convertquota
+/usr/sbin/setquota
+/usr/sbin/quotastats
+/usr/sbin/quotaon
+/usr/sbin/quot
+/usr/sbin/repquota
+/usr/sbin/warnquota
+/etc/quotatab
+/usr/sbin/edquota
+/usr/sbin/xqmstats
+/usr/sbin/quotacheck

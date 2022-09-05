@@ -1,0 +1,11 @@
+Package: udev-rules-imx
+Version: 1.0-r0
+Description: udev-rules-imx version 1.0-r0
+ udev rules for Freescale i.MX SOCs
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: udev-rules-imx
+Source: file://10-imx.rules

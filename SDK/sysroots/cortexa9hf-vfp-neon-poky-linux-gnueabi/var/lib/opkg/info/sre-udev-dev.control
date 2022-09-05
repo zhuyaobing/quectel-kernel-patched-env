@@ -1,0 +1,14 @@
+Package: sre-udev-dev
+Version: 1.0.0-r0
+Description: sre-udev version 1.0.0-r0 - Development files
+ Recipe to install the udev rules on the alex platform  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-udev
+Depends: sre-udev (= 1.0.0-r0)
+Source: file://60-extusb.rules file://98-usb-connection.rules file://99-usb-pendrive.rules

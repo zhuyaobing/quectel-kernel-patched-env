@@ -1,0 +1,16 @@
+/usr/bin/.debug/logctl
+/usr/bin/.debug/sysparamsc
+/usr/bin/.debug/maintrc
+/usr/bin/.debug/evild
+/usr/bin/.debug/udsifc
+/usr/bin/.debug/aleavesdrop
+/usr/bin/.debug/emmcc
+/usr/bin/.debug/aclifc
+/usr/bin/.debug/beproxyc
+/usr/bin/.debug/bootctl
+/usr/bin/.debug/container-test
+/usr/bin/.debug/ws_server
+/usr/bin/.debug/acctl
+/usr/bin/.debug/cert-test
+/usr/bin/.debug/rtsigc
+/usr/bin/.debug/message_sender

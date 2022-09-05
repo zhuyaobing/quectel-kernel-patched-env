@@ -1,0 +1,16 @@
+Package: libx11-dbg
+Version: 1:1.6.3-r0
+Description: Xlib: C Language X Interface library - Debugging files
+ This package provides a client interface to the X Window System,
+ otherwise known as 'Xlib'.  It provides a complete API for the basic
+ functions of the window system.  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libx11
+Homepage: http://www.x.org
+Recommends: libc6-dbg, libxcb-dbg, libxdmcp-dbg, libxau-dbg
+Source: http://xorg.freedesktop.org/releases/individual/lib/libX11-1.6.3.tar.bz2 file://disable_tests.patch file://libX11-Add-missing-NULL-check.patch

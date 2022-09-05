@@ -1,0 +1,15 @@
+Package: packagegroup-alexandra-tele-dev
+Version: 1.0-r8
+Description: Software specific to Alexandra project - Development files
+ Software specific to Alexandra project.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-alexandra-tele
+Depends: packagegroup-alexandra-tele (= 1.0-r8)
+Recommends: sre-check-eth-interface-dev, alex-cslc-vpnctld-dev, sre-usblog-dev, hostapd-dev, alex-cslc-servicetuner-dev, wireguard-tools-dev, alex-cslc-loctimed-dev, sre-udev-dev, sre-check-ethernet-link-status-dev, alex-cslc-ecuvarc-dev, sre-ipcd-dev, sre-demo-app-dev, packagegroup-glibc-gconv-dev, alex-cslc-ecuvard-dev, packagegroup-base-wifi-dev, alex-malc-cert-dev, packagegroup-base-bluetooth-dev, alex-cslc-udsifd-dev, alex-cslc-gnssmgr-dev
+Source: None

@@ -1,0 +1,16 @@
+Package: curl-dev
+Version: 7.44.0-r0.alex0
+Description: Command line tool and library for client-side URL transfers - Development files
+ Command line tool and library for client-side URL transfers.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: curl
+Homepage: http://curl.haxx.se/
+Depends: libcurl4, curl (= 7.44.0-r0.alex0)
+Recommends: libcurl-dev, libz-dev, libssl-dev, openssl-dev, libcrypto-dev, libc6-dev
+Source: http://curl.haxx.se/download/curl-7.44.0.tar.bz2 file://pkgconfig_fix.patch file://configure_ac.patch file://CVE-2016-5421.patch file://CVE-2016-5420.patch file://CVE-2016-5419.patch file://CVE-2016-0754.patch file://CVE-2016-0755.patch

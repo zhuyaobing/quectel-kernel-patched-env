@@ -1,0 +1,13 @@
+Package: gnome-desktop-testing
+Version: 2014.1-r1
+Description: Test runner for GNOME-style installed tests
+ Test runner for GNOME-style installed tests.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: gnome-desktop-testing
+Homepage: https://wiki.gnome.org/GnomeGoals/InstalledTests
+Depends: libglib-2.0-0 (>= 2.44.1), libffi6 (>= 3.2.1), libz1 (>= 1.2.8), libc6 (>= 2.22)
+Source: http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-testing/2014.1/gnome-desktop-testing-2014.1.tar.xz file://0001-gsystem-subprocess.c-Enable-GNU-extensions-in-system.patch

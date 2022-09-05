@@ -1,0 +1,14 @@
+/sbin/mklost+found
+/usr/bin/lsattr
+/usr/bin/mk_cmds
+/sbin/populate-extfs.sh
+/sbin/filefrag
+/bin/chattr.e2fsprogs
+/sbin/logsave
+/usr/bin/compile_et
+/sbin/dumpe2fs
+/sbin/e2image
+/sbin/e4defrag
+/sbin/e2freefrag
+/sbin/debugfs
+/sbin/e2undo

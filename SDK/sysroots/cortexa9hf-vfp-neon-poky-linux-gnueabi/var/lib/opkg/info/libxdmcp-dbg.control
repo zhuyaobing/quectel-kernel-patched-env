@@ -1,0 +1,18 @@
+Package: libxdmcp-dbg
+Version: 1:1.1.2-r0
+Description: XDMCP: X Display Manager Control Protocol library - Debugging files
+ The purpose of the X Display Manager Control Protocol (XDMCP) is to
+ provide a uniform mechanism for an autonomous display to request login
+ service from a remote host. An X terminal (screen, keyboard, mouse,
+ processor, network interface) is a prime example of an autonomous
+ display.  This package contains ELF symbols and related sources for
+ debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: libxdmcp
+Homepage: http://www.x.org
+Recommends: libc6-dbg
+Source: http://xorg.freedesktop.org/releases/individual/lib/libXdmcp-1.1.2.tar.bz2

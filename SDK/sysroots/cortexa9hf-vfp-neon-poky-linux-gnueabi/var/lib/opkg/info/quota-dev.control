@@ -1,0 +1,16 @@
+Package: quota-dev
+Version: 4.02-r0
+Description: Tools for monitoring & limiting user disk usage per filesystem - Development files
+ Tools for monitoring & limiting user disk usage per filesystem.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD & GPLv2+ & LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: quota
+Homepage: http://sourceforge.net/projects/linuxquota/
+Depends: quota (= 4.02-r0)
+Recommends: tcp-wrappers-dev, libcomerr-dev, libwrap-dev, libtirpc-dev, libc6-dev, libext2fs-dev, e2fsprogs-dev
+Source: http://downloads.sourceforge.net/project/linuxquota/quota-tools/4.02/quota-4.02.tar.gz file://config-tcpwrappers.patch file://fcntl.patch file://remove_non_posix_types.patch

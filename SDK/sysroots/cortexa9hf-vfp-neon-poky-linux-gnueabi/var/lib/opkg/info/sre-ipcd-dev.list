@@ -1,0 +1,11 @@
+/usr/include/ecu/ipc_signal.h
+/usr/include/ecu/ipc_queuereader.h
+/usr/include/ecu/test/mock_systemd.h
+/usr/lib/cmake/cslcipc/cslcipc-config-noconfig.cmake
+/usr/include/ecu/ipc_datasource.h
+/usr/lib/libcslcipc.so
+/usr/include/ecu/ipc_typedefs.h
+/usr/lib/cmake/cslcipc/
+/usr/include/ecu/ipc_queuewriter.h
+/usr/include/ecu/systemd.h
+/usr/lib/cmake/cslcipc/cslcipc-config.cmake

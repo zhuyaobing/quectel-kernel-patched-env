@@ -1,0 +1,16 @@
+Package: picocom-dev
+Version: 1.7-r0
+Description: Lightweight and minimal (~20K) dumb-terminal emulation program - Development files
+ Lightweight and minimal (~20K) dumb-terminal emulation program.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: picocom
+Homepage: http://code.google.com/p/picocom/
+Depends: picocom (= 1.7-r0)
+Recommends: libc6-dev
+Source: http://picocom.googlecode.com/files/picocom-1.7.tar.gz

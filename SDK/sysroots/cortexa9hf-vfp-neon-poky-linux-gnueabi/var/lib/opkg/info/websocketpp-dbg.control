@@ -1,0 +1,13 @@
+Package: websocketpp-dbg
+Version: 0.7.0-r0
+Description: C++/Boost Asio based websocket client/server library. - Debugging files
+ C++/Boost Asio based websocket client/server library..  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-3-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: websocketpp
+Homepage: https://github.com/zaphoyd/websocketpp
+Source: http://euartif01.stoneridge.com:8081/artifactory/sre-ext-src-mirror-local/com/stoneridge/src-mirror/alex/tarballs/2.2.0/websocketpp-0.7.0.tar.gz file://0001-Fix-issue-599.patch file://9ddb300d874a30db35e3ad58f188944bef0bf31b.patch file://4cab5e5c0c5f19fcee7d37b4a38b156d63a150d4.patch file://disable-tests.patch

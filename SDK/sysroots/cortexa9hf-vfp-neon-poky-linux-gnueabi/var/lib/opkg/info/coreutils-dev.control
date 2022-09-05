@@ -1,0 +1,17 @@
+Package: coreutils-dev
+Version: 6.9-r5
+Description: The basic file, shell and text manipulation utilities - Development files
+ The GNU Core Utilities provide the basic file, shell and text
+ manipulation utilities. These are the core utilities which are expected
+ to exist on every system.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: coreutils
+Homepage: http://www.gnu.org/software/coreutils/
+Depends: coreutils (= 6.9-r5)
+Recommends: libc6-dev, update-alternatives-opkg-dev
+Source: http://ftp.gnu.org/gnu/coreutils/coreutils-6.9.tar.bz2 file://gnulib_m4.patch file://futimens.patch file://coreutils-ls-x.patch file://coreutils-6.9-cp-i-u.patch file://coreutils-i18n.patch file://coreutils-overflow.patch file://coreutils-fix-install.patch file://man-touch.patch file://coreutils_fix_for_automake-1.12.patch file://coreutils-build-with-acl.patch file://coreutils-fix-texinfo.patch file://fix_for_manpage_building.patch file://loadavg.patch

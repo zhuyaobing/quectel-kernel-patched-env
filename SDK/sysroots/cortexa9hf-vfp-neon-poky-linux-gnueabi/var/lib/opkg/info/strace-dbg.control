@@ -1,0 +1,14 @@
+Package: strace-dbg
+Version: 4.10-r0
+Description: System call tracing tool - Debugging files
+ System call tracing tool.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: strace
+Homepage: http://strace.sourceforge.net
+Recommends: libc6-dbg
+Source: http://downloads.sourceforge.net/strace/strace-4.10.tar.xz file://0001-Add-linux-aarch64-arch_regs.h.patch file://git-version-gen file://strace-add-configure-options.patch file://Makefile-ptest.patch file://run-ptest file://Include-sys-stat.h-for-S_I-macros.patch file://Include-linux-ioctl.h-for-_IOC_-macros.patch

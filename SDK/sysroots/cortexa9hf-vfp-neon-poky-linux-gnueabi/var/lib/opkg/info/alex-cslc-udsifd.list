@@ -1,0 +1,3 @@
+/usr/bin/udsifd
+/lib/systemd/system/udsifd.service
+/etc/alex/udsifd.conf

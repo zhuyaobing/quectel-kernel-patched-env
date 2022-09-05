@@ -1,0 +1,17 @@
+[Unit]
+Description=Opkg first boot configure
+DefaultDependencies=no
+After=systemd-remount-fs.service systemd-tmpfiles-setup.service tmp.mount
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/etc/default/postinst
+ExecStart=-/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/bin/sh -c " if [ $POSTINST_LOGGING = '1' ]; then /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg configure > $LOGFILE 2>&1; else /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg configure; fi"
+ExecStartPost=/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/bin/systemctl disable opkg-configure.service
+StandardOutput=syslog
+RemainAfterExit=No
+
+[Install]
+WantedBy=basic.target
+WantedBy=sysinit.target

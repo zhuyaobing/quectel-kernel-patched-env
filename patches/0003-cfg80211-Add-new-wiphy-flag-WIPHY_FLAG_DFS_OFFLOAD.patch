@@ -1,0 +1,40 @@
+From ea9e417116601c381ca55de987074f92c6a2efce Mon Sep 17 00:00:00 2001
+From: Amar Singhal <asinghal@codeaurora.org>
+Date: Mon, 6 Jan 2014 14:55:18 -0800
+Subject: cfg80211: Add new wiphy flag WIPHY_FLAG_DFS_OFFLOAD
+
+Add new flag WIPHY_FLAG_DFS_OFFLOAD to the wiphy structure. When this
+flag is defined, the driver would handle all the DFS related operations.
+
+CRs-Fixed: 630797
+Change-Id: I592722607788dc4e2167c90bb684071cc9fb6986
+Signed-off-by: Amar Singhal <asinghal@codeaurora.org>
+[joshc: renumbered flag due to upstream collision]
+Signed-off-by: Josh Cartwright <joshc@codeaurora.org>
+---
+ include/net/cfg80211.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/net/cfg80211.h b/include/net/cfg80211.h
+index 8851e17..96a44fd 100644
+--- a/include/net/cfg80211.h
++++ b/include/net/cfg80211.h
+@@ -2571,6 +2571,7 @@ struct cfg80211_ops {
+  * @WIPHY_FLAG_SUPPORTS_5_10_MHZ: Device supports 5 MHz and 10 MHz channels.
+  * @WIPHY_FLAG_HAS_CHANNEL_SWITCH: Device supports channel switch in
+  *	beaconing mode (AP, IBSS, Mesh, ...).
++ * @WIPHY_FLAG_DFS_OFFLOAD: The driver handles all the DFS related operations.
+  */
+ enum wiphy_flags {
+ 	/* use hole at 0 */
+@@ -2596,6 +2597,7 @@ enum wiphy_flags {
+ 	WIPHY_FLAG_HAS_REMAIN_ON_CHANNEL	= BIT(21),
+ 	WIPHY_FLAG_SUPPORTS_5_10_MHZ		= BIT(22),
+ 	WIPHY_FLAG_HAS_CHANNEL_SWITCH		= BIT(23),
++	WIPHY_FLAG_DFS_OFFLOAD                  = BIT(24)
+ };
+ 
+ /**
+-- 
+cgit v1.1
+

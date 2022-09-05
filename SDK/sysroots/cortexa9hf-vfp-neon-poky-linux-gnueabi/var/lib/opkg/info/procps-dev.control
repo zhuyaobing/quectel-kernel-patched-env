@@ -1,0 +1,18 @@
+Package: procps-dev
+Version: 3.3.10-r0
+Description: System and process monitoring utilities - Development files
+ Procps contains a set of system utilities that provide system information
+ about processes using the /proc filesystem. The package includes the
+ programs ps, top, vmstat, w, kill, and skill.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: procps
+Homepage: https://gitorious.org/procps
+Depends: procps (= 3.3.10-r0)
+Recommends: libc6-dev, ncurses-libncurses-dev, update-alternatives-opkg-dev, ncurses-libtinfo-dev, ncurses-dev
+Source: http://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-3.3.10.tar.xz file://fix-configure.patch file://sysctl.conf

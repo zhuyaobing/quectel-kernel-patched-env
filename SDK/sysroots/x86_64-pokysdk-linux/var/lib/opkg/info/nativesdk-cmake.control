@@ -1,0 +1,13 @@
+Package: nativesdk-cmake
+Version: 3.3.1-r0
+Description: Cross-platform, open-source make system
+ Cross-platform, open-source make system.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: x86_64-nativesdk
+OE: nativesdk-cmake
+Homepage: http://www.cmake.org/
+Depends: nativesdk-libexpat1 (>= 2.1.0), nativesdk-libz1 (>= 1.2.8), nativesdk-libstdc++6 (>= 4.9.3), nativesdk-libcurl4 (>= 7.44.0), nativesdk-libgcc1 (>= 4.9.3), nativesdk-libc6 (>= 2.22), nativesdk-libarchive13 (>= 3.1.2)
+Source: http://www.cmake.org/files/v3.3/cmake-3.3.1.tar.gz file://support-oe-qt4-tools-names.patch file://qt4-fail-silent.patch file://OEToolchainConfig.cmake file://environment.d-cmake.sh

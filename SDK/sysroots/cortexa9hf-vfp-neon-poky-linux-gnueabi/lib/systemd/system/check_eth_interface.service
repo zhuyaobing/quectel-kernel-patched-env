@@ -1,0 +1,12 @@
+[Unit]
+Description=Check Ethernet interface status and report to CSP
+Wants=ipcd.service network.target
+After=ipcd.service network.target
+
+[Service]
+ExecStart=/usr/sbin/check_eth_interface.sh
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=alex-core.target

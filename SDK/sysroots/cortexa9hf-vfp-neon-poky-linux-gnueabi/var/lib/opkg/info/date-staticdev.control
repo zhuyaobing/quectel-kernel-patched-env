@@ -1,0 +1,14 @@
+Package: date-staticdev
+Version: 2.4.1-r0
+Description: Datelib - Development files (Static Libraries)
+ Recipe for the open source project date  This package contains static
+ libraries for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: date
+Homepage: https://github.com/HowardHinnant/date
+Depends: date-dev (= 2.4.1-r0)
+Source: https://github.com/HowardHinnant/date/releases/date-2.4.1.tar.gz;downloadfilename=date-2.4.1.tar.gz file://CMakeLists.patch

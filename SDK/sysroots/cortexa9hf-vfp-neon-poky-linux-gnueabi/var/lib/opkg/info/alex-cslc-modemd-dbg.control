@@ -1,0 +1,13 @@
+Package: alex-cslc-modemd-dbg
+Version: 13.1.0-r0
+Description: Control the modem hardware - Debugging files
+ Controls the modem on an alexandra board  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-modemd
+Recommends: libmosquittopp1-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libc6-dbg, libstdc++-dbg
+Source: None

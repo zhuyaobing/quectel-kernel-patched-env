@@ -1,0 +1,14 @@
+Package: libcap-dbg
+Version: 2.24-r0
+Description: Library for getting/setting POSIX.1e capabilities - Debugging files
+ Library for getting/setting POSIX.1e capabilities.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD | GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: libcap
+Homepage: http://sites.google.com/site/fullycapable/
+Recommends: libc6-dbg
+Source: http://kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.24.tar.xz

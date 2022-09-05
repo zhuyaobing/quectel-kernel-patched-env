@@ -1,0 +1,14 @@
+Package: libmanproto-dbg
+Version: 3.0.0-r0
+Description: The MCP protobuf library - Debugging files
+ Recipe for building the MAN protobuf library  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-mlapi
+Recommends: libc6-dbg, libstdc++-dbg, libgcc-s-dbg
+Provides: alex-malc-mlapi-dbg
+Source: None

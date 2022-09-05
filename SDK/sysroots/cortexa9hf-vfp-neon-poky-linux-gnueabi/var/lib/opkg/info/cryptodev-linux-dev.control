@@ -1,0 +1,15 @@
+Package: cryptodev-linux-dev
+Version: 1.7-r0
+Description: A /dev/crypto device driver header file - Development files
+ A /dev/crypto device driver header file.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: cryptodev-linux
+Homepage: http://cryptodev-linux.org/
+Depends: cryptodev-linux (= 1.7-r0)
+Source: http://download.gna.org/cryptodev-linux/cryptodev-linux-1.7.tar.gz

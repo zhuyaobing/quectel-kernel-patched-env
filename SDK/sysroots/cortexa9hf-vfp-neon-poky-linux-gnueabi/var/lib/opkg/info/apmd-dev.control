@@ -1,0 +1,17 @@
+Package: apmd-dev
+Version: 3.2.2-15-r0
+Description: Utilities for Advanced Power Management - Development files
+ The Advanced Power Management (APM) support provides access to battery
+ status information and a set of tools for managing notebook power
+ consumption.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: apmd
+Homepage: http://apenwarr.ca/apmd/
+Depends: apmd (= 3.2.2-15-r0), libapm1
+Recommends: libc6-dev, libapm-dev, update-rc.d-dev, initscripts-dev
+Source: ftp://ftp.debian.org/debian/pool/main/a/apmd/apmd_3.2.2.orig.tar.gz;name=tarball file://legacy.patch file://libtool.patch file://unlinux.patch file://init file://default file://apmd_proxy file://apmd_proxy.conf file://apmd.service

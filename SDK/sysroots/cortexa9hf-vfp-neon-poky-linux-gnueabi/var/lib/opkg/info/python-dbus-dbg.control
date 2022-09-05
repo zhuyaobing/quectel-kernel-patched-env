@@ -1,0 +1,14 @@
+Package: python-dbus-dbg
+Version: 1.2.0-r0
+Description: Python bindings for the DBus inter-process communication system - Debugging files
+ Python bindings for the DBus inter-process communication system.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: python-dbus
+Homepage: http://www.freedesktop.org/Software/dbus
+Recommends: libglib-2.0-dbg, dbus-lib-dbg, libz-dbg, libffi-dbg, libc6-dbg, libdbus-glib-1-dbg
+Source: http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz

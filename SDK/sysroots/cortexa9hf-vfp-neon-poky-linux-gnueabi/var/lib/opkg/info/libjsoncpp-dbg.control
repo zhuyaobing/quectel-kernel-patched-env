@@ -1,0 +1,18 @@
+Package: libjsoncpp-dbg
+Version: 1.7.7-r0
+Description: JSON C++ lib used to read and write json file. - Debugging files
+ Jsoncpp is an implementation of a JSON (http://json.org) reader
+ and writer in C++. JSON (JavaScript Object Notation) is a
+ lightweight data-interchange format. It is easy for humans to
+ read and write. It is easy for machines to parse and generate.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: jsoncpp
+Homepage: http://sourceforge.net/projects/jsoncpp/
+Recommends: libc6-dbg, libstdc++-dbg, libgcc-s-dbg
+Provides: jsoncpp-dbg
+Source: git://github.com/open-source-parsers/jsoncpp

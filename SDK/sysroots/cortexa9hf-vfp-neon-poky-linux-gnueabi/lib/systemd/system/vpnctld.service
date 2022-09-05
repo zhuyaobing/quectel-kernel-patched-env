@@ -1,0 +1,19 @@
+[Unit]
+Description=VPN Control Daemon - using Wireguard
+After=network-online.target
+Requires=alex-core.target
+Before=mosquitto.service
+RequiresMountsFor=/common
+
+[Service]
+Type=notify
+Restart=always
+ExecStart=/usr/bin/vpnctld
+
+
+
+
+[Install]
+WantedBy=multi-user.target
+
+

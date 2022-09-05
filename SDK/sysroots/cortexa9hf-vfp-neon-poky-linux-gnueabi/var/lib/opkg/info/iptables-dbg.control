@@ -1,0 +1,15 @@
+Package: iptables-dbg
+Version: 1.4.21-r0.alex3
+Description: Tools for managing kernel packet filtering capabilities - Debugging files
+ iptables is the userspace command line program used to configure and
+ control network packet filtering code in Linux.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: iptables
+Homepage: http://www.netfilter.org/
+Recommends: libc6-dbg
+Source: http://netfilter.org/projects/iptables/files/iptables-1.4.21.tar.bz2 file://types.h-add-defines-that-are-required-for-if_packet.patch file://0001-configure-Add-option-to-enable-disable-libnfnetlink.patch file://0001-fix-build-with-musl.patch file://0002-configure.ac-only-check-conntrack-when-libnfnetlink-enabled.patch file://iptables.service file://iptables.rules.tbm3.tele file://iptables.rules.tbm3.tpa file://iptables.rules.vcm file://iptables.rules.dev file://iptables.rules.prod

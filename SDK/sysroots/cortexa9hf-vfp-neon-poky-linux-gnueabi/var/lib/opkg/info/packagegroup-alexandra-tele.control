@@ -1,0 +1,12 @@
+Package: packagegroup-alexandra-tele
+Version: 1.0-r8
+Description: Software specific to Alexandra project
+ Software specific to Alexandra project.
+Section: console
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-alexandra-tele
+Depends: sre-udev, packagegroup-base-wifi, hostapd, packagegroup-base-bluetooth, sre-check-ethernet-link-status, packagegroup-glibc-gconv, alex-cslc-servicetuner, alex-malc-cert, sre-demo-app, alex-cslc-vpnctld, sre-ipcd, alex-cslc-udsifd, alex-cslc-loctimed, wireguard-tools, sre-usblog, sre-check-eth-interface, alex-cslc-gnssmgr, alex-cslc-ecuvard, alex-cslc-ecuvarc
+Source: None

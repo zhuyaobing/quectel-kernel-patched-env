@@ -1,0 +1,14 @@
+Package: alex-malc-beproxy-dev
+Version: 13.3.0-r0
+Description: Backend Proxy - Development files
+ Recipe for the backend proxy  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-beproxy
+Depends: alex-malc-beproxy (= 13.3.0-r0)
+Recommends: libmosquittopp1-dev, sre-lapi-dev, libgcc-s-dev, libc6-dev, boost-dev, libmanproto-dev, libstdc++-dev, alex-malc-cert-dev, libcslccrypto-dev, sre-ipcd-dev, systemd-dev, boost-serialization-dev, alex-malc-cert-certificates-pack-dev, libjsoncpp-dev, protobuf-dev, sre-systemd-target-dev, sre-ipcd-lib-dev
+Source: None

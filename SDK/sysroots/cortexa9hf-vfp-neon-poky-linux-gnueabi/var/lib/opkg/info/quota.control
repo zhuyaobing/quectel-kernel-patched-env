@@ -1,0 +1,13 @@
+Package: quota
+Version: 4.02-r0
+Description: Tools for monitoring & limiting user disk usage per filesystem
+ Tools for monitoring & limiting user disk usage per filesystem.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD & GPLv2+ & LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: quota
+Homepage: http://sourceforge.net/projects/linuxquota/
+Depends: libwrap0 (>= 7.6), libc6 (>= 2.22), libtirpc1 (>= 0.2.5), libext2fs2 (>= 1.42.9), libcom-err2 (>= 1.42.9)
+Source: http://downloads.sourceforge.net/project/linuxquota/quota-tools/4.02/quota-4.02.tar.gz file://config-tcpwrappers.patch file://fcntl.patch file://remove_non_posix_types.patch

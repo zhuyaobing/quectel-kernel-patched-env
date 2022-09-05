@@ -1,0 +1,4 @@
+/etc/systimemgr/
+/etc/systimemgr/systimemgr.conf
+/lib/systemd/system/systimemgr.service
+/usr/bin/systimemgr

@@ -1,0 +1,5 @@
+[Match]
+Driver=eth1
+
+[Link]
+Name=ethint

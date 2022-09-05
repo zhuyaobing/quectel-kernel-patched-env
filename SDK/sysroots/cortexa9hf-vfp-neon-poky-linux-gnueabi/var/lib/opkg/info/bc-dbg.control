@@ -1,0 +1,14 @@
+Package: bc-dbg
+Version: 1.06-r3
+Description: Arbitrary precision calculator language - Debugging files
+ Arbitrary precision calculator language.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: bc
+Homepage: http://www.gnu.org/software/bc/bc.html
+Recommends: libc6-dbg
+Source: http://ftp.gnu.org/gnu/bc/bc-1.06.tar.gz file://fix-segment-fault.patch

@@ -1,0 +1,12 @@
+[Unit]
+Description=Alexandra Certificate Signing Application
+After=alex-boot.target
+Requires=alex-boot.target
+
+[Service]
+ExecStart=/usr/bin/cert_app
+Type=simple
+Restart=on-abnormal
+
+[Install]
+WantedBy=alex-core.target

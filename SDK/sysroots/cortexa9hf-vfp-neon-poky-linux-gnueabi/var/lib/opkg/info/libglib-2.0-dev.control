@@ -1,0 +1,18 @@
+Package: libglib-2.0-dev
+Version: 1:2.44.1-r0
+Description: A general-purpose utility library - Development files
+ GLib is a general-purpose utility library, which provides many useful
+ data types, macros, type conversions, string utilities, file utilities, a
+ main loop abstraction, and so on.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2+ & BSD & PD
+Architecture: cortexa9hf-vfp-neon
+OE: glib-2.0
+Homepage: https://developer.gnome.org/glib/
+Depends: libglib-2.0-0 (= 1:2.44.1-r0)
+Recommends: python-pygobject-dev, libz-dev, libffi-dev, tzdata-posix-dev, tzdata-americas-dev, gnome-desktop-testing-dev, glibc-gconv-cp1255-dev, tzdata-asia-dev, python-dbus-dev, glibc-charmap-utf-8-dev, glibc-charmap-invariant-dev, glibc-gconv-euc-jp-dev, tzdata-dev, glibc-gconv-utf-7-dev, tzdata-europe-dev, libc6-dev, glibc-gconv-iso8859-15-dev, glibc-gconv-utf-32-dev, glibc-localedata-translit-cjk-variants-dev, dbus-dev, dbus-lib-dev, glibc-gconv-utf-16-dev, glibc-charmap-cp1255-dev, glibc-gconv-iso8859-1-dev, shared-mime-info-dev
+Provides: glib-2.0-dev
+Source: http://ftp.gnome.org/pub/GNOME/sources/glib/2.44/glib-2.44.1.tar.xz file://configure-libtool.patch file://fix-conflicting-rand.patch file://add-march-i486-into-CFLAGS-automatically.patch file://glib-2.0-configure-readlink.patch file://run-ptest file://ptest-paths.patch file://uclibc.patch file://0001-configure.ac-Do-not-use-readlink-when-cross-compilin.patch file://allow-run-media-sdX-drive-mount-if-username-root.patch file://0001-Remove-the-warning-about-deprecated-paths-in-schemas.patch

@@ -1,0 +1,22 @@
+Package: busybox-dev
+Version: 1.23.2-r0.alex1
+Description: Tiny versions of many common UNIX utilities in a single small executable - Development files
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & bzip2
+Architecture: cortexa9hf-vfp-neon
+OE: busybox
+Homepage: http://www.busybox.net
+Depends: busybox (= 1.23.2-r0.alex1)
+Recommends: libc6-dev, update-alternatives-opkg-dev, update-rc.d-dev, initscripts-dev
+Source: http://www.busybox.net/downloads/busybox-1.23.2.tar.bz2;name=tarball file://get_header_tar.patch file://busybox-appletlib-dependency.patch file://busybox-udhcpc-no_deconfig.patch file://find-touchscreen.sh file://busybox-cron file://busybox-httpd file://busybox-udhcpd file://default.script file://simple.script file://hwclock.sh file://mount.busybox file://syslog file://syslog-startup.conf file://syslog.conf file://busybox-syslog.default file://mdev file://mdev.conf file://mdev-mount.sh file://umount.busybox file://defconfig file://busybox-syslog.service.in file://busybox-klogd.service.in file://fail_on_no_media.patch file://run-ptest file://inetd.conf file://inetd file://login-utilities.cfg file://recognize_connmand.patch file://busybox-cross-menuconfig.patch file://0001-Switch-to-POSIX-utmpx-API.patch file://0001-ifconfig-fix-double-free-fatal-error-in-INET_sprint.patch file://0001-chown-fix-help-text.patch file://0001-Use-CC-when-linking-instead-of-LD-and-use-CFLAGS-and.patch file://0002-Passthrough-r-to-linker.patch file://0001-randconfig-fix.patch file://0001-zcip-fix-wrong-comparison-of-source-IP-with-our-IP.patch file://mount-via-label.cfg file://sha1sum.cfg file://sha256sum.cfg file://getopts.cfg file://CVE-2016-2148.patch file://CVE-2016-2147.patch file://CVE-2016-2147_2.patch file://fstrim-all.timer file://fstrim-all.service file://fstrim-all.sh file://fragment.cfg;subdir=busybox-1.23.2

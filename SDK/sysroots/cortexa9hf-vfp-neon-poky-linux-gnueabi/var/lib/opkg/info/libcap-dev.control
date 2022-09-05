@@ -1,0 +1,16 @@
+Package: libcap-dev
+Version: 2.24-r0
+Description: Library for getting/setting POSIX.1e capabilities - Development files
+ Library for getting/setting POSIX.1e capabilities.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD | GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: libcap
+Homepage: http://sites.google.com/site/fullycapable/
+Depends: libcap2 (= 2.24-r0)
+Recommends: libc6-dev, attr-dev
+Source: http://kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.24.tar.xz

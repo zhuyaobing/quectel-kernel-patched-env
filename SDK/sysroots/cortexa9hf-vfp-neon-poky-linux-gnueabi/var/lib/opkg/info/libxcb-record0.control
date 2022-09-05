@@ -1,0 +1,14 @@
+Package: libxcb-record0
+Version: 1.11-r0
+Description: XCB library module for record
+ XCB library module for record
+Section: x11/libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: libxcb
+Homepage: http://xcb.freedesktop.org
+Depends: libxau6 (>= 1.0.8), libxdmcp6 (>= 1.1.2), libxcb1 (>= 1.11), libc6 (>= 2.22)
+Provides: libxcb-record
+Source: http://xcb.freedesktop.org/dist/libxcb-1.11.tar.bz2 file://xcbincludedir.patch file://disable-check.patch file://gcc-mips-pr68302-mips-workaround.patch

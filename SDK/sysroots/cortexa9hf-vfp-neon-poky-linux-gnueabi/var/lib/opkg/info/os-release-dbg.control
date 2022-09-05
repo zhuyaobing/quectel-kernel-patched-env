@@ -1,0 +1,13 @@
+Package: os-release-dbg
+Version: 1.0-r0
+Description: Operating system identification - Debugging files
+ The /etc/os-release file contains operating system identification data.
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: os-release
+Source: None

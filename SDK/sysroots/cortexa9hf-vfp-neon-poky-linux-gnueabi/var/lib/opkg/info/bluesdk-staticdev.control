@@ -1,0 +1,13 @@
+Package: bluesdk-staticdev
+Version: 5.5.2-r0
+Description: OpenSynergy BlueSDK - Development files (Static Libraries)
+ Bluetooth stack from OpenSynergy  This package contains static libraries
+ for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: bluesdk
+Depends: bluesdk-dev (= 5.5.2-r0)
+Source: http://euartif01.stoneridge.com:8081/artifactory/opsy-bt-release-local/com/opensynergy/bluesdk/bluesdk-5.5.2.tar.xz;name=bluesdk http://euartif01.stoneridge.com:8081/artifactory/opsy-bt-release-local/com/opensynergy/lesdk/lesdk-2.5.2.tar.xz;name=lesdk file://add-extra-files-to-library.patch file://enable-legatt.patch file://tty-configuration.patch

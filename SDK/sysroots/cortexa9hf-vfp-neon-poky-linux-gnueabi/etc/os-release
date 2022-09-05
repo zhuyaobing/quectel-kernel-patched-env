@@ -1,0 +1,5 @@
+ID="poky"
+NAME="Poky (Yocto Project Reference Distro)"
+VERSION="2.0.3 (jethro)"
+VERSION_ID="2.0.3"
+PRETTY_NAME="Poky (Yocto Project Reference Distro) 2.0.3 (jethro)"

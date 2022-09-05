@@ -1,0 +1,12 @@
+[Unit]
+Description=Alexandra System Time Manager
+After=alex-boot.target
+Requires=alex-boot.target
+
+[Service]
+ExecStart=/usr/bin/systimemgr
+Type=notify
+
+[Install]
+WantedBy=alex-core.target
+

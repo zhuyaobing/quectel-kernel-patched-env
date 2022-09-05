@@ -1,0 +1,14 @@
+Package: nativesdk-libcurl4
+Version: 7.44.0-r0.alex0
+Description: Command line tool and library for client-side URL transfers
+ Command line tool and library for client-side URL transfers.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: x86_64-nativesdk
+OE: nativesdk-curl
+Homepage: http://curl.haxx.se/
+Depends: nativesdk-libz1 (>= 1.2.8), nativesdk-libssl1.0.0 (>= 1.0.2h), nativesdk-libc6 (>= 2.22), nativesdk-libcrypto1.0.0 (>= 1.0.2h)
+Provides: nativesdk-libcurl
+Source: http://curl.haxx.se/download/curl-7.44.0.tar.bz2 file://pkgconfig_fix.patch file://configure_ac.patch file://CVE-2016-5421.patch file://CVE-2016-5420.patch file://CVE-2016-5419.patch file://CVE-2016-0754.patch file://CVE-2016-0755.patch

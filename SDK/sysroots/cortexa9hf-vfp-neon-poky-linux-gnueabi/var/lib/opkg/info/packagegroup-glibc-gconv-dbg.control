@@ -1,0 +1,13 @@
+Package: packagegroup-glibc-gconv-dbg
+Version: 1.0-r0
+Description: Packagegroup for needed gconv libraries - Debugging files
+ Packagegroup for needed gconv libraries.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-glibc-gconv
+Recommends: glibc-gconv-iso8859-2-dbg, glibc-gconv-iso8859-11-dbg, glibc-gconv-iso8859-4-dbg, glibc-gconv-iso8859-13-dbg, glibc-gconv-iso8859-9-dbg, glibc-gconv-iso8859-9e-dbg, glibc-gconv-iso8859-6-dbg, glibc-gconv-iso8859-15-dbg, glibc-gconv-iso8859-7-dbg, glibc-gconv-iso8859-1-dbg, glibc-gconv-iso8859-14-dbg, glibc-gconv-iso8859-3-dbg, glibc-gconv-iso8859-16-dbg, glibc-gconv-iso8859-5-dbg, glibc-gconv-iso8859-10-dbg, glibc-gconv-iso8859-8-dbg
+Source: None

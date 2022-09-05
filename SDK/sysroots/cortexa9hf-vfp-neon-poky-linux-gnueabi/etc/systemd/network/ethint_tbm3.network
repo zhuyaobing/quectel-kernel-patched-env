@@ -1,0 +1,6 @@
+[Match]
+Name=ethint
+
+[Network]
+Address=10.6.0.1/16
+LinkLocalAddressing=no

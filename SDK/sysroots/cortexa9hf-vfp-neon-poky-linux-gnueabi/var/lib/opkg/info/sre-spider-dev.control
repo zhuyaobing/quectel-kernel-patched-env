@@ -1,0 +1,16 @@
+Package: sre-spider-dev
+Version: 13.3.0-r0
+Description: Spider - system state and signaling daemon - Development files
+ Central point for system state, signaling between partitions, software
+ update and miscellaneous house-keeping  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-spider
+Depends: sre-spider (= 13.3.0-r0)
+Recommends: libc6-dev, sre-lapi-dev, libgcc-s-dev, sre-ipcd-dev, mosquitto-dev, libcrypto-dev, libstdc++-dev, libarchive-dev, systemd-dev, boost-serialization-dev, protobuf-dev, sre-systemd-target-dev, boost-dev, sre-ipcd-lib-dev
+Source: file://spider-vcm-tele.conf file://spider-tbm3-tele.conf file://spider-tpa.conf

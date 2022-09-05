@@ -1,0 +1,13 @@
+Package: alex-cslc-servicetuner
+Version: 1.0-r0
+Description: Service tuner (enable/disable services) utility
+ Service tuner runs at first boot and disables un-needed services
+ according to the board characteristics
+Section: applications
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-servicetuner
+Depends: alex-cslc-ecuvarc
+Source: file://service_tuner.service file://service_tuner.sh

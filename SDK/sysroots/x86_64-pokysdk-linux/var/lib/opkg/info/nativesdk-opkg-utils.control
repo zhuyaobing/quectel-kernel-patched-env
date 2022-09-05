@@ -1,0 +1,13 @@
+Package: nativesdk-opkg-utils
+Version: 0.1.8+git0+53274f0875-r0
+Description: Additional utilities for the opkg package manager
+ Additional utilities for the opkg package manager.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: x86_64-nativesdk
+OE: nativesdk-opkg-utils
+Homepage: http://code.google.com/p/opkg/
+Depends: nativesdk-python-logging, nativesdk-python-crypt, nativesdk-python-subprocess, nativesdk-python-fcntl, nativesdk-python-io, nativesdk-libc6 (>= 2.22), nativesdk-python-math, nativesdk-python-textutils, nativesdk-python, nativesdk-python-compression, nativesdk-python-shell, nativesdk-python-pickle, nativesdk-python-stringold
+Source: git://git.yoctoproject.org/opkg-utils

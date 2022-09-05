@@ -1,0 +1,12 @@
+Package: packagegroup-tbm3
+Version: 1.0-r6
+Description: Software specific to Alexandra project, TBM3 variant
+ Software specific to Alexandra project, TBM3 variant.
+Section: console
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-tbm3
+Depends: packagegroup-alexandra-tele, e2fsprogs-resize2fs, systemd-tbm3-conf, nfs-tele-server, alex-cslc-pgnreqd, sre-spider-tbm3-tele-conf, nfs-utils, wireguard-tools-tbm3-tele-keys, sre-usblog-tele-args, emmy-w1-driver-tools, alex-cslc-modemd-conf, sre-usblog-move-tpa-logs, emmy-w1-driver-sdiouart-firmware
+Source: None

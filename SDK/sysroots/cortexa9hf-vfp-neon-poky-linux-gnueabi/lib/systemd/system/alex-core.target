@@ -1,0 +1,9 @@
+[Unit]
+Description=Alexandra core apps
+After=alex-boot.target
+Requires=alex-boot.target
+AllowIsolate=yes
+
+[Install]
+RequiredBy=alex.target
+WantedBy=alex-boot.target

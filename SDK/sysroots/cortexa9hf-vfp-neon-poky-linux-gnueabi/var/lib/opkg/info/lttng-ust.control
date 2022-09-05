@@ -1,0 +1,17 @@
+Package: lttng-ust
+Version: 2:2.6.2+git0+c49ee9040a-r0
+Description: Linux Trace Toolkit Userspace Tracer 2.x
+ The LTTng UST 2.x package contains the userspace tracer library to trace
+ userspace codes.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+ & MIT & GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: lttng-ust
+Homepage: http://lttng.org/ust
+Depends: libc6 (>= 2.22), liburcu (>= 0.8.7)
+Provides: lttng2-ust
+Replaces: lttng2-ust
+Conflicts: lttng2-ust
+Source: git://git.lttng.org/lttng-ust.git;branch=stable-2.6 file://lttng-ust-doc-examples-disable.patch file://lttng-ust-Fix-live-timer-calculation-error.patch

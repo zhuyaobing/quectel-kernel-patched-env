@@ -1,0 +1,34 @@
+config PPC
+	bool
+	default n
+	select OF
+	select OF_EARLY_FLATTREE
+	select HAVE_MOD_ARCH_SPECIFIC
+	select MODULES_USE_ELF_RELA
+	select NEED_SG_DMA_LENGTH
+	select GENERIC_ATOMIC64
+	select OLD_SIGSUSPEND
+	select OLD_SIGACTION 
+	select IRQ_DOMAIN
+	select CLONE_BACKWARDS
+
+config PPC32
+	bool
+	default n
+
+config ARCH_HAS_ILOG2_U32
+	bool
+	default y
+
+config GENERIC_BUG
+	def_bool y
+	depends on BUG
+
+config 6xx
+	bool
+
+config 4xx
+	bool
+
+config BOOKE
+	bool

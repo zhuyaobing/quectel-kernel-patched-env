@@ -1,0 +1,15 @@
+Package: usbutils-dbg
+Version: 008-r0.alex0
+Description: Host side USB console utilities - Debugging files
+ Contains the lsusb utility for inspecting the devices connected to the
+ USB bus.  This package contains ELF symbols and related sources for
+ debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: usbutils
+Homepage: http://www.linux-usb.org
+Recommends: systemd-dbg, libc6-dbg, libusb-1.0-dbg
+Source: http://kernel.org/pub/linux/utils/usb/usbutils/usbutils-008.tar.gz file://usb-devices-avoid-dependency-on-bash.patch file://Fix-NULL-pointer-crash.patch file://iconv.patch

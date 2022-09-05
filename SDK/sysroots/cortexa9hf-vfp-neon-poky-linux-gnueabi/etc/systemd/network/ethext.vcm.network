@@ -1,0 +1,10 @@
+[Match]
+Name=ethext.vcm
+
+[Link]
+MACAddress=02:7d:fa:00:ba:00
+
+[Network]
+Address=192.168.1.186/24
+IPForward=yes
+LinkLocalAddressing=no

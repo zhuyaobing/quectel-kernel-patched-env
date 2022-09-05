@@ -1,0 +1,13 @@
+Package: packagegroup-base
+Version: 1.0-r83.alex2
+Description: Merge machine and distro options to create a basic machine task/package
+ Merge machine and distro options to create a basic machine task/package.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Depends: packagegroup-base-usbhost, packagegroup-base-nfs, packagegroup-base-pci, packagegroup-distro-base, module-init-tools, packagegroup-base-usbgadget, sysfsutils, packagegroup-machine-base, packagegroup-base-ipv6, packagegroup-base-apm
+Recommends: kernel-module-rtc-sysfs, kernel-module-rtc-proc, kernel-module-nls-utf8, kernel-module-rtc-dev, kernel-module-input, kernel-module-unix, kernel-module-uinput
+Source: None

@@ -1,0 +1,12 @@
+/usr/include/libcgroup/tasks.h
+/usr/include/libcgroup/error.h
+/usr/include/libcgroup/
+/usr/lib/libcgroup.so
+/usr/include/libcgroup/log.h
+/usr/lib/pkgconfig/libcgroup.pc
+/usr/include/libcgroup.h
+/usr/include/libcgroup/iterators.h
+/usr/include/libcgroup/groups.h
+/usr/include/libcgroup/init.h
+/usr/include/libcgroup/config.h
+/usr/lib/libcgroup.la

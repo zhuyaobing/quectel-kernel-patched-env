@@ -1,0 +1,6 @@
+[NetDev]
+Name=ethext.vcm
+Kind=vlan
+
+[VLAN]
+Id=234

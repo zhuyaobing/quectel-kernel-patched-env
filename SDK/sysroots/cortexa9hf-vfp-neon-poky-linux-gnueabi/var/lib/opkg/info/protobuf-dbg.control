@@ -1,0 +1,16 @@
+Package: protobuf-dbg
+Version: 2.6.1+git0+bba83652e1-r0
+Description: Protocol Buffers - structured data serialisation mechanism - Debugging files
+ Protocol Buffers are a way of encoding structured data in an efficient
+ yet extensible format. Google uses Protocol Buffers for almost all of its
+ internal RPC protocols and file formats.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-3-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: protobuf
+Homepage: https://github.com/google/protobuf
+Recommends: libc6-dbg, libstdc++-dbg, libz-dbg, libgcc-s-dbg
+Source: git://github.com/google/protobuf.git

@@ -1,0 +1,14 @@
+Package: picocom-dbg
+Version: 1.7-r0
+Description: Lightweight and minimal (~20K) dumb-terminal emulation program - Debugging files
+ Lightweight and minimal (~20K) dumb-terminal emulation program.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: picocom
+Homepage: http://code.google.com/p/picocom/
+Recommends: libc6-dbg
+Source: http://picocom.googlecode.com/files/picocom-1.7.tar.gz

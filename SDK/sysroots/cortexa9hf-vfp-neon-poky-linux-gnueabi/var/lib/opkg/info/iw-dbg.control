@@ -1,0 +1,16 @@
+Package: iw-dbg
+Version: 4.1-r0
+Description: nl80211 based CLI configuration utility for wireless devices - Debugging files
+ iw is a new nl80211 based CLI configuration utility for wireless devices.
+ It supports almost all new drivers that have been added to the kernel
+ recently.   This package contains ELF symbols and related sources for
+ debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: iw
+Homepage: http://wireless.kernel.org/en/users/Documentation/iw
+Recommends: libc6-dbg, libnl-3-dbg, libnl-genl-dbg
+Source: http://www.kernel.org/pub/software/network/iw/iw-4.1.tar.gz file://0001-iw-version.sh-don-t-use-git-describe-for-versioning.patch file://separate-objdir.patch

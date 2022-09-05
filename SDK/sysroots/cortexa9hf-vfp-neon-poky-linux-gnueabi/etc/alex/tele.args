@@ -1,0 +1,4 @@
+TEMPLOG=/handover/log
+USBPATH=/tmp/usb
+TPALOGS=/handover/tpalogs
+SUFFIX=

@@ -1,0 +1,12 @@
+Package: sre-systemd-target-dbg
+Version: 2.0.0-r0
+Description: The alex systemd target - Debugging files
+ Recipe to install the systemd target on the alex platform  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-systemd-target
+Source: file://alex-boot.target file://alex-core.target file://alex-standalone.target file://alex.target

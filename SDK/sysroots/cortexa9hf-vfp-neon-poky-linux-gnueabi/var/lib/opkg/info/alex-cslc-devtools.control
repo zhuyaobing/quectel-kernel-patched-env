@@ -1,0 +1,12 @@
+Package: alex-cslc-devtools
+Version: 13.3.0-r0
+Description: Development and sysver tools
+ Recipe to build devtools.
+Section: example
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-devtools
+Depends: libgcc1 (>= 4.9.3), systemd (>= 232), protobuf (>= 2.6.1+git0+bba83652e1), libc6 (>= 2.22), libjsoncpp11 (>= 1.7.7), libmanproto1 (>= 3.0.0), libcurl4 (>= 7.44.0), libcslccrypto1 (>= 13.1.0-2-g5ac4f01), libstdc++6 (>= 4.9.3), alex-cslc-ecuvarc, libmosquittopp1 (>= 1.5.10), sre-lapi (>= 13.3.0-2-g7c58342), bash
+Source: None

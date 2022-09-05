@@ -1,0 +1,12 @@
+Package: opkg-arch-config-dbg
+Version: 1.0-r1
+Description: Architecture-dependent configuration for opkg - Debugging files
+ Architecture-dependent configuration for opkg.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: opkg-arch-config
+Source: None

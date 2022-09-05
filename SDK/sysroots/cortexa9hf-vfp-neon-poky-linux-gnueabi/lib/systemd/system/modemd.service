@@ -1,0 +1,19 @@
+[Unit]
+Description=modemd - Alexandra Modem daemon
+After=alex-boot.target
+Requires=alex-boot.target
+StartLimitIntervalSec=300s
+StartLimitBurst=3
+
+[Service]
+Type=notify
+Restart=always
+ExecStart=/usr/bin/modemd
+
+
+
+
+[Install]
+WantedBy=alex-standalone.target
+
+

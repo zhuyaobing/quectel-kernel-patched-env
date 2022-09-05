@@ -1,0 +1,15 @@
+Package: emmy-w1-driver-sdiouart-firmware-dev
+Version: W15.44.19.p36-15.100.19.p36-C4X15657-r2.alex4
+Description: SD8887 Driver/Firmware for EMMY-W1 - Development files
+ SD8887 Driver/Firmware for EMMY-W1.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Firmware-Marvell
+Architecture: cortexa9hf-vfp-neon
+OE: emmy-w1-driver-sdiouart-firmware
+Depends: emmy-w1-driver-sdiouart-firmware (= W15.44.19.p36-15.100.19.p36-C4X15657-r2.alex4)
+Recommends: emmy-w1-driver-tools-dev
+Source: file://SD-WLAN-UART-BT-8887-U16-MMC-W15.44.19.p36-15.100.19.p36-C4X15657_A2-GPL.zip;name=bundle file://LICENCE.Marvell file://mrvl-sd8887-sdiouart.conf file://load-emmy-uart.sh file://load-emmy-uart.service

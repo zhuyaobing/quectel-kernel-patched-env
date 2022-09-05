@@ -1,0 +1,553 @@
+#
+# For a description of the syntax of this configuration file,
+# see the Configure script.
+#
+
+#
+# Note: x86 minimum required processor is a 486, 386 is no longer supported!
+#
+
+config GENERIC_HWEIGHT
+	def_bool y
+
+config GENERIC_PTRACE
+	bool
+
+config GENERIC_SIGNAL
+	bool
+
+config GENERIC_TIME
+	def_bool y
+
+config MMU
+	bool
+	default y
+
+config UID16
+	bool
+	default y
+
+config ZONE_DMA
+	def_bool y
+
+config RWSEM_GENERIC_SPINLOCK
+	bool
+
+config RWSEM_XCHGADD_ALGORITHM
+	bool
+
+config GENERIC_CALIBRATE_DELAY
+	bool
+	default y
+
+config NEED_SG_DMA_LENGTH
+	bool
+
+config P4
+	bool
+	default y
+	select USE_GENERIC_SMP_HELPERS if SMP
+	select HAVE_GENERIC_HARDIRQS
+	select IRQ_NO_DISABLE
+	select HAVE_FUNCTION_TRACER
+	select GENERIC_IRQ_SHOW
+	select GENERIC_CLOCKEVENTS
+
+config HIGHMEM
+	bool
+	default n
+
+config DISCONTIGMEM
+	bool
+	default n
+
+menu "PikeOS Settings"
+
+config PIKEOS_PREFIX
+	string 'Path to PikeOS directory'
+	default "/opt/pikeos-3.4"
+
+config PIKEOS_DISABLE_VERSION_CHECK
+	bool "Disable PikeOS compile time version check"
+	help
+	  This option disables the PikeOS version check when compiling the
+	  kernel. The check makes sure that the PikeOS version is compatible
+	  and tested with this version of ELinOS.
+
+endmenu
+
+source "init/Kconfig"
+
+source "kernel/Kconfig.freezer"
+
+menu "Executable file formats"
+
+source "fs/Kconfig.binfmt"
+
+endmenu
+
+menu "Hardware setup"
+
+config P4_X86
+	bool
+	default n
+	select GENERIC_FIND_FIRST_BIT
+	select GENERIC_IOMAP
+	select GENERIC_PTRACE
+	select GENERIC_SIGNAL
+	select HAVE_DMA_ATTRS
+	select MODULES_USE_ELF_REL if X86_32
+	select MODULES_USE_ELF_RELA if X86_64
+	select NEED_SG_DMA_LENGTH
+	select OLD_SIGSUSPEND3 if X86_32
+	select OLD_SIGACTION if X86_32
+	select RWSEM_XCHGADD_ALGORITHM
+	select CLONE_BACKWARDS if X86_32
+
+config P4_PPC
+	bool
+	default n
+	select PPC
+	select PPC32
+	select RWSEM_XCHGADD_ALGORITHM
+
+config P4_ARM
+	bool
+	default n
+
+config P4_SUBARCH
+	string
+	default "x86" if P4_X86
+	default "ppc" if P4_PPC
+	default "arm" if P4_ARM
+
+choice
+	prompt "Processor type"
+	default P4_X86_I686
+
+config P4_X86_I386
+	bool "x86 486 (pre PikeOS 4.0)"
+	select P4_X86
+
+config P4_X86_I686
+	bool "x86 i686"
+	select P4_X86
+
+config P4_X86_AMD64
+	bool "x86 amd64"
+	select P4_X86
+	select 64BIT
+
+config P4_PPC_OEA
+	bool "PPC OEA"
+	select P4_PPC
+	select 6xx
+
+config P4_PPC_4xx
+	bool "PPC 4xx"
+	select P4_PPC
+	select 4xx
+
+config P4_PPC_SPE
+	bool "PPC e200/e500"
+	select P4_PPC
+	select BOOKE
+
+config P4_PPC_E500MC
+	bool "PPC e500mc"
+	select P4_PPC
+	select BOOKE
+
+config P4_ARM_V5
+	bool "ARM v5 (pre PikeOS 4.0)"
+	select P4_ARM
+
+config P4_ARM_V6
+	bool "ARM v6sf"
+	select P4_ARM
+
+config P4_ARM_V7
+	bool "ARM v7hf"
+	select P4_ARM
+	select CPU_V7
+
+endchoice
+
+source kernel/Kconfig.preempt
+
+config SMP
+	bool "Symmetric multi-processing support (EXPERIMENTAL)"
+	default n
+	help
+	  This option enables P4Linux SMP support.
+	  If you don't know what to do, say N.
+
+config NR_CPUS
+	int "Maximum number of CPUs (2-32)"
+	range 2 32
+	depends on SMP
+	default "32"
+
+config P4_TASK_FLUSH_TERMINATE
+	bool
+	default n
+
+config P4_FLUSH_CACHE_AT_BOOT
+	bool "Flush Linux kernel memory at boot"
+	depends on !P4_PPC
+	default y
+	help
+	  On PikeOS, contents of the RAM assigned to the Linux partition (kseg0)
+	  is not flushed from caches at Linux startup. This may lead to broken DMA
+	  transfers when a driver expects that caches were flushed by the
+	  Linux boot code. If you enable cache flushing at boot, the Linux kernel
+	  will flush its memory from the caches before initialization device
+	  drivers.
+	  If you don't know what to do, say Y.
+
+config P4_TASK_OVERCOMMIT
+	bool "Task overcommit"
+	default y
+	help
+	  This option enables task overcommit mode.
+	  Normally, the maximum number of user processes is limited to the number
+	  of PikeOS child tasks assigned to the Linux partition. If you enable
+	  task overcommit mode, the Linux kernel will assign processes to PikeOS
+	  tasks dynamically.
+	  If you don't know what to do, say Y.
+
+config P4_KMEM_FLUSH
+	bool "KMEM flushing"
+	depends on P4_TASK_OVERCOMMIT
+	default y
+	help
+	  This option enables flushing of PikeOS kernel memory.
+	  Before Linux runs out of KMEM (i.e. internal memory in the microkernel
+	  assigned to the Linux partition for page tables and threads),
+	  the Linux kernel to unmap the least used address spaces to free KMEM.
+	  If you don't know what to do, say Y.
+
+config P4_CHECK_PFN_MAPPINGS
+	bool "Check pfn mappings"
+	default n
+	help
+	  This option enables additional checkings for pfn mappings. It will make
+	  sure that drivers will use remap_pfn_range only on physical memory.
+	  A driver remapping I/O memory must call io_remap_pfn_range on PikeOS.
+
+	  NOTE: Due to some limitations it may be possible that a driver uses
+	  a virtual memory address for a file provider remap. This will generate
+	  a false BUG. In this case, please deactivate this option.
+
+	  If unsure, say N.
+
+if P4_X86
+	source "arch/p4/Kconfig.x86"
+endif
+
+if P4_PPC
+	source "arch/p4/Kconfig.ppc"
+endif
+
+if P4_ARM
+	source "arch/p4/Kconfig.arm"
+endif
+
+config 32BIT
+	bool
+
+config TRAD_SIGNALS
+	bool
+
+config SBUS
+	bool
+
+config ISA
+	bool 'ISA bus support'
+	depends on !P4_ARM
+	default n
+	help
+	  Enable this option if you want to use ISA devices on your target.
+	  There is only limited support for ISA devices on P4, you can't
+	  use ISA DMA transfers. Some hardware, like soundcards, depend on
+	  DMA transfers to fetch their data. Devices which don't depend
+	  on DMA might work.
+	  If you have ISA, say Y, otherwise N.
+
+config GENERIC_ISA_DMA
+	bool
+	default n
+
+config PCI
+	bool 'PCI bus support'
+	depends on !P4_ARM
+	default n
+	help
+	  If your target has PCI, say Y, otherwise N.
+
+choice
+    prompt "Choose bus type"
+    depends on PCI
+    default PCI_VIRT
+    help
+       This option allows to select the PCI bus type.
+
+config PCI_REAL
+    bool "Real"
+    help
+      This type of bus is in fact the default Linux behavior. If Y,
+      Linux will enumerate and discover PCI devices by scanning your
+      hardware going through all bridges.
+
+      NOTE: The Linux system needs access to all PCI registers and modifies
+      them on startup. When using the PCI bus in other partitions as well
+      please use the virtual bus type.
+
+config PCI_VIRT
+    bool "Virtual"
+    help
+       This type of bus uses PikeOS PCI manager. If Y, you will be
+       able to choose which PCI devices Linux will handle. Doing so,
+       Linux will only (re)configure previsouly selected devices in
+       the project configurator.
+
+endchoice
+
+config PCI_DIRECT
+	def_bool y && PCI
+
+# for PPC only
+config PCI_DOMAINS
+	bool
+	default PCI
+	depends on P4_PPC
+
+source "drivers/pci/pcie/Kconfig"
+
+source "drivers/pci/Kconfig"
+
+source "drivers/pcmcia/Kconfig"
+
+source "drivers/pci/hotplug/Kconfig"
+
+source mm/Kconfig
+
+source kernel/Kconfig.hz
+
+# Source BSP specific configuration
+source "arch/p4/bsp/Kconfig"
+
+endmenu
+
+
+source "arch/p4/drivers/Kconfig"
+
+
+# standard linux drivers
+
+menu "Power management options"
+
+source "kernel/power/Kconfig"
+
+config ARCH_SUSPEND_POSSIBLE
+	def_bool y
+
+config HOTPLUG_CPU
+	bool
+	depends on SMP
+	help
+	  Say Y here to allow turning CPUs off and on. CPUs can be
+	  controlled through /sys/devices/system/cpu.
+	  (Note: power management support will enable this option
+	    automatically on SMP systems. )
+	  Say N if you want to disable CPU hotplug.
+
+endmenu
+
+source "net/Kconfig"
+
+source "drivers/Kconfig"
+
+source "fs/Kconfig"
+
+source "security/Kconfig"
+
+source "crypto/Kconfig"
+
+source "lib/Kconfig"
+
+
+
+# Love it!
+
+menu "Kernel hacking"
+
+config TRACE_IRQFLAGS_SUPPORT
+	def_bool y
+
+source "lib/Kconfig.debug"
+
+config DEBUG_KMEM
+	bool "Debug KMEM usage / shortages"
+	depends on DEBUG_KERNEL
+	default n
+	help
+	  Setting this option enables debug information on kernel memory
+	  allocation in the microkernel. If the microkernel runs out of
+	  pages, creating new kernel objects like tasks and threads fail.
+	  You will see messages on the PikeOS boot console about short
+	  kernel memory.
+
+	  If you really want to see debug messages of the kernel, say Y, otherwise N.
+
+config DEBUG_IOREMAP
+	bool "Debug ioremap() calls"
+	depends on DEBUG_KERNEL
+	default n
+	help
+	  Setting this option enables debug information on all ioremap(),
+	  phys_to_virt() and virt_to_phys() calls.
+	  Messages are printed with KERN_DEBUG on the kernel console.
+
+	  If you really want to see debug messages of the kernel, say Y, otherwise N.
+
+config INITIAL_BRKPT
+	bool "Initial breakpoint at startup"
+	depends on DEBUG_KERNEL
+	default n
+	help
+	  Setting this option enables a breakpoint at kernel startup
+	  time. You can then use an external debugger to set further
+	  breakpoints or debug the kernel startup code.
+
+	  If you really, really want to debug the kernel, say Y, otherwise N.
+
+config SHOW_KERNEL_EXCEPTIONS
+	bool "Show handled exceptions raised by the kernel itself"
+	depends on DEBUG_KERNEL
+	default n
+	help
+	  Setting this option shows handled exceptions raised by the kernel itself.
+	  This includes exceptions successfully handled by the kernel as well.
+
+	  If you really want to see debug messages of the kernel, say Y, otherwise N.
+
+config SHOW_USER_EXCEPTIONS
+	bool "Show exceptions raised by a user application"
+	depends on DEBUG_KERNEL
+	default n
+	help
+	  Setting this option shows exceptions raised by an application which
+	  cannot be handled by the kernel.
+
+	  If you really want to see debug messages of the kernel, say Y, otherwise N.
+
+config SHOW_USER_EXCEPTIONS_ALL
+	bool "Show handled exceptions raised by a user application"
+	depends on SHOW_USER_EXCEPTIONS
+	default n
+	help
+	  Setting this option shows handled exceptions raised by an application.
+	  This includes page fault successfully handled by the kernel as well.
+
+	  If you really want to see debug messages of the kernel, say Y, otherwise N.
+
+config BUILTIN_TEST
+	bool "Builtin tests"
+	depends on DEBUG_KERNEL
+	default n
+	help
+	  Setting this option performs some builtin tests at startup.
+
+config EARLY_PRINTK
+	bool "Early printk on PikeOS system console"
+	default y
+	help
+	  This enables support for printk()s on the PikeOS boot console.
+	  If you enable this, you should also pass the following
+	  commandline to the kernel:
+
+	  earlyprintk
+
+	  This is useful for kernel debugging when your machine crashes very
+	  early before the console code is initialized.
+
+if P4_X86
+
+#
+# IO delay types:
+#
+
+config IO_DELAY_TYPE_0X80
+	int
+	default "0"
+
+config IO_DELAY_TYPE_0XED
+	int
+	default "1"
+
+config IO_DELAY_TYPE_UDELAY
+	int
+	default "2"
+
+config IO_DELAY_TYPE_NONE
+	int
+	default "3"
+
+choice
+	prompt "IO delay type"
+	default IO_DELAY_0X80
+
+config IO_DELAY_0X80
+	bool "port 0x80 based port-IO delay [recommended]"
+	---help---
+	  This is the traditional Linux IO delay used for in/out_p.
+	  It is the most tested hence safest selection here.
+
+config IO_DELAY_0XED
+	bool "port 0xed based port-IO delay"
+	---help---
+	  Use port 0xed as the IO delay. This frees up port 0x80 which is
+	  often used as a hardware-debug port.
+
+config IO_DELAY_UDELAY
+	bool "udelay based port-IO delay"
+	---help---
+	  Use udelay(2) as the IO delay method. This provides the delay
+	  while not having any side-effect on the IO port space.
+
+config IO_DELAY_NONE
+	bool "no port-IO delay"
+	---help---
+	  No port-IO delay. Will break on old boxes that require port-IO
+	  delay for certain operations. Should work on most new machines.
+
+endchoice
+
+if IO_DELAY_0X80
+config DEFAULT_IO_DELAY_TYPE
+	int
+	default IO_DELAY_TYPE_0X80
+endif
+
+if IO_DELAY_0XED
+config DEFAULT_IO_DELAY_TYPE
+	int
+	default IO_DELAY_TYPE_0XED
+endif
+
+if IO_DELAY_UDELAY
+config DEFAULT_IO_DELAY_TYPE
+	int
+	default IO_DELAY_TYPE_UDELAY
+endif
+
+if IO_DELAY_NONE
+config DEFAULT_IO_DELAY_TYPE
+	int
+	default IO_DELAY_TYPE_NONE
+endif
+
+endif
+
+endmenu

@@ -1,0 +1,15 @@
+Package: gawk-common
+Version: 3.1.5-r2
+Description: GNU awk text processing utility
+ The GNU version of awk, a text processing utility. Awk interprets a
+ special-purpose programming language to do quick and easy text pattern
+ matching and reformatting jobs.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: gawk
+Homepage: www.gnu.org/software/gawk
+Depends: libc6 (>= 2.22)
+Source: http://ftp.gnu.org/gnu/gawk/gawk-3.1.5.tar.gz file://gawk-3.1.5_fix_for_automake-1.12.patch

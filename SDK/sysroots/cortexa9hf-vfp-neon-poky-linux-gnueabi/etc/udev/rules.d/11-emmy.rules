@@ -1,0 +1,1 @@
+ACTION=="ADD", KERNEL=="ttymxc2", SUBSYSTEM=="tty", TAG+="systemd"

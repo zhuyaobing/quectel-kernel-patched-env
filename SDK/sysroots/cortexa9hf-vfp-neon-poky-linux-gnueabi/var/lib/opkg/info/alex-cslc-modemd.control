@@ -1,0 +1,12 @@
+Package: alex-cslc-modemd
+Version: 13.1.0-r0
+Description: Control the modem hardware
+ Controls the modem on an alexandra board
+Section: system
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-modemd
+Depends: libgcc1 (>= 4.9.3), protobuf (>= 2.6.1+git0+bba83652e1), libc6 (>= 2.22), ppp-chat, libstdc++6 (>= 4.9.3), alex-cslc-ecuvarc, sre-systemd-target, libmosquittopp1 (>= 1.5.10), sre-lapi (>= 13.3.0-2-g7c58342)
+Source: None

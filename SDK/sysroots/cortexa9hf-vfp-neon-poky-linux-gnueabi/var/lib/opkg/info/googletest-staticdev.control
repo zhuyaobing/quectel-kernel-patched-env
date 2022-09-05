@@ -1,0 +1,14 @@
+Package: googletest-staticdev
+Version: 1.8.1-r0
+Description: googletest version 1.8.1-r0 - Development files (Static Libraries)
+ Google's framework for writing C++ tests  This package contains static
+ libraries for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-3-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: googletest
+Homepage: https://github.com/google/googletest
+Depends: googletest-dev (= 1.8.1-r0)
+Source: http://euartif01.stoneridge.com:8081/artifactory/sre-ext-src-mirror-local/com/stoneridge/src-mirror/alex/tarballs/2.2.0/googletest-release-1.8.1.zip

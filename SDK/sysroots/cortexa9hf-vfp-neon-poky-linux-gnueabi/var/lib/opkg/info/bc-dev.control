@@ -1,0 +1,16 @@
+Package: bc-dev
+Version: 1.06-r3
+Description: Arbitrary precision calculator language - Development files
+ Arbitrary precision calculator language.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: bc
+Homepage: http://www.gnu.org/software/bc/bc.html
+Depends: bc (= 1.06-r3)
+Recommends: libc6-dev, update-alternatives-opkg-dev, flex-dev
+Source: http://ftp.gnu.org/gnu/bc/bc-1.06.tar.gz file://fix-segment-fault.patch

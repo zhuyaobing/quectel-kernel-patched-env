@@ -1,0 +1,2 @@
+/lib/systemd/system/ecuvard.service
+/usr/bin/ecuvard

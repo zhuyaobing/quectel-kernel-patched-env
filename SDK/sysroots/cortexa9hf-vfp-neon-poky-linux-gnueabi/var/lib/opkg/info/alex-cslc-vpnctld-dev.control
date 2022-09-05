@@ -1,0 +1,15 @@
+Package: alex-cslc-vpnctld-dev
+Version: 13.1.0-r0
+Description: VPN Control Daemon Utility - Development files
+ Recipe for the VPN Control Daemon, reposible for check of VPN
+ Connectivity and exchange of keys  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-vpnctld
+Depends: alex-cslc-vpnctld (= 13.1.0-r0)
+Recommends: sre-lapi-dev, libgcc-s-dev, libstdc++-dev, alex-malc-cert-dev, libcslccrypto-dev, libc6-dev, protobuf-dev, sre-systemd-target-dev
+Source: None

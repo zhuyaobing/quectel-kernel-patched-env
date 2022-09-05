@@ -1,0 +1,16 @@
+Package: libsre-shared-dbg
+Version: 1.0.0-r1
+Description: SRE Linux API proprietary parts - Debugging files
+ This recipe checks out a deifined revision of the sre shared code. There
+ is another recipe in the sre-platform layer that uses the resulting
+ binaries from this one  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-shared
+Recommends: libc6-dbg, libstdc++-dbg, libgcc-s-dbg
+Provides: sre-shared-dbg
+Source: None

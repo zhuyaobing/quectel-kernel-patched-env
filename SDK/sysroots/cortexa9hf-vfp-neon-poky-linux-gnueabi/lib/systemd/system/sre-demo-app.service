@@ -1,0 +1,13 @@
+[Unit]
+Description=The Alexandra MQTT Test App
+After=network.target mosquitto.service ipcd.service
+Requires=mosquitto.service ipcd.service
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/sre-demo-app
+Restart=on-failure
+
+[Install]
+WantedBy=alex.target
+

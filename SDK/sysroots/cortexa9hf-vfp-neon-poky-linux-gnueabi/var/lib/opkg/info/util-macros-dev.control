@@ -1,0 +1,14 @@
+Package: util-macros-dev
+Version: 1:1.19.0-r0
+Description: X autotools macros - Development files
+ M4 autotools macros used by various X.org programs.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: util-macros
+Homepage: http://www.x.org
+Source: http://xorg.freedesktop.org/releases/individual/util/util-macros-1.19.0.tar.gz

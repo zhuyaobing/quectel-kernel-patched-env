@@ -1,0 +1,12 @@
+Package: alex-cslc-modemd-conf
+Version: 13.1.0-r0
+Description: Control the modem hardware
+ Controls the modem on an alexandra board
+Section: system
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-modemd
+Depends: alex-cslc-modemd
+Source: None

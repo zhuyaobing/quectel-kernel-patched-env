@@ -1,0 +1,7 @@
+#!/bin/sh
+	update-alternatives --remove  passwd /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/passwd.shadow
+	update-alternatives --remove  chfn /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/chfn.shadow
+	update-alternatives --remove  chsh /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/chsh.shadow
+	update-alternatives --remove  chpasswd /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/chpasswd.shadow
+	update-alternatives --remove  vipw /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/sbin/vipw.shadow
+	update-alternatives --remove  vigr /home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/sbin/vigr.shadow

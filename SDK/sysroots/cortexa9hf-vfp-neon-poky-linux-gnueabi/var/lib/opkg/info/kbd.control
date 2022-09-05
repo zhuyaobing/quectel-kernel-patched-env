@@ -1,0 +1,15 @@
+Package: kbd
+Version: 2.0.2-r0
+Description: Keytable files and keyboard utilities
+ Keytable files and keyboard utilities.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: kbd
+Depends: update-alternatives-opkg, libc6 (>= 2.22)
+Provides: console-tools
+Replaces: console-tools
+Conflicts: console-tools
+Source: http://kernel.org/pub/linux/utils/kbd/kbd-2.0.2.tar.xz file://uclibc-stdarg.patch file://0003-Only-inluclude-kernel-headers-with-glibc.patch

@@ -1,0 +1,15 @@
+Package: systemd-compat-units-dev
+Version: 1.0-r29
+Description: Enhances systemd compatilibity with existing SysVinit scripts - Development files
+ Enhances systemd compatilibity with existing SysVinit scripts.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: systemd-compat-units
+Depends: systemd-compat-units (= 1.0-r29)
+Recommends: systemd-dev
+Source: None

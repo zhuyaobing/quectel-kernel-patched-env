@@ -1,0 +1,15 @@
+Package: base-passwd-dbg
+Version: 3.5.29-r0
+Description: Base system master password/group files - Debugging files
+ The master copies of the user database files (/etc/passwd and
+ /etc/group).  The update-passwd tool is also provided to keep the system
+ databases synchronized with these master files.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: base-passwd
+Recommends: libc6-dbg
+Source: https://launchpad.net/debian/+archive/primary/+files/base-passwd_3.5.29.tar.gz file://add_shutdown.patch file://nobash.patch file://noshadow.patch file://input.patch file://disable-docs.patch

@@ -1,0 +1,13 @@
+Package: alex-malc-systime-dbg
+Version: 13.3.0-r0r1
+Description: Alexandra System Time Daemon - Debugging files
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-systime
+Recommends: libmosquittopp1-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libc6-dbg, libstdc++-dbg
+Source: file://systimemgr-tpa.conf

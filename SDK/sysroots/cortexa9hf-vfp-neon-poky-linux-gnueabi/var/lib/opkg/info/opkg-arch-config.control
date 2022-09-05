@@ -1,0 +1,14 @@
+Package: opkg-arch-config
+Version: 1.0-r1
+Description: Architecture-dependent configuration for opkg
+ Architecture-dependent configuration for opkg.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: opkg-arch-config
+Provides: opkg-config-base
+Replaces: opkg-config-base
+Conflicts: opkg-config-base
+Source: None

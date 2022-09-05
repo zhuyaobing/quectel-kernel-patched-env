@@ -1,0 +1,15 @@
+Package: sre-check-eth-interface-dev
+Version: 1.0-r0
+Description: Check status of eth interface - Development files
+ Checks status of Ethernet interface and reports it to CSP.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-check-eth-interface
+Depends: sre-check-eth-interface (= 1.0-r0)
+Recommends: alex-cslc-mqttsender-dev
+Source: file://check_eth_interface.service file://check_eth_interface.sh

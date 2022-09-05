@@ -1,0 +1,15 @@
+Package: sre-check-ethernet-link-status-dev
+Version: 1.0-r0
+Description: Check status of Ethernet link - Development files
+ Checks link status of Ethernet interface and reports it to CSP.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-check-ethernet-link-status
+Depends: sre-check-ethernet-link-status (= 1.0-r0)
+Recommends: alex-cslc-mqttsender-dev, alex-cslc-ecuvarc-dev
+Source: file://check_ethernet_link_status.service file://check_ethernet_link_status.sh

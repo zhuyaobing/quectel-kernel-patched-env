@@ -1,0 +1,12 @@
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/lib/systemd/
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/opkg/intercept/update-modules
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/etc/opkg/
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/etc/opkg/opkg.conf
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/lib/systemd/system/opkg-configure.service
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-check-config
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/lib/systemd/system/
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/opkg/
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/opkg/intercept/
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/opkg/intercept/ldconfig
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/opkg/intercept/depmod

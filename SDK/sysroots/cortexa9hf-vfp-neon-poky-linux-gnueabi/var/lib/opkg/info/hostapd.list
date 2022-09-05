@@ -1,0 +1,4 @@
+/usr/sbin/hostapd
+/lib/systemd/system/hostapd.service
+/usr/sbin/hostapd_cli
+/etc/hostapd.conf

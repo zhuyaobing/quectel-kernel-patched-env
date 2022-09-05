@@ -1,0 +1,14 @@
+Package: sre-iomanager-dbg
+Version: 1.0.0-r2
+Description: SRE Linux API proprietary parts - Debugging files
+ This recipe checks out and builds a deifined revision of the sre
+ iomanager code.  This package contains ELF symbols and related sources
+ for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-iomanager
+Recommends: boost-thread-dbg, boost-system-dbg, libstdc++-dbg, libgcc-s-dbg, dbus-lib-dbg, libsre-shared-dbg, libc6-dbg
+Source: None

@@ -1,0 +1,12 @@
+[Unit]
+Description=EMMY-W1 (SDIO_UART) driver bootstrap loader
+After=reset_wifi.service
+Wants=reset_wifi.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/load-emmy-uart.sh
+
+[Install]
+WantedBy=network.target
+

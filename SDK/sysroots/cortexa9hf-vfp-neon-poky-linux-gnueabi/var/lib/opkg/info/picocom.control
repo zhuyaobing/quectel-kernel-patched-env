@@ -1,0 +1,13 @@
+Package: picocom
+Version: 1.7-r0
+Description: Lightweight and minimal (~20K) dumb-terminal emulation program
+ Lightweight and minimal (~20K) dumb-terminal emulation program.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: picocom
+Homepage: http://code.google.com/p/picocom/
+Depends: libc6 (>= 2.22)
+Source: http://picocom.googlecode.com/files/picocom-1.7.tar.gz

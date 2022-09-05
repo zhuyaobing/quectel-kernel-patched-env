@@ -1,0 +1,13 @@
+Package: bash
+Version: 3.2.48-r11
+Description: An sh-compatible command language interpreter
+ An sh-compatible command language interpreter.
+Section: base/shell
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: bash
+Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
+Depends: update-alternatives-opkg, libc6 (>= 2.22), libtinfo5 (>= 5.9), base-files
+Source: http://ftp.gnu.org/gnu/bash/bash-3.2.48.tar.gz;name=tarball http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-049;apply=yes;striplevel=0;name=patch049 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-050;apply=yes;striplevel=0;name=patch050 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-051;apply=yes;striplevel=0;name=patch051 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-052;apply=yes;striplevel=0;name=patch052 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-053;apply=yes;striplevel=0;name=patch053 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-054;apply=yes;striplevel=0;name=patch054 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-055;apply=yes;striplevel=0;name=patch055 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-056;apply=yes;striplevel=0;name=patch056 http://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-057;apply=yes;striplevel=0;name=patch057 file://mkbuiltins_have_stringize.patch file://build-tests.patch file://test-output.patch file://run-ptest file://dont-include-target-CFLAGS-in-host-LDFLAGS.patch

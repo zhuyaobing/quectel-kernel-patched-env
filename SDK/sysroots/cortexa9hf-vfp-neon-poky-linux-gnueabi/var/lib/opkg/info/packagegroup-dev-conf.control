@@ -1,0 +1,12 @@
+Package: packagegroup-dev-conf
+Version: 1.0-r2
+Description: Software specific to Alexandra project, VCM or TBM, debug variants
+ Software specific to Alexandra project, VCM or TBM, debug variants.
+Section: console
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-dev-conf
+Depends: alex-cslc-devtools, ca-certificates
+Source: None

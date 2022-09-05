@@ -1,0 +1,2 @@
+#!/bin/sh
+	update-alternatives --remove  fsck /sbin/fsck.util-linux

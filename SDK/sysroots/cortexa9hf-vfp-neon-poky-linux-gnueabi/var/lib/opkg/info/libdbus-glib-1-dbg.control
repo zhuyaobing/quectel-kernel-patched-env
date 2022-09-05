@@ -1,0 +1,16 @@
+Package: libdbus-glib-1-dbg
+Version: 0.104-r0
+Description: High level language (GLib) binding for D-Bus - Debugging files
+ GLib bindings for the D-Bus message bus that integrate the D-Bus library
+ with the GLib thread abstraction and main loop.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: AFL-2 | GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: dbus-glib
+Homepage: http://www.freedesktop.org/Software/dbus
+Recommends: libexpat-dbg, libglib-2.0-dbg, dbus-lib-dbg, libz-dbg, libffi-dbg, libc6-dbg
+Provides: dbus-glib-dbg
+Source: http://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.104.tar.gz file://no-examples.patch file://test-install-makefile.patch

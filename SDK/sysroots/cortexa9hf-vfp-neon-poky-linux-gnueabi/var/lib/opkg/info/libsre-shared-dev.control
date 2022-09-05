@@ -1,0 +1,17 @@
+Package: libsre-shared-dev
+Version: 1.0.0-r1
+Description: SRE Linux API proprietary parts - Development files
+ This recipe checks out a deifined revision of the sre shared code. There
+ is another recipe in the sre-platform layer that uses the resulting
+ binaries from this one  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-shared
+Depends: libsre-shared0 (= 1.0.0-r1)
+Recommends: libgcc-s-dev, boost-dev, libstdc++-dev, libc6-dev, crpcut-dev, dbus-dev
+Provides: sre-shared-dev
+Source: None

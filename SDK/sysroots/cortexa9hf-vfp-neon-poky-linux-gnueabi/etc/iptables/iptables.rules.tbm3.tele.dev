@@ -1,0 +1,26 @@
+*nat
+:PREROUTING ACCEPT [0:0]
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:POSTROUTING ACCEPT [0:0]
+-4 -A POSTROUTING -o usb0 -j MASQUERADE
+COMMIT
+*filter
+:INPUT DROP [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:NFS - [0:0]
+:DEV - [0:0]
+-A INPUT -i lo -j ACCEPT
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-4 -A INPUT -i ethint -s 10.6.0.2 -p tcp -m multiport --dport 111,2049,33206,52656 -j NFS
+-4 -A INPUT -i ethint -s 10.6.0.2 -p udp -m multiport --dport 111,2049,33206,52656 -j NFS
+-4 -A INPUT -i ethext.vcm -s 192.168.1.103 -p udp --dport 51820 -j ACCEPT
+-4 -A INPUT -i ethvpn.vcm -s 192.168.2.2 -j ACCEPT
+-6 -A INPUT -p ipv6-icmp -j ACCEPT
+-A INPUT -p tcp -m multiport --dport 22,1883 -j DEV
+-A INPUT -p udp -m multiport --dport 53,67 -j DEV
+-A INPUT -m limit --limit 5/min -j LOG --log-prefix "iptables blocked: "
+-A NFS -j ACCEPT
+-A DEV -j ACCEPT
+COMMIT

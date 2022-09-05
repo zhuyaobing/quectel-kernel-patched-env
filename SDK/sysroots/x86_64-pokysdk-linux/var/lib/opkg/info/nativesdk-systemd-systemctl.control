@@ -1,0 +1,11 @@
+Package: nativesdk-systemd-systemctl
+Version: 1.0-r0
+Description: Wrapper for enabling systemd services in native SDK
+ Wrapper for enabling systemd services in native SDK.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: x86_64-nativesdk
+OE: nativesdk-systemd-systemctl
+Source: file://systemctl file://0001-nativesdk-systemd-systemctl-opkg-post-install-env.patch

@@ -1,0 +1,5 @@
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/postinst-intercepts/postinst_intercept
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/postinst-intercepts/update_pixbuf_cache
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/postinst-intercepts/update_icon_cache
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/postinst-intercepts/update_font_cache
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/share/postinst-intercepts/

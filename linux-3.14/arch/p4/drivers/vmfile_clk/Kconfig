@@ -1,0 +1,14 @@
+config P4VM_CLOCK_TREE
+	bool "PikeOS clock tree virtualization"
+	depends on COMMON_CLK
+	depends on P4_BSP_ARCH_MXC
+	default n
+	help
+	  Say Y here, if you want to use clock tree virtualization.
+
+	  Guest calls to manipulate the clocks are rerouted to a single server
+	  driver, which has exclusive access to the hardware clock tree. The
+	  server driver performs a permission check and, if allowed, forwards
+	  the call to the real clock.
+
+	  Note: Depends on the clock virtualization driver of PikeOS.

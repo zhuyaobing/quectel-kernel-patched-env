@@ -1,0 +1,14 @@
+Package: libxkbcommon
+Version: 0.5.0-r0
+Description: Generic XKB keymap library
+ libxkbcommon is a keymap compiler and support library which processes a
+ reduced subset of keymaps as defined by the XKB specification.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: libxkbcommon
+Homepage: http://www.xkbcommon.org
+Depends: libxdmcp6 (>= 1.1.2), libxcb-xkb1 (>= 1.11), libxau6 (>= 1.0.8), libxcb1 (>= 1.11), libc6 (>= 2.22)
+Source: http://xkbcommon.org/download/libxkbcommon-0.5.0.tar.xz

@@ -1,0 +1,14 @@
+Package: alex-cslc-devtools-dev
+Version: 13.3.0-r0
+Description: Development and sysver tools - Development files
+ Recipe to build devtools.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-devtools
+Depends: alex-cslc-devtools (= 13.3.0-r0)
+Recommends: websocketpp-dev, libmosquittopp1-dev, sre-lapi-dev, libgcc-s-dev, libcurl-dev, libc6-dev, mosquitto-dev, libmanproto-dev, libstdc++-dev, alex-malc-cert-dev, libcslccrypto-dev, sre-ipcd-dev, systemd-dev, bash-dev, libjsoncpp-dev, protobuf-dev, alex-cslc-ecuvarc-dev
+Source: None

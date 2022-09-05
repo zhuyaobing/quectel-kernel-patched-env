@@ -1,0 +1,13 @@
+Package: libical
+Version: 1.0.0-r0
+Description: iCal and scheduling (RFC 2445, 2446, 2447) library
+ iCal and scheduling (RFC 2445, 2446, 2447) library.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1 | MPL-1
+Architecture: cortexa9hf-vfp-neon
+OE: libical
+Homepage: https://github.com/libical/libical
+Depends: libc6 (>= 2.22)
+Source: https://github.com/libical/libical/archive/v1.0.0.tar.gz

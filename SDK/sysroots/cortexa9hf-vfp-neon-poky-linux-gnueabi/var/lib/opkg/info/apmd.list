@@ -1,0 +1,12 @@
+/etc/apm/scripts.d/
+/etc/default/apmd
+/etc/apm/other.d/
+/etc/apm/suspend.d/
+/etc/apm/event.d/
+/usr/share/apmd/apmd_proxy.conf
+/usr/share/apmd/
+/usr/sbin/apmd
+/etc/apm/resume.d/
+/etc/apm/apmd_proxy
+/etc/apm/
+/lib/systemd/system/apmd.service

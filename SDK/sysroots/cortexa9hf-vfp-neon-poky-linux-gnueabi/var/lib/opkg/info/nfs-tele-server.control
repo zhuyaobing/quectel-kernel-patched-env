@@ -1,0 +1,11 @@
+Package: nfs-tele-server
+Version: 1.0-r0
+Description: Configure NFS server
+ Configure NFS server on telematics partition
+Section: networking
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: nfs-tele-server
+Source: file://exports

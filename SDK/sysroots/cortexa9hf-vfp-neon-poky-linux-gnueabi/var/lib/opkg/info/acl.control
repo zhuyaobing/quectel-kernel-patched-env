@@ -1,0 +1,13 @@
+Package: acl
+Version: 2.2.52-r0
+Description: Utilities for managing POSIX Access Control Lists
+ Utilities for managing POSIX Access Control Lists.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: acl
+Homepage: http://savannah.nongnu.org/projects/acl/
+Depends: libacl1 (>= 2.2.52), libc6 (>= 2.22)
+Source: http://download.savannah.gnu.org/releases/acl/acl-2.2.52.src.tar.gz file://run-ptest file://acl-fix-the-order-of-expected-output-of-getfacl.patch file://relative-libdir.patch;striplevel=0 file://add-missing-configure.ac.patch

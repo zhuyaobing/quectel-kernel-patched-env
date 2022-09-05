@@ -1,0 +1,13 @@
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-build
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-buildpackage
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-show-deps
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-compare-versions
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg.py
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-list-fields
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-compare-indexes
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/arfile.py
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-diff
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-make-index
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-extract-file
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-compare-versions.sh
+/home/yaobing/imx6_af20_20220829/alex-kernel-patched-env/SDK/sysroots/x86_64-pokysdk-linux/usr/bin/opkg-unbuild

@@ -1,0 +1,17 @@
+Package: libx11-dev
+Version: 1:1.6.3-r0
+Description: Xlib: C Language X Interface library - Development files
+ This package provides a client interface to the X Window System,
+ otherwise known as 'Xlib'.  It provides a complete API for the basic
+ functions of the window system.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libx11
+Homepage: http://www.x.org
+Depends: libx11-6 (= 1:1.6.3-r0), libx11-xcb1
+Recommends: libx11-xcb-dev, xtrans-dev, libxcb-dev, libxau-dev, xproto-dev, libc6-dev, libxdmcp-dev, inputproto-dev, xextproto-dev, kbproto-dev, util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/lib/libX11-1.6.3.tar.bz2 file://disable_tests.patch file://libX11-Add-missing-NULL-check.patch

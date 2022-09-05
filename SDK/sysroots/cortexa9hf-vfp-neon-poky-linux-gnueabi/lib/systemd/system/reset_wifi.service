@@ -1,0 +1,12 @@
+[Unit]
+Description=Reset WiFi
+DefaultDependencies=no
+After=dev-ttymxc2.device sysinit.target
+Wants=dev-ttymxc2.device sysinit.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/reset_wifi.sh
+
+[Install]
+WantedBy=sysinit.target

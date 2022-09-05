@@ -1,0 +1,8 @@
+/usr/include/mosquitto_broker.h
+/usr/include/mosquitto.h
+/usr/include/mosquittopp.h
+/usr/lib/libmosquittopp.so
+/usr/include/mosquitto_plugin.h
+/usr/lib/pkgconfig/libmosquitto.pc
+/usr/lib/pkgconfig/libmosquittopp.pc
+/usr/lib/libmosquitto.so

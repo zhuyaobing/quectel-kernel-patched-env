@@ -1,0 +1,13 @@
+Package: libmanproto1
+Version: 3.0.0-r0
+Description: The MCP protobuf library
+ Recipe for building the MAN protobuf library
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-mlapi
+Depends: libgcc1 (>= 4.9.3), sre-lapi, libstdc++6 (>= 4.9.3), protobuf, libc6 (>= 2.22)
+Provides: alex-malc-mlapi
+Source: None

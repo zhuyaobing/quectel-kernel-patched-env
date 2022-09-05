@@ -1,0 +1,13 @@
+Package: fsl-alsa-plugins-dbg
+Version: 1.0.25-r0
+Description: fsl-alsa-plugins version 1.0.25-r0 - Debugging files
+ Freescale alsa-lib plugins  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: alexandra
+OE: fsl-alsa-plugins
+Recommends: libc6-dbg, libasound-dbg
+Source: http://www.freescale.com/lgfiles/NMG/MAD/YOCTO//fsl-alsa-plugins-1.0.25.tar.gz file://0001-asrc_pair-update-output-buffer-size.patch

@@ -1,0 +1,2 @@
+# Force is used to overwrite the default mosquitto.conf
+    ln -s -f mosquitto-tbm3-tele.conf $D/etc/mosquitto/mosquitto.conf

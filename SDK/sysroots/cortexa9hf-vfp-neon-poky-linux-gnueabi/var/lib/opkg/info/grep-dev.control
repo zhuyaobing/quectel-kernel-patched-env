@@ -1,0 +1,16 @@
+Package: grep-dev
+Version: 2.5.1a-r2
+Description: Pattern matching utilities - Development files
+ The GNU versions of commonly used grep utilities.  The grep command
+ searches one or more input files for lines containing a match to a
+ specified pattern.  This package contains symbolic links, header files,
+ and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: grep
+Depends: grep (= 2.5.1a-r2)
+Recommends: libc6-dev, update-alternatives-opkg-dev
+Source: http://ftp.gnu.org/gnu/grep/grep-2.5.1a.tar.bz2 file://uclibc-fix.patch file://grep_fix_for_automake-1.12.patch file://gettext.patch file://fix64-int-to-pointer.patch file://Makevars file://grep-CVE-2012-5667.patch file://fix-for-texinfo-5.1.patch file://grep-egrep-fgrep-Fix-LSB-NG-cases.patch

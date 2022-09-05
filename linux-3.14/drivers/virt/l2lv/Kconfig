@@ -1,0 +1,86 @@
+menu "Linux-2-linux virtualization"
+
+
+# Virtual drivers specific configuration
+
+choice
+	prompt "L2LV Role"
+	default L2LV_CLIENT
+	depends on L2LV
+	---help---
+	  Selects, whether the shared driver implements the client or the
+	  server interface.
+
+config L2LV_CLIENT
+	bool "L2LV Client"
+	depends on L2LV
+	---help---
+	  Use a shared driver from another partition.
+
+config L2LV_SERVER
+	bool "L2LV Server"
+	depends on L2LV
+	---help---
+	  Provide a shared driver that is used by other partitions.
+
+endchoice
+
+config L2LV_TEST
+	bool "l2lv_test"
+	---help---
+	  Enables test message for testing the l2lv.
+
+config L2LV_DEBUG
+	bool "l2lv_debug"
+	---help---
+	  Enables debug messages in the l2lv code.
+
+config L2LV_TEST_DRV
+	bool "l2lv_test_drv"
+	depends on L2LV
+	---help---
+	  Enables the l2lv test drivers.
+
+config L2LV_TEST_SERVER
+	bool "test_server"
+	depends on L2LV_SERVER && L2LV_TEST_DRV
+	---help---
+	  Provide a server for l2lv test device.
+
+config L2LV_TEST_CLIENT
+	bool "test_client"
+	depends on L2LV_CLIENT && L2LV_TEST_DRV
+	---help---
+	  Provide a client for l2lv test device.
+
+config L2LV_VBD
+	tristate "Enable virtual block device (client)"
+	default n
+	depends on L2LV_CLIENT
+	---help---
+	  WARNING: This driver is not yet fully functional
+
+	  This is a L2LV virtual block device. It needs proper configuration
+	  and a corresponding L2LV block device server.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called vbd.
+
+	  If unsure, say N.
+
+config L2LV_VBD_SERVER
+        tristate "Enable virtual block device (server)"
+        default n
+        depends on L2LV_SERVER
+        ---help---
+          WARNING: This driver is not yet fully functional
+
+          This is a L2LV virtual block device. It needs proper configuration
+          and a corresponding L2LV block device server.
+
+          To compile this driver as a module, choose M here: the
+          module will be called vbd.
+
+          If unsure, say N.
+
+endmenu

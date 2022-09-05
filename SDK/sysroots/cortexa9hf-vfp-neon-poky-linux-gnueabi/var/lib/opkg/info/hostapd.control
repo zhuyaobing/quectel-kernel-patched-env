@@ -1,0 +1,13 @@
+Package: hostapd
+Version: 2.4-r0.alex1
+Description: User space daemon for extended IEEE 802.11 management
+ User space daemon for extended IEEE 802.11 management.
+Section: kernel/userland
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 | BSD
+Architecture: cortexa9hf-vfp-neon
+OE: hostapd
+Homepage: http://hostap.epitest.fi
+Depends: libssl1.0.0 (>= 1.0.2h), libc6 (>= 2.22), libnl-3-200 (>= 3.2.25), libnl-3-genl (>= 3.2.25), libcrypto1.0.0 (>= 1.0.2h)
+Source: http://hostap.epitest.fi/releases/hostapd-2.4.tar.gz file://defconfig file://init file://hostapd.service file://systemd-service-restart.patch;patchdir=/data/jenkins/workspace/alex-platform_CI_master/build/tmp/work/cortexa9hf-vfp-neon-poky-linux-gnueabi/hostapd/2.4-r0.alex1

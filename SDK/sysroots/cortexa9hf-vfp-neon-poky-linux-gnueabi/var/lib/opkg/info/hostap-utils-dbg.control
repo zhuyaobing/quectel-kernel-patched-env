@@ -1,0 +1,16 @@
+Package: hostap-utils-dbg
+Version: 0.4.7-r4
+Description: User mode helpers for the hostap driver - Debugging files
+ The hostap driver supports Host AP mode, it allows for IEEE 802.11
+ management functions on the host computer and allows the system to act as
+ an access point.  This package contains ELF symbols and related sources
+ for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: hostap-utils
+Homepage: http://hostap.epitest.fi
+Recommends: libc6-dbg
+Source: http://hostap.epitest.fi/releases/hostap-utils-0.4.7.tar.gz file://hostap-fw-load.patch file://0001-Define-_u32-__s32-__u16-__s16-__u8-in-terms-of-c99-t.patch file://ldflags.patch

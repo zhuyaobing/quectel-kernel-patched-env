@@ -1,0 +1,15 @@
+Package: iw
+Version: 4.1-r0
+Description: nl80211 based CLI configuration utility for wireless devices
+ iw is a new nl80211 based CLI configuration utility for wireless devices.
+ It supports almost all new drivers that have been added to the kernel
+ recently.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: iw
+Homepage: http://wireless.kernel.org/en/users/Documentation/iw
+Depends: libnl-3-200 (>= 3.2.25), libnl-3-genl (>= 3.2.25), libc6 (>= 2.22)
+Source: http://www.kernel.org/pub/software/network/iw/iw-4.1.tar.gz file://0001-iw-version.sh-don-t-use-git-describe-for-versioning.patch file://separate-objdir.patch

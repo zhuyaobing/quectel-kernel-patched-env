@@ -1,0 +1,7 @@
+/usr/lib/libpci.so
+/usr/include/pci/header.h
+/usr/include/pci/pci.h
+/usr/include/pci/
+/usr/lib/pkgconfig/libpci.pc
+/usr/include/pci/types.h
+/usr/include/pci/config.h

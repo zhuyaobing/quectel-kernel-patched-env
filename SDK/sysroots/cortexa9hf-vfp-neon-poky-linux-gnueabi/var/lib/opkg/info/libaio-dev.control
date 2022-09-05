@@ -1,0 +1,16 @@
+Package: libaio-dev
+Version: 0.3.110-r0
+Description: Asynchronous I/O library - Development files
+ Asynchronous input/output library that uses the kernels native interface
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libaio
+Homepage: http://lse.sourceforge.net/io/aio.html
+Depends: libaio1 (= 0.3.110-r0)
+Recommends: libc6-dev
+Source: ftp://ftp.debian.org/debian/pool/main/liba/libaio/libaio_0.3.110.orig.tar.gz file://generic-arch-dectection-for-padding-defines.patch file://00_arches.patch file://destdir.patch file://libaio_fix_for_x32.patch file://libaio_fix_for_mips_syscalls.patch file://system-linkage.patch

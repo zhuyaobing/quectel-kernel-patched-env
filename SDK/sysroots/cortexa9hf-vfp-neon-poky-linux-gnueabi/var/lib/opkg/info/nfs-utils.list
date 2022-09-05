@@ -1,0 +1,9 @@
+/lib/systemd/system/sysinit.target.wants/proc-fs-nfsd.mount
+/lib/systemd/system/nfs-server.service
+/etc/modules-load.d/nfsd.conf
+/lib/systemd/system/proc-fs-nfsd.mount
+/usr/sbin/exportfs
+/usr/sbin/rpc.nfsd
+/usr/sbin/rpc.mountd
+/lib/systemd/system/nfs-mountd.service
+/sbin/osd_login

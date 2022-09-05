@@ -1,0 +1,17 @@
+Package: libgdbm-dev
+Version: 1.8.3-r4
+Description: Key/value database library with extensible hashing - Development files
+ Key/value database library with extensible hashing.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: gdbm
+Homepage: http://www.gnu.org/software/gdbm/
+Depends: libgdbm3 (= 1.8.3-r4)
+Recommends: libc6-dev
+Provides: gdbm-dev
+Source: http://ftp.gnu.org/gnu/gdbm/gdbm-1.8.3.tar.gz file://makefile.patch file://libtool-mode.patch file://ldflags.patch

@@ -1,0 +1,5 @@
+/etc/dnsmasq.d/
+/etc/dnsmasq.conf
+/usr/bin/dnsmasq
+/usr/bin/dhcp_release
+/lib/systemd/system/dnsmasq.service

@@ -1,0 +1,13 @@
+Package: alex-malc-cert-dbg
+Version: 13.1.0-2-g5ac4f01-r0
+Description: MAN certificate handling service - Debugging files
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-cert
+Recommends: libcurl-dbg, libstdc++-dbg, libgcc-s-dbg, protobuf-dbg, libcrypto-dbg, sre-lapi-dbg, libcslccrypto-dbg, libc6-dbg, libjsoncpp-dbg, libmosquittopp1-dbg, util-linux-libuuid-dbg
+Source: None

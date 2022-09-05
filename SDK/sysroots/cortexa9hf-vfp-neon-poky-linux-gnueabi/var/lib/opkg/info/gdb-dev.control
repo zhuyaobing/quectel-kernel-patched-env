@@ -1,0 +1,15 @@
+Package: gdb-dev
+Version: 7.12.1-r0
+Description: GNU debugger - Development files
+ GNU debugger.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & GPLv3 & LGPLv2 & LGPLv3
+Architecture: cortexa9hf-vfp-neon
+OE: gdb
+Homepage: http://www.gnu.org/software/gdb/
+Depends: gdb (= 7.12.1-r0)
+Recommends: ncurses-libtinfo-dev, ncurses-dev, libz-dev, lttng-ust-dev, libc6-dev, libexpat-dev
+Source: http://ftp.gnu.org/gnu/gdb/gdb-7.12.1.tar.gz file://0001-include-sys-types.h-for-mode_t.patch file://0002-make-man-install-relative-to-DESTDIR.patch file://0007-use-asm-sgidefs.h.patch file://0008-Use-exorted-definitions-of-SIGRTMIN.patch file://0009-Change-order-of-CFLAGS.patch file://0010-resolve-restrict-keyword-conflict.patch file://package_devel_gdb_patches_120-sigprocmask-invalid-call.patch

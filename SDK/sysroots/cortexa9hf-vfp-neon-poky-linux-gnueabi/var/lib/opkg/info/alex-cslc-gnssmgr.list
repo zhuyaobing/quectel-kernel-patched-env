@@ -1,0 +1,4 @@
+/etc/gnssmgr/
+/etc/gnssmgr/gnssmgr.conf
+/usr/bin/gnssmgr
+/lib/systemd/system/gnssmgr.service

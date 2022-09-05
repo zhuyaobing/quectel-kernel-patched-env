@@ -1,0 +1,16 @@
+Package: shared-mime-info-dev
+Version: 1.4-r0
+Description: Shared MIME type database and specification - Development files
+ Shared MIME type database and specification.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: shared-mime-info
+Homepage: http://freedesktop.org/wiki/Software/shared-mime-info
+Depends: shared-mime-info (= 1.4-r0)
+Recommends: libc6-dev, libglib-2.0-dev, libxml2-dev
+Source: http://freedesktop.org/~hadess/shared-mime-info-1.4.tar.xz file://parallelmake.patch file://install-data-hook.patch

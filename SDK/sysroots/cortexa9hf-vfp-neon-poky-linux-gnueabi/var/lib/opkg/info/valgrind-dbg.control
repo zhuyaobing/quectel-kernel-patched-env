@@ -1,0 +1,14 @@
+Package: valgrind-dbg
+Version: 3.10.1-r1.alex0
+Description: Valgrind memory debugger and instrumentation framework - Debugging files
+ Valgrind memory debugger and instrumentation framework.  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & GPLv2+ & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: valgrind
+Homepage: http://valgrind.org/
+Recommends: boost-thread-dbg, libc6-dbg, libstdc++-dbg, libgcc-s-dbg, boost-system-dbg
+Source: http://www.valgrind.org/downloads/valgrind-3.10.1.tar.bz2 file://fixed-perl-path.patch file://Added-support-for-PPC-instructions-mfatbu-mfatbl.patch file://sepbuildfix.patch file://glibc.patch file://force-nostabs.patch file://remove-arm-variant-specific.patch file://remove-ppc-tests-failing-build.patch file://valgrind-remove-rpath.patch file://enable.building.on.4.x.kernel.patch file://add-ptest.patch file://pass-maltivec-only-if-it-supported.patch file://run-ptest file://0001-valgrind-Enable-rt_sigpending-syscall-on-ppc64-linux.patch file://add-support-for-linux-5_x.patch

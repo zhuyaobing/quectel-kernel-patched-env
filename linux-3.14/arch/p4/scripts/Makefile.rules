@@ -1,0 +1,4 @@
+ifdef subarch-obj-y
+obj-y += subarch.o
+subarch-y = $(addprefix ../../$(HEADER_ARCH)/,$(subarch-obj-y))
+endif

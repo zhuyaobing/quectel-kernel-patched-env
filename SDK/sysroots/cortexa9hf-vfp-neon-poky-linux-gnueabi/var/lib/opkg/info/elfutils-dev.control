@@ -1,0 +1,16 @@
+Package: elfutils-dev
+Version: 0.148-r11
+Description: Utilities and libraries for handling compiled object files - Development files
+ Utilities and libraries for handling compiled object files.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: (GPL-2+ & Elfutils-Exception)
+Architecture: cortexa9hf-vfp-neon
+OE: elfutils
+Homepage: https://fedorahosted.org/elfutils
+Depends: elfutils (= 0.148-r11), libasm1, libdw1, libelf1
+Recommends: libdw-dev, libz-dev, libelf-dev, libc6-dev, libbz2-dev, libasm-dev, libtool-dev, bzip2-dev
+Source: https://fedorahosted.org/releases/e/l/elfutils/elfutils-0.148.tar.bz2 file://redhat-portability.diff file://redhat-robustify.diff file://hppa_backend.diff file://arm_backend.diff file://mips_backend.diff file://m68k_backend.diff file://testsuite-ignore-elflint.diff file://elf_additions.diff file://elfutils-fsize.patch file://remove-unused.patch file://mempcpy.patch file://fix_for_gcc-4.7.patch file://dso-link-change.patch file://nm-Fix-size-passed-to-snprintf-for-invalid-sh_name-case.patch file://elfutils-ar-c-fix-num-passed-to-memset.patch file://Fix_elf_cvt_gunhash.patch file://elf_begin.c-CVE-2014-9447-fix.patch file://fix-build-gcc-4.8.patch file://i386_dis.h file://x86_64_dis.h

@@ -1,0 +1,12 @@
+[Unit]
+Description=Service tuner
+DefaultDependencies=no
+After=ecuvard.service
+Wants=ecuvard.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/service_tuner.sh
+
+[Install]
+WantedBy=alex-boot.target

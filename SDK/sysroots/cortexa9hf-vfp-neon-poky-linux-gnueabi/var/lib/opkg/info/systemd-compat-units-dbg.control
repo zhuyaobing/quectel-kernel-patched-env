@@ -1,0 +1,12 @@
+Package: systemd-compat-units-dbg
+Version: 1.0-r29
+Description: Enhances systemd compatilibity with existing SysVinit scripts - Debugging files
+ Enhances systemd compatilibity with existing SysVinit scripts.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: systemd-compat-units
+Source: None

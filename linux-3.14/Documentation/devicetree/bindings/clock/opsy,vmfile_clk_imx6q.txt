@@ -1,0 +1,46 @@
+* Clock bindings for P4 Linux clock tree virtualization on Freescale i.MX6 Quad
+
+Required properties:
+- compatible: Should be "opsy,p4-clk-imx6q"
+- #clock-cells: Should be <1>
+- file_name: Should contain the file name of the file provider driver
+
+The clock consumer should specify the desired clock by having the clock
+ID in its "clocks" phandle cell.  See include/dt-bindings/clock/imx6qdl-clock.h
+for the full list of i.MX6 Quad and DualLite clock IDs.
+
+Examples:
+
+#include <dt-bindings/clock/imx6qdl-clock.h>
+
+clks: ccm {
+	compatible = "fsl,imx6q-ccm";
+	#clock-cells = <1>;
+	provider-filename = "imx_clk_fp:/vclock";
+};
+
+uart1: serial@02020000 {
+	compatible = "fsl,imx6q-uart", "fsl,imx21-uart";
+	reg = <0x02020000 0x4000>;
+	interrupts = <0 26 0x04>;
+	clocks = <&clks IMX6QDL_CLK_UART_IPG>, <&clks IMX6QDL_CLK_UART_SERIAL>;
+	clock-names = "ipg", "per";
+	status = "disabled";
+};
+
+In general, the native device tree with an overlay is used for P4 Linux
+DirectIO. In this case, you already have a device tree node for the ccm as
+follows. Overriding the compatibility string is sufficient for using clock
+tree virtualization.
+
+clks: ccm@020c4000 {
+	compatible = "fsl,imx6q-ccm";
+	reg = <0x020c4000 0x4000>;
+	interrupts = <0 87 0x04 0 88 0x04>;
+	#clock-cells = <1>;
+};
+
+&clks {
+	compatible = "opsy,p4-clk-imx6q";
+	provider-filename = "imx_clk_fp:/vclock";
+}

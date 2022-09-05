@@ -1,0 +1,14 @@
+Package: db-dbg
+Version: 5.3.28-r0
+Description: Berkeley Database v5 - Debugging files
+ Berkeley Database v5.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Sleepycat
+Architecture: cortexa9hf-vfp-neon
+OE: db
+Homepage: http://www.oracle.com/technology/products/berkeley-db/db/index.html
+Recommends: libc6-dbg, libstdc++-dbg, libgcc-s-dbg
+Source: http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz file://arm-thumb-mutex_db5.patch;patchdir=.. file://fix-parallel-build.patch

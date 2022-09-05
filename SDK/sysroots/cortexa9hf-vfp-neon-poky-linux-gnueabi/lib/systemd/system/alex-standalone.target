@@ -1,0 +1,7 @@
+[Unit]
+Description=Alexandra standalone base SW apps
+After=alex-boot.target
+Requires=alex-boot.target
+
+[Install]
+WantedBy=alex-boot.target

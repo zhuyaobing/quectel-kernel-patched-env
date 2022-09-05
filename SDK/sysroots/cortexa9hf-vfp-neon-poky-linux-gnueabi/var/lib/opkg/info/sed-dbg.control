@@ -1,0 +1,14 @@
+Package: sed-dbg
+Version: 4.1.2-r7
+Description: Stream EDitor (text filtering utility) - Debugging files
+ Stream EDitor (text filtering utility).  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: sed
+Homepage: http://www.gnu.org/software/sed/
+Recommends: libc6-dbg
+Source: http://ftp.gnu.org/gnu/sed/sed-4.1.2.tar.gz file://fix_return_type.patch file://sed-4.1.2_fix_for_automake-1.12.patch file://Makevars

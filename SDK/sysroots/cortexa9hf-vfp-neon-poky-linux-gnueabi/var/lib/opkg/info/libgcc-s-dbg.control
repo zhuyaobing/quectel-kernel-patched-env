@@ -1,0 +1,15 @@
+Package: libgcc-s-dbg
+Version: 4.9.3-r0
+Description: GNU cc and gcc C compilers - Debugging files
+ GNU cc and gcc C compilers.  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPL-3.0-with-GCC-exception
+Architecture: cortexa9hf-vfp-neon
+OE: libgcc
+Homepage: http://www.gnu.org/software/gcc/
+Recommends: libc6-dbg
+Provides: libgcc-dbg
+Source: None

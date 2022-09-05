@@ -1,0 +1,14 @@
+Package: sre-demo-app-dev
+Version: 3.0.0-r0
+Description: SRE MQTT App - Development files
+ Recipe to build the MQTT app.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-demo-app
+Depends: sre-demo-app (= 3.0.0-r0)
+Recommends: sre-lapi-dev, libgcc-s-dev, libstdc++-dev, libc6-dev, protobuf-dev, sre-systemd-target-dev
+Source: None

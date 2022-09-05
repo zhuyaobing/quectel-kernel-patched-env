@@ -1,0 +1,11 @@
+Package: shadow-securetty
+Version: 4.2.1-r3.alex0
+Description: Provider of the machine specific securetty file
+ Provider of the machine specific securetty file.
+Section: base utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: shadow-securetty
+Source: file://securetty file://add-ttyFPX.patch

@@ -1,0 +1,18 @@
+[Unit]
+Description=The Alexandra Backend Proxy
+After=alex-boot.target
+Requires=alex-boot.target
+
+
+[Service]
+Type=notify
+Restart=on-failure
+ExecStart=/usr/bin/backendproxy
+
+
+
+
+[Install]
+WantedBy=alex-core.target
+
+

@@ -1,0 +1,17 @@
+Package: libxau-dev
+Version: 1:1.0.8-r0
+Description: Xau: X Authority Database library - Development files
+ libxau provides the main interfaces to the X11 authorisation handling,
+ which controls authorisation for X connections, both client-side and
+ server-side.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: libxau
+Homepage: http://www.x.org
+Depends: libxau6 (= 1:1.0.8-r0)
+Recommends: libc6-dev, xproto-dev, util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/lib/libXau-1.0.8.tar.bz2

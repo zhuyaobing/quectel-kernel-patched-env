@@ -1,0 +1,12 @@
+Package: fsl-alsa-plugins
+Version: 1.0.25-r0
+Description: fsl-alsa-plugins version 1.0.25-r0
+ Freescale alsa-lib plugins
+Section: multimedia
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: alexandra
+OE: fsl-alsa-plugins
+Depends: libasound2 (>= 1.0.29), libc6 (>= 2.22)
+Source: http://www.freescale.com/lgfiles/NMG/MAD/YOCTO//fsl-alsa-plugins-1.0.25.tar.gz file://0001-asrc_pair-update-output-buffer-size.patch

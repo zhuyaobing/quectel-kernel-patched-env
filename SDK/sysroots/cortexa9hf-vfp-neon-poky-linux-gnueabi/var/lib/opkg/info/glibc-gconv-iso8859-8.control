@@ -1,0 +1,13 @@
+Package: glibc-gconv-iso8859-8
+Version: 2.22-r0
+Description: gconv module for character set iso8859-8
+ gconv module for character set iso8859-8
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Depends: glibc-gconv, libc6 (>= 2.22)
+Source: None

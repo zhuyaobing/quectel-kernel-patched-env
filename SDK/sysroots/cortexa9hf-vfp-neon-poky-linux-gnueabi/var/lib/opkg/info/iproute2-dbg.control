@@ -1,0 +1,17 @@
+Package: iproute2-dbg
+Version: 4.1.1-r0
+Description: TCP / IP networking and traffic control utilities - Debugging files
+ Iproute2 is a collection of utilities for controlling TCP / IP networking
+ and traffic control in Linux.  Of the utilities ip and tc are the most
+ important.  ip controls IPv4 and IPv6 configuration and tc stands for
+ traffic control.  This package contains ELF symbols and related sources
+ for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: iproute2
+Homepage: http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
+Recommends: libc6-dbg, iptables-dbg, libelf-dbg
+Source: http://kernel.org/pub/linux/utils/net/iproute2/iproute2-4.1.1.tar.xz file://configure-cross.patch file://0001-iproute2-de-bash-scripts.patch

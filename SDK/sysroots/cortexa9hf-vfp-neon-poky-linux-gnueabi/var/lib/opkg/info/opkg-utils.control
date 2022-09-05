@@ -1,0 +1,13 @@
+Package: opkg-utils
+Version: 0.1.8+git0+53274f0875-r0
+Description: Additional utilities for the opkg package manager
+ Additional utilities for the opkg package manager.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: opkg-utils
+Homepage: http://code.google.com/p/opkg/
+Depends: python-pickle, python-shell, python, python-textutils, python-math, python-subprocess, python-io, python-logging, python-compression, libc6 (>= 2.22), python-crypt, python-fcntl, python-stringold
+Source: git://git.yoctoproject.org/opkg-utils

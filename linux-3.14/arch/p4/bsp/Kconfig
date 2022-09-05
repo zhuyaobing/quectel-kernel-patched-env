@@ -1,0 +1,49 @@
+# arch/p4/bsp/Kconfig
+#
+# BSP specific configuration
+
+config BSP
+	bool
+	default n
+
+config HAVE_IRQ_XLATE
+	bool
+
+config PIKEOS_DIRECT_IO
+	bool "Enable PikeOS Direct-IO"
+	select BSP
+	default n
+
+config USE_OF
+	bool "Flattened Device Tree support"
+	select IRQ_DOMAIN
+	select OF
+	select OF_EARLY_FLATTREE
+	help
+	  Include support for flattened device tree machine descriptions.
+
+config P4_BSP_ARCH_MXC
+	bool "Enable PikeOS Direct-IO support for Freescale i.MX family"
+	default n
+	depends on PIKEOS_DIRECT_IO
+	select ARCH_MULTI_V7
+	select HAVE_IRQ_XLATE
+	select P4_GENERIC_OUTER_CACHE
+	select P4_CACHEMGR_DRIVER
+
+config ARCH_MULTI_V7
+	bool "ARMv7 based platforms (Cortex-A, PJ4, Scorpion, Krait)"
+	default y
+	select ARCH_MULTI_V6_V7
+
+config ARCH_MULTI_V6_V7
+	bool
+
+if P4_BSP_ARCH_MXC
+source "arch/arm/mach-imx/Kconfig"
+
+# Adapted from arch/arm/Kconfig for ARCH_MXC
+config FORCE_MAX_ZONEORDER
+	int
+	default "14" if ARCH_MXC
+endif

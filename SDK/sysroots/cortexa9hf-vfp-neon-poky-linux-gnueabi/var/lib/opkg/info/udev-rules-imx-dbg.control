@@ -1,0 +1,12 @@
+Package: udev-rules-imx-dbg
+Version: 1.0-r0
+Description: udev-rules-imx version 1.0-r0 - Debugging files
+ udev rules for Freescale i.MX SOCs  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: udev-rules-imx
+Source: file://10-imx.rules

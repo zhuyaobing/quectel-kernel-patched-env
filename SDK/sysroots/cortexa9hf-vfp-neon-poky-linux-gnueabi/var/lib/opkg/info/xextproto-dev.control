@@ -1,0 +1,19 @@
+Package: xextproto-dev
+Version: 1:7.3.0-r0
+Description: XExt: X Extension headers - Development files
+ This package provides the wire protocol for several X extensions.  These
+ protocol extensions include DOUBLE-BUFFER, DPMS, Extended-Visual-
+ Information, LBX, MIT_SHM, MIT_SUNDRY-NONSTANDARD, Multi-Buffering,
+ SECURITY, SHAPE, SYNC, TOG-CUP, XC-APPGROUP, XC-MISC, XTEST.  In addition
+ a small set of utility functions are also available.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: xextproto
+Homepage: http://www.x.org
+Recommends: util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/proto/xextproto-7.3.0.tar.bz2

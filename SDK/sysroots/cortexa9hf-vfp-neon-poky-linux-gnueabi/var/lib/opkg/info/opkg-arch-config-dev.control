@@ -1,0 +1,14 @@
+Package: opkg-arch-config-dev
+Version: 1.0-r1
+Description: Architecture-dependent configuration for opkg - Development files
+ Architecture-dependent configuration for opkg.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: opkg-arch-config
+Depends: opkg-arch-config (= 1.0-r1)
+Source: None

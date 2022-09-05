@@ -1,0 +1,15 @@
+Package: alex-cslc-loctimed-dev
+Version: 13.1.0-r0
+Description: Local time manager deamon - Development files
+ Recipe for the local time manager that publish time zone messages to the
+ mqtt broker  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-loctimed
+Depends: alex-cslc-loctimed (= 13.1.0-r0)
+Recommends: sre-lapi-dev, libgcc-s-dev, date-dev, libstdc++-dev, libc6-dev, protobuf-dev
+Source: http://euartif01.stoneridge.com:8081/artifactory/sre-ext-src-mirror-local/com/stoneridge/src-mirror/alex/tarballs//zddatabase-20180911.tar.bz2;name=zddb https://data.iana.org/time-zones/releases/tzdata2018e.tar.gz;downloadfilename=tzdata2018e.tar.gz;name=ianadb;subdir=tzdata

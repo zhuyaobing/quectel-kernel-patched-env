@@ -1,0 +1,3 @@
+/lib/systemd/system/cert_app.service
+/usr/bin/cert_app
+/etc/alex/cert_app.conf

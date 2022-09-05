@@ -1,0 +1,13 @@
+Package: glibc-localedata-iso14651-t1
+Version: 2.22-r0
+Description: locale definition for iso14651-t1
+ locale definition for iso14651-t1
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Depends: glibc-localedata-iso14651-t1-common
+Source: None

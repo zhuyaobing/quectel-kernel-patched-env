@@ -1,0 +1,14 @@
+Package: netbase-dbg
+Version: 1:5.3-r0
+Description: Basic TCP/IP networking support - Debugging files
+ This package provides the necessary infrastructure for basic TCP/IP based
+ networking  This package contains ELF symbols and related sources for
+ debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: netbase
+Homepage: http://packages.debian.org/netbase
+Source: ftp://ftp.debian.org/debian/pool/main/n/netbase/netbase_5.3.tar.xz file://netbase-add-rpcbind-as-an-alias-to-sunrpc.patch file://hosts

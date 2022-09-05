@@ -1,0 +1,15 @@
+Package: crpcut-dev
+Version: 1.9.2-r0
+Description: The unit test framework crpcut - Development files
+ The unit test framework crpcut.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-2-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: crpcut
+Homepage: http://sourceforge.net/projects/crpcut
+Depends: crpcut (= 1.9.2-r0)
+Recommends: libc6-dev, valgrind-dev, libgcc-s-dev, libstdc++-dev
+Source: http://downloads.sourceforge.net/project/crpcut/crpcut/1.9.2/crpcut-1.9.2.tar.bz2 file://remove-examples.patch

@@ -1,0 +1,54 @@
+#
+# Virtualization support drivers
+#
+menuconfig VIRT_DRIVERS
+	bool "Virtualization drivers"
+	---help---
+	  Say Y here to get to see options for device drivers that support
+	  virtualization environments.
+
+	  If you say N, all options in this submenu will be skipped and disabled.
+
+if VIRT_DRIVERS
+
+# Virtual drivers specific configuration
+config L2LV
+	bool "Enable OpenSynergy L2LV framework drivers"
+	default n
+	help
+	  With this option, L2L drivers become available. These are
+	  device drivers which are shared between linux partitions.
+	  Each driver has a server and a client configuration option -
+	  server should be enabled on a direct-io linux only. If
+	  client option is enabled, a proxy device driver is enabled
+	  that uses the respective server via hypervisor inter-partition
+	  communication.
+
+	  Note: using these features also requires proper hypervisor
+	  configuration. TODO: link to detailed configuration documentation.
+
+	  If unsure, say N.
+
+if L2LV
+	source "drivers/virt/l2lv/Kconfig"
+endif
+
+config FSL_HV_MANAGER
+	tristate "Freescale hypervisor management driver"
+	depends on FSL_SOC
+	select EPAPR_PARAVIRT
+	help
+          The Freescale hypervisor management driver provides several services
+	  to drivers and applications related to the Freescale hypervisor:
+
+          1) An ioctl interface for querying and managing partitions.
+
+          2) A file interface to reading incoming doorbells.
+
+          3) An interrupt handler for shutting down the partition upon
+	     receiving the shutdown doorbell from a manager partition.
+
+          4) A kernel interface for receiving callbacks when a managed
+	     partition shuts down.
+
+endif

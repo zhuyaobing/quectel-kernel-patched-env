@@ -1,0 +1,2 @@
+/lib/systemd/system/sre-demo-app.service
+/usr/bin/sre-demo-app

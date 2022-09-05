@@ -1,0 +1,14 @@
+/usr/sbin/cgclear
+/usr/bin/cgsnapshot
+/usr/bin/cgcreate
+/usr/bin/cgget
+/usr/bin/lscgroup
+/lib/libcgroup.so.1.0.41
+/usr/bin/cgexec
+/usr/bin/lssubsys
+/usr/bin/cgclassify
+/usr/sbin/cgconfigparser
+/usr/bin/cgdelete
+/lib/libcgroup.so.1
+/usr/bin/cgset
+/usr/sbin/cgrulesengd

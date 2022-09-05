@@ -1,0 +1,13 @@
+Package: libgcrypt
+Version: 1.6.3-r1
+Description: General purpose cryptographic library based on the code from GnuPG
+ General purpose cryptographic library based on the code from GnuPG.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libgcrypt
+Homepage: http://directory.fsf.org/project/libgcrypt/
+Depends: libcap2 (>= 2.24), libgpg-error0 (>= 1.19), libc6 (>= 2.22)
+Source: ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.6.3.tar.gz file://add-pkgconfig-support.patch file://libgcrypt-fix-building-error-with-O2-in-sysroot-path.patch file://fix-ICE-failure-on-mips-with-option-O-and-g.patch file://CVE-2015-7511_1.patch file://CVE-2015-7511_2.patch

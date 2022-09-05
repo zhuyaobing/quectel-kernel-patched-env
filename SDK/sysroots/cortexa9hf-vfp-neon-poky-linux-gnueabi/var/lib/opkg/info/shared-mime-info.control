@@ -1,0 +1,13 @@
+Package: shared-mime-info
+Version: 1.4-r0
+Description: Shared MIME type database and specification
+ Shared MIME type database and specification.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: shared-mime-info
+Homepage: http://freedesktop.org/wiki/Software/shared-mime-info
+Depends: libglib-2.0-0 (>= 2.44.1), libxml2 (>= 2.9.2), libc6 (>= 2.22)
+Source: http://freedesktop.org/~hadess/shared-mime-info-1.4.tar.xz file://parallelmake.patch file://install-data-hook.patch

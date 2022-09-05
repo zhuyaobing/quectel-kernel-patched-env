@@ -1,0 +1,19 @@
+Package: libsm-dev
+Version: 1:1.2.2-r0
+Description: SM: Session Management library - Development files
+ The Session Management Library (SMlib) is a low-level \"C\" language
+ interface to XSMP.  The purpose of the X Session Management Protocol
+ (XSMP) is to provide a uniform mechanism for users to save and restore
+ their sessions.  A session is a group of clients, each of which has a
+ particular state.  This package contains symbolic links, header files,
+ and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: libsm
+Homepage: http://www.x.org
+Depends: libsm6 (= 1:1.2.2-r0)
+Recommends: libc6-dev, xproto-dev, xtrans-dev, libice-dev, util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/lib/libSM-1.2.2.tar.bz2

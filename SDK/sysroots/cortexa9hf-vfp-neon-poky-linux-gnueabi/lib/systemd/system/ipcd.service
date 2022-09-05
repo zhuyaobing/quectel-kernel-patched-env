@@ -1,0 +1,18 @@
+[Unit]
+Description=The Alexandra inter-partition communication daemon (IPCd)
+After=network.target mosquitto.service
+Requires=mosquitto.service
+
+
+[Service]
+Type=notify
+Restart=on-failure
+ExecStart=/usr/bin/ipcd
+
+Nice=-10
+
+
+[Install]
+WantedBy=alex-boot.target
+
+

@@ -1,0 +1,15 @@
+Package: run-postinsts-dev
+Version: 1.0-r9
+Description: Runs postinstall scripts on first boot of the target device - Development files
+ Runs postinstall scripts on first boot of the target device.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: run-postinsts
+Depends: run-postinsts (= 1.0-r9)
+Recommends: update-rc.d-dev, initscripts-dev
+Source: file://run-postinsts file://run-postinsts.init file://run-postinsts.service

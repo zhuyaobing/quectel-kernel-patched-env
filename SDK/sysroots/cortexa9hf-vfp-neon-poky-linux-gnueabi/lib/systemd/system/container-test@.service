@@ -1,0 +1,20 @@
+[Unit]
+Description=SRE SysVer Containerization testbench - %i
+After=alex.target
+Requires=alex.target
+
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/alex-container -m container-test-%i  -b /common/appdata/container-test:/data -b /bin -b /usr/bin/openssl -r /usr/lib/libjsoncpp.so.11 -r /etc/alex/container-test-%i.conf  /usr/bin/container-test -c /etc/alex/container-test-%i.conf
+
+
+CPUQuota=2%
+MemoryHigh=2M
+MemoryMax=4M
+
+[Install]
+WantedBy=alex.target
+
+

@@ -1,0 +1,6 @@
+[Match]
+Name=ethext
+
+[Network]
+VLAN=ethext.vcm
+LinkLocalAddressing=no

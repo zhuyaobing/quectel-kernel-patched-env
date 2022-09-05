@@ -1,0 +1,15 @@
+Package: procps
+Version: 3.3.10-r0
+Description: System and process monitoring utilities
+ Procps contains a set of system utilities that provide system information
+ about processes using the /proc filesystem. The package includes the
+ programs ps, top, vmstat, w, kill, and skill.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: procps
+Homepage: https://gitorious.org/procps
+Depends: update-alternatives-opkg, libtinfo5 (>= 5.9), libncurses5 (>= 5.9), libc6 (>= 2.22)
+Source: http://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-3.3.10.tar.xz file://fix-configure.patch file://sysctl.conf

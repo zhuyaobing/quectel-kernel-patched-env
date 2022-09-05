@@ -1,0 +1,14 @@
+Package: libcap2
+Version: 2.24-r0
+Description: Library for getting/setting POSIX.1e capabilities
+ Library for getting/setting POSIX.1e capabilities.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD | GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: libcap
+Homepage: http://sites.google.com/site/fullycapable/
+Depends: libc6 (>= 2.22)
+Provides: libcap
+Source: http://kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.24.tar.xz

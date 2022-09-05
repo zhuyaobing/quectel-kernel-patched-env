@@ -1,0 +1,13 @@
+Package: kbd-dbg
+Version: 2.0.2-r0
+Description: Keytable files and keyboard utilities - Debugging files
+ Keytable files and keyboard utilities.  This package contains ELF symbols
+ and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: kbd
+Recommends: libc6-dbg
+Source: http://kernel.org/pub/linux/utils/kbd/kbd-2.0.2.tar.xz file://uclibc-stdarg.patch file://0003-Only-inluclude-kernel-headers-with-glibc.patch

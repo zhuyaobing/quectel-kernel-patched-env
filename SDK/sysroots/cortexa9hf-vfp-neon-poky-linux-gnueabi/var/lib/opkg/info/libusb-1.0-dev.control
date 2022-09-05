@@ -1,0 +1,17 @@
+Package: libusb-1.0-dev
+Version: 1.0.19-r0
+Description: Userspace library to access USB (version 1.0) - Development files
+ Userspace library to access USB (version 1.0).  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libusb1
+Homepage: http://libusb.sf.net
+Depends: libusb-1.0-0 (= 1.0.19-r0)
+Recommends: libc6-dev
+Provides: libusb1-dev
+Source: http://downloads.sourceforge.net/libusb/libusb-1.0.19.tar.bz2

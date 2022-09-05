@@ -1,0 +1,15 @@
+Package: systemd-serialgetty-dev
+Version: 1.0-r5
+Description: Serial terminal support for systemd - Development files
+ Serial terminal support for systemd.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: alexandra
+OE: systemd-serialgetty
+Depends: systemd-serialgetty (= 1.0-r5)
+Recommends: systemd-dev
+Source: file://serial-getty@.service

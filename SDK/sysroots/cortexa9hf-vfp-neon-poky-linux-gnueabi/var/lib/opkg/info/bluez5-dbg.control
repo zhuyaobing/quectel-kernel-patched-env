@@ -1,0 +1,15 @@
+Package: bluez5-dbg
+Version: 5.43-r0
+Description: Linux Bluetooth Stack Userland V5 - Debugging files
+ Linux Bluetooth stack V5 userland components.  These include a system
+ configurations, daemons, tools and system libraries.  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: bluez5
+Homepage: http://www.bluez.org
+Recommends: systemd-dbg, libical-dbg, libreadline-dbg, libglib-2.0-dbg, dbus-lib-dbg, libc6-dbg
+Source: http://kernel.org/pub/linux/bluetooth/bluez-5.43.tar.xz

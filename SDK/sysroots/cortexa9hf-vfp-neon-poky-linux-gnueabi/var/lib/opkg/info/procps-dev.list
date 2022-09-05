@@ -1,0 +1,16 @@
+/usr/lib/libprocps.so
+/usr/include/proc/alloc.h
+/usr/include/proc/sig.h
+/usr/include/proc/whattime.h
+/usr/lib/pkgconfig/libprocps.pc
+/usr/include/proc/devname.h
+/usr/include/proc/pwcache.h
+/usr/include/proc/readproc.h
+/usr/include/proc/
+/usr/include/proc/wchan.h
+/usr/include/proc/escape.h
+/usr/include/proc/version.h
+/usr/include/proc/sysinfo.h
+/usr/lib/libprocps.la
+/usr/include/proc/slab.h
+/usr/include/proc/procps.h

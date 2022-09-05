@@ -1,0 +1,398 @@
+menu "PikeOS drivers"
+
+config P4VM_PORT
+	# module not supported, see driver for more information
+	bool 'PikeOS queuing ports support'
+	help
+	  PikeOS partitions can communicate via PikeOS Communication Ports.
+	  These are simple CPU driven communication channels between two
+	  partitions. Their main advantage is that they are easy to handle
+	  and require no hardware support. Note that the PikeOS Communication
+	  Ports and the way they are interconnected must be conﬁgured in the
+	  PikeOS VMIT, so please study the PikeOS documentation for more
+	  details on this
+
+	  You should also select one or more userspace frontend drivers:
+	  the raw char driver, the link driver, the tty driver,
+	  or the network driver.
+
+config P4VM_PORT_CHAR
+	tristate 'raw char support'
+	depends on P4VM_PORT
+	help
+	  The char driver allows you to use the ports as
+	  /dev/vmport_char[0...n] device, keeping the frame character
+	  of the ports. The driver's major number is 199.
+
+	  The driver automatically detects all available queuing
+	  ports and registers the corresponding device files. A
+	  configuration is not needed.
+
+	  In order to get a list of registered queuing ports, you
+	  can read from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmport/config
+
+	  You should say Y here.
+
+config P4VM_PORT_TTY
+	tristate 'tty driver'
+	depends on P4VM_PORT
+	select SERIAL_CORE
+	help
+	  The tty driver allows you to use two ports as a
+	  tty device or console.
+	  Messages are buffered by the kernel and usually
+	  lots of small messages are sent.
+	  The ttys are available as major 200 / minor 0+.
+
+	  You can link two ports together by echoing:
+
+	  $ echo "5 console3rx console3tx" >/sys/bus/platform/drivers/vmport_tty/config
+
+	  This links console3rx for input and console3tx for
+	  output together, and both are useables as /dev/ttyMP5.
+
+	  You can also disable such a tty if it's not used
+	  anymore by typing:
+
+	  $ echo "5" >/sys/bus/platform/drivers/vmport_tty/config
+
+	  In order to get a list of registered devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmport_tty/config
+
+	  It is usually a good idea to use the ports, so say Y here.
+
+config P4VM_PORT_TTY_DEVICES
+	int 'Maximum number of TTYs in use'
+	depends on P4VM_PORT_TTY
+	range 1 64
+	default '8'
+	help
+	  The Linux tty subsystem does not support a dynamic number of
+	  tty devices. Usually the default is a good value, increase this
+	  value if you need more ttys.
+
+config P4VM_PORT_CONSOLE
+	bool 'tty bootconsole support'
+	depends on P4VM_PORT_TTY=y
+	select SERIAL_CORE_CONSOLE
+	help
+	  This enables support for a bootconsole over a tty.
+	  If you enable this, you should also pass the following
+	  commandline to the kernel:
+
+	  console=ttyMP0,console0rx,console0tx
+
+	  This creates the ttyMP0 devices and uses console0rx and
+	  console0tx for in- and output of all kernel messages.
+
+config P4VM_PORT_LINK
+	tristate 'linked char driver'
+	depends on P4VM_PORT
+	help
+	  Like the tty driver, this driver allows you to handle two ports
+	  as a single device, but without the tty characteristics like
+	  buffering or CR/LF mangling.
+	  The links are available as major 196 / minor 0+.
+
+	  You can link two ports together by echoing:
+
+	  $ echo "5 console3rx console3tx" >/sys/bus/platform/drivers/vmport_link/config
+
+	  This links console3rx for input and console3tx for
+	  output together, and both are useables as /dev/vmportlink5.
+
+	  You can also disable such a link if it's not used
+	  anymore by typing:
+
+	  $ echo "5" >/sys/bus/platform/drivers/vmport_link/config
+
+	  In order to get a list of registered devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmport_link/config
+
+	  It is usually a good idea to use the ports, so say Y here.
+
+config P4VM_PORT_NET
+	tristate 'virtual network'
+	depends on P4VM_PORT && NET
+	help
+	  The network driver allows you to use two ports as a network
+	  device using raw ethernet frames. You can connect to another
+	  port-based network driver.
+
+	  You can link two ports together to form a network device by echoing:
+
+	  $ echo "5 net3rx net3tx [macaddress]" >/sys/bus/platform/drivers/vmport_net/config
+
+	  This links net3rx for input and net3tx for
+	  output together into a network device called veth5.
+
+	  You can also configure this device from the kernel's boot
+	  command-linue by appending
+
+	  veth=5,net3rx,net3tx[,optional-MAC]
+
+	  On both cases, the MAC address must be provided in
+	  "12:34:56:78:90:ab:cd" notation. When no MAC address is provided,
+	  the driver tries to autodetect it's MAC address.
+
+	  You can also disable such a network device if it's not used
+	  anymore by typing:
+
+	  $ echo "5" >/sys/bus/platform/drivers/vmport_net/config
+
+	  In order to get a list of registered network devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmport_net/config
+
+	  This driver is usually a good idea if you want to connect to other
+	  port-based network services, so say Y here.
+
+config P4VM_FILE_CHAR
+	tristate 'File-provider (client) raw char driver'
+	help
+	  This driver allows you to use a file-provider service as "raw"
+	  device. It supports read(), write(), and lseek() as operations
+	  and has support to receive microkernel events from the provider
+	  through an ioctl() interface.
+
+	  Only one open file is supported per instance, and this driver
+	  is only usable in special setups.
+	  The driver is available as major 198 / minor 0+.
+
+	  You can set a file provider connection by echoing:
+
+	  $ echo "3 myprovider:/myfile" >/sys/bus/platform/drivers/vmfile_char/config
+
+	  This opens the file provider service myprovider:/myfile
+	  and the connection is useable as /dev/vmfile3.
+
+	  You can also disable such a device if it's not used
+	  anymore by typing:
+
+	  $ echo "3" >/sys/bus/platform/drivers/vmfile_char/config
+
+	  In order to get a list of registered devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmfile_char/config
+
+	  This driver is usually not necessary, so say N here.
+
+config P4VM_FILE_SHM
+	tristate 'File-provider (client) SHM char driver'
+	help
+	  The shared memory driver allows you to use a shared memory
+	  provided by file provider as shared memory in linux.
+	  The driver supports mmap(), read(), write(), and lseek() on the
+	  shared memory.
+	  The shared memories are available as major 197 / minor 0+.
+
+	  You can set a file provider connection by echoing:
+
+	  $ echo "3 shm:myshm" >/sys/bus/platform/drivers/vmfile_shm/config
+
+	  This opens the shared memory shm:myshm
+	  and the shared memory is useable as /dev/vmfileshm3.
+	  Note, that only shared memories prefixed with "shm:" are
+	  accepted by this driver.
+
+	  You can also disable such a shared memory if it's not used
+	  anymore by typing:
+
+	  $ echo "3" >/sys/bus/platform/drivers/vmfile_shm/config
+
+	  In order to get a list of registered devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmfile_shm/config
+
+	  It is usually a good idea to use this, so say Y here.
+
+config P4VM_FILE_TTY
+	tristate 'File-provider (client) tty driver'
+	select SERIAL_CORE
+	help
+	  The tty driver allows you to use a file provider connection
+	  as a tty-device or console.
+	  Messages are buffered by the kernel and usually
+	  lots of small messages are sent.
+	  The ttys are available as major 201 / minor 0+.
+
+	  You can set a file provider connection by echoing:
+
+	  $ echo "3 myprovider:/myfile" >/sys/bus/platform/drivers/vmfile_tty/config
+
+	  This opens the file provider service myprovider:/myfile
+	  and the connection is useable as /dev/ttyFP3.
+
+	  You can also disable such a tty if it's not used
+	  anymore by typing:
+
+	  $ echo "3" >/sys/bus/platform/drivers/vmfile_tty/config
+
+	  In order to get a list of registered devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmfile_tty/config
+
+	  It is usually a good idea to use this, so say Y here.
+
+config P4VM_FILE_TTY_DEVICES
+	int 'Maximum number of TTYs in use'
+	depends on P4VM_FILE_TTY
+	range 1 64
+	default '8'
+	help
+	  The Linux tty subsystem does not support a dynamic number of
+	  tty devices. Usually the default is a good value, increase this
+	  value if you need more ttys.
+
+config P4VM_FILE_CONSOLE
+	bool 'File-provider (client) tty bootconsole support'
+	depends on P4VM_FILE_TTY=y
+	select SERIAL_CORE_CONSOLE
+	help
+	  This enables support for a bootconsole over a tty.
+	  If you enable this, you should also pass the following
+	  commandline to the kernel when using muxa for in- and
+	  output of all kernel messages:
+
+	  console=ttyFP0,muxa:/linux
+
+	  If you want to use a PikeOS serial driver directly,
+	  you should also specify the baudrate in the commandline:
+
+	  console=ttyFP0,ser0:/0,38400
+
+
+config P4VM_FILE_NET
+	tristate 'File-provider (client) virtual network'
+	depends on NET
+	help
+	  This network driver allows you to use a file-provider based
+	  network device using raw ethernet frames. This driver only
+	  works in file-provider client mode and always retrieves
+	  its MAC address from the file-provider.
+
+	  You can set a file provider connection by echoing:
+
+	  $ echo "7 netprovider:/netdev" >/sys/bus/platform/drivers/vmfile_net/config
+
+	  This opens the file provider service netprovider:/netdev
+	  and the connection is useable as network device called fpeth7.
+
+	  You can also configure this device from the kernel's boot
+	  command-linue by appending:
+
+	  fpeth=7,netprovider:/netdev
+
+	  You can also disable such a network device if it's not used
+	  anymore by typing:
+
+	  $ echo "7" >/sys/bus/platform/drivers/vmfile_net/config
+
+	  In order to get a list of registered network devices, you can read
+	  from the proc file:
+
+	  $ cat /sys/bus/platform/drivers/vmfile_net/config
+
+	  This driver is usually a good idea if you want to connect to
+	  a file-provider based network driver, so say Y here.
+
+config P4VM_PARTCTRL
+	tristate 'Partition control driver'
+	help
+	  The partition control driver allows you to control other
+	  partitions -- if you have configured the rights to do this.
+	  The driver creates a /sys/bus/platform/drivers/partctrl/command
+	  file and listens to write requests.
+
+	  In general, the driver expects strings in "<command> <number>"
+	  format. Number zero is the whole system, numbers larger than
+	  zero correspond to the partition with that number.
+	  Supported commands are "shutdown", "poweroff", "reboot" and "sched".
+	  Poweroff and shutdown are the same for partitions.
+
+	  To power off the target just do:
+
+	  $ echo "poweroff 0" >/sys/bus/platform/drivers/partctrl/command
+	  
+	  To reboot partition 7 just type:
+
+	  $ echo "reboot 7" >/sys/bus/platform/drivers/partctrl/command
+
+	  This driver is quite handy in a development system, say Y here.
+
+config P4VM_SPORT
+	tristate 'PikeOS Sampling Port support'
+	help
+	  The sampling ports are interpartition ports between
+	  two partition, but unlike queueing ports, messages are
+	  not queued. the linux server and an osek server, for example.
+	  It's a good idea to use them, so say Y here.
+
+	  The driver allows you to use the sampling ports as
+	  /dev/vmsport[0...n] device, keeping the message character
+	  of the ports. The driver's major number is 195.
+	  Access to the ports is done via ioctl() calls, refer to
+	  vmdrv_ioctl.h and the reference manual for more information.
+
+	  You should say Y here.
+
+comment "Experimental drivers (unsupported)"
+
+config P4VM_FB
+	bool "PikeOS Virtual Framebuffer (EXPERIMENTAL)"
+	depends on FB
+	select FB_CFB_FILLRECT
+	select FB_CFB_COPYAREA
+	select FB_CFB_IMAGEBLIT
+	help
+	  This enable PikeOS virtual framebuffer driver. video=vmfile_fb:x must
+	  be given on command line to be able to use it.
+	  This must not be used as a module.
+
+config P4VM_FILE_SHM_FB
+	bool "PikeOS Virtual Framebuffer driver based on shared memory (EXPERIMENTAL)"
+	depends on FB
+	select FB_CFB_FILLRECT
+	select FB_CFB_COPYAREA
+	select FB_CFB_IMAGEBLIT
+	help
+	  This enable PikeOS virtual framebuffer driver. video=vmfile_shm_fb:x
+	  must be given on command line to be able to use it.
+
+config P4VM_RTC
+	bool "PikeOS RTC support (EXPERIMENTAL)"
+	select RTC_CLASS
+	help
+		This enable PikeOS RTC support. The driver name is pikeos-rtc.
+
+config P4VM_PORT_INPUT
+	bool "PikeOS queuing port input driver (EXPERIMENTAL)"
+	depends on P4VM_PORT
+	select INPUT
+	select INPUT_EVDEV
+	help
+	  The input driver allows you to use a queuing port named "input_rx"
+	  to forward events from another partition to the linux input event
+	  handler system, e.g. touch displays.
+
+config P4VM_REGULATOR
+	bool "P4 virtual regulator"
+	depends on P4_BSP_ARCH_MXC
+	default n
+	help
+	  This driver supports P4 virtual regulator in a way that
+	  PikeOS .rbx file is interpreted and the regulators are probed.
+
+source "arch/p4/drivers/vmfile_clk/Kconfig"
+
+endmenu

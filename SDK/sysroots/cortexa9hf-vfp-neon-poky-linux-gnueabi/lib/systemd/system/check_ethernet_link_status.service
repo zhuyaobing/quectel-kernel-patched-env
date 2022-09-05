@@ -1,0 +1,12 @@
+[Unit]
+Description=Check Ethernet link status of eth0 and report to CSP
+Wants=ecuvard.service
+After=ecuvard.service
+
+[Service]
+ExecStart=/usr/sbin/check_ethernet_link_status.sh
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=alex-core.target

@@ -1,0 +1,16 @@
+Package: util-linux-dbg
+Version: 2.29.1-r0
+Description: A suite of basic system administration utilities - Debugging files
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.  This package contains ELF symbols
+ and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1+ & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: util-linux
+Recommends: util-linux-libsmartcols-dbg, ncurses-libncursesw-dbg, util-linux-libuuid-dbg, ncurses-libtinfo-dbg, libz-dbg, util-linux-libfdisk-dbg, libc6-dbg, util-linux-libblkid-dbg, util-linux-libmount-dbg
+Source: http://kernel.org/pub/linux/utils/util-linux/v2.29/util-linux-2.29.1.tar.xz file://configure-sbindir.patch file://runuser.pamd file://runuser-l.pamd file://ptest.patch file://run-ptest file://display_testname_for_subtest.patch file://avoid_parallel_tests.patch file://uuid-test-error-api.patch

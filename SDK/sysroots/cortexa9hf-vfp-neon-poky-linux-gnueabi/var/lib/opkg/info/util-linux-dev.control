@@ -1,0 +1,19 @@
+Package: util-linux-dev
+Version: 2.29.1-r0
+Description: A suite of basic system administration utilities - Development files
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & LGPLv2.1+ & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: util-linux
+Depends: libblkid1, libfdisk1, libmount1, libsmartcols1, util-linux (= 2.29.1-r0), libuuid1
+Recommends: libc6-dev, util-linux-libsmartcols-dev, util-linux-libuuid-dev, util-linux-libmount-dev, util-linux-sulogin-dev, ncurses-libncursesw-dev, libz-dev, util-linux-libfdisk-dev, util-linux-losetup-dev, update-alternatives-opkg-dev, ncurses-libtinfo-dev, util-linux-libblkid-dev, coreutils-dev, bash-dev, ncurses-dev, grep-dev, util-linux-lsblk-dev, util-linux-umount-dev, util-linux-swaponoff-dev
+Provides: util-linux-libblkid-dev, util-linux-libuuid-dev, util-linux-libmount-dev
+Source: http://kernel.org/pub/linux/utils/util-linux/v2.29/util-linux-2.29.1.tar.xz file://configure-sbindir.patch file://runuser.pamd file://runuser-l.pamd file://ptest.patch file://run-ptest file://display_testname_for_subtest.patch file://avoid_parallel_tests.patch file://uuid-test-error-api.patch

@@ -1,0 +1,18 @@
+Package: libxcb-dev
+Version: 1.11-r0
+Description: XCB: The X protocol C binding library - Development files
+ The X protocol C-language Binding (XCB) is a replacement for Xlib
+ featuring a small footprint, latency hiding, direct access to the
+ protocol, improved threading support, and extensibility.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: libxcb
+Homepage: http://xcb.freedesktop.org
+Depends: libxcb-xtest0, libxcb1 (= 1.11-r0), libxcb-xv0, libxcb-shm0, libxcb-damage0, libxcb-xvmc0, libxcb-dpms0, libxcb-xprint0, libxcb-record0, libxcb-xinerama0, libxcb-randr0, libxcb-xfixes0, libxcb-xevie0, libxcb-res0, libxcb-shape0, libxcb-present0, libxcb-xf86dri0, libxcb-xkb1, libxcb-sync1, libxcb-dri3-0, libxcb-composite0, libxcb-glx0, libxcb-dri2-0, libxcb-screensaver0, libxcb-render0
+Recommends: libxcb-shape-dev, libxcb-dpms-dev, xproto-dev, libpthread-stubs-dev, libxcb-render-dev, libxcb-shm-dev, libxcb-dri3-dev, libxcb-damage-dev, libxcb-glx-dev, libxcb-composite-dev, libxdmcp-dev, libxcb-res-dev, libxcb-xvmc-dev, libxau-dev, libxcb-xkb-dev, libxcb-sync-dev, libxcb-xevie-dev, libxcb-dri2-dev, libxcb-randr-dev, libxcb-record-dev, libxcb-xprint-dev, libxcb-xv-dev, libc6-dev, libxcb-xtest-dev, libxcb-screensaver-dev, xcb-proto-dev, libxcb-present-dev, libxcb-xf86dri-dev, libxcb-xinerama-dev, libxcb-xfixes-dev
+Source: http://xcb.freedesktop.org/dist/libxcb-1.11.tar.bz2 file://xcbincludedir.patch file://disable-check.patch file://gcc-mips-pr68302-mips-workaround.patch

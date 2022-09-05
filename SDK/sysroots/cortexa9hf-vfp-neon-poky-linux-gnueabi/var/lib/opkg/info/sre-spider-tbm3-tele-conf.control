@@ -1,0 +1,13 @@
+Package: sre-spider-tbm3-tele-conf
+Version: 13.3.0-r0
+Description: Spider - system state and signaling daemon
+ Central point for system state, signaling between partitions, software
+ update and miscellaneous house-keeping
+Section: system
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-spider
+Depends: sre-spider
+Source: file://spider-vcm-tele.conf file://spider-tbm3-tele.conf file://spider-tpa.conf

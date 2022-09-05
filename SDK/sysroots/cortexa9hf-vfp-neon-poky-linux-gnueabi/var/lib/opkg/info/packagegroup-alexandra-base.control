@@ -1,0 +1,12 @@
+Package: packagegroup-alexandra-base
+Version: 1.0-r2
+Description: Software specific to Alexandra project
+ Software specific to Alexandra project.
+Section: console
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-alexandra-base
+Depends: sre-spider, alex-malc-systime, alex-cslc-mqttsender, sre-ipcd-lib, sre-systemd-target, alex-malc-beproxy
+Source: None

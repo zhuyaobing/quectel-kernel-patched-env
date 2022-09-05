@@ -1,0 +1,19 @@
+Package: libxdmcp-dev
+Version: 1:1.1.2-r0
+Description: XDMCP: X Display Manager Control Protocol library - Development files
+ The purpose of the X Display Manager Control Protocol (XDMCP) is to
+ provide a uniform mechanism for an autonomous display to request login
+ service from a remote host. An X terminal (screen, keyboard, mouse,
+ processor, network interface) is a prime example of an autonomous
+ display.  This package contains symbolic links, header files, and related
+ items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: libxdmcp
+Homepage: http://www.x.org
+Depends: libxdmcp6 (= 1:1.1.2-r0)
+Recommends: libc6-dev, xproto-dev, util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/lib/libXdmcp-1.1.2.tar.bz2

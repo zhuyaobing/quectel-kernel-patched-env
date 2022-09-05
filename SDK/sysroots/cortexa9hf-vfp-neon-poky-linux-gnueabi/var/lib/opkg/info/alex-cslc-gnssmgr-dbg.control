@@ -1,0 +1,14 @@
+Package: alex-cslc-gnssmgr-dbg
+Version: 13.3.0-r0
+Description: GNSS Manager, Global Navigation Satellite System Manager - Debugging files
+ Recipe for the GNSS manager that publish gps messages to the mqtt broker
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-gnssmgr
+Recommends: libmosquittopp1-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libc6-dbg, libstdc++-dbg
+Source: None

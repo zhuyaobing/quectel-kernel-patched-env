@@ -1,0 +1,18 @@
+[Unit]
+Description=pgnreqd - Alexandra PGN request daemon
+After=alex-boot.target
+Requires=alex-boot.target
+
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/pgnreqd
+
+
+
+
+[Install]
+WantedBy=alex-core.target
+
+

@@ -1,0 +1,6 @@
+/usr/include/nfsidmap.h
+/usr/lib/libnfsidmap.so
+/usr/lib/libnfsidmap/static.la
+/usr/lib/libnfsidmap/nsswitch.la
+/usr/lib/pkgconfig/libnfsidmap.pc
+/usr/lib/libnfsidmap.la

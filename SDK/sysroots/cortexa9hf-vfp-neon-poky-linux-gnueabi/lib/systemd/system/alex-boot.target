@@ -1,0 +1,9 @@
+[Unit]
+Description=The alexandra boot target
+After=network.target
+Requires=network.target
+AllowIsolate=yes
+
+[Install]
+WantedBy=network.target
+RequiredBy=alex-core.target

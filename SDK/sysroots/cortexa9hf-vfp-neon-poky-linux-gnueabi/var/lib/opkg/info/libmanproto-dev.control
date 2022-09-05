@@ -1,0 +1,16 @@
+Package: libmanproto-dev
+Version: 3.0.0-r0
+Description: The MCP protobuf library - Development files
+ Recipe for building the MAN protobuf library  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-mlapi
+Depends: libmanproto1 (= 3.0.0-r0)
+Recommends: libc6-dev, sre-lapi-dev, protobuf-dev, libgcc-s-dev, libstdc++-dev
+Provides: alex-malc-mlapi-dev
+Source: None

@@ -1,0 +1,15 @@
+Package: libusb-1.0-dbg
+Version: 1.0.19-r0
+Description: Userspace library to access USB (version 1.0) - Debugging files
+ Userspace library to access USB (version 1.0).  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libusb1
+Homepage: http://libusb.sf.net
+Recommends: libc6-dbg
+Provides: libusb1-dbg
+Source: http://downloads.sourceforge.net/libusb/libusb-1.0.19.tar.bz2

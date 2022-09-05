@@ -1,0 +1,13 @@
+Package: gdb-cross-canadian-arm
+Version: 7.12.1-r0
+Description: GNU debugger (cross-canadian gdb for arm target)
+ GNU debugger (cross-canadian gdb for arm target).
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & GPLv3 & LGPLv2 & LGPLv3
+Architecture: x86_64-nativesdk
+OE: gdb-cross-canadian-arm
+Homepage: http://www.gnu.org/software/gdb/
+Depends: nativesdk-libexpat1 (>= 2.1.0), nativesdk-python-lang, nativesdk-python-re, nativesdk-python-codecs, nativesdk-libpython2.7-1.0 (>= 2.7.9), nativesdk-libreadline6 (>= 6.3), nativesdk-python-core, nativesdk-libncurses5 (>= 5.9), nativesdk-python-netclient, nativesdk-libc6 (>= 2.22), nativesdk-libtinfo5 (>= 5.9)
+Source: http://ftp.gnu.org/gnu/gdb/gdb-7.12.1.tar.gz file://0001-include-sys-types.h-for-mode_t.patch file://0002-make-man-install-relative-to-DESTDIR.patch file://0007-use-asm-sgidefs.h.patch file://0008-Use-exorted-definitions-of-SIGRTMIN.patch file://0009-Change-order-of-CFLAGS.patch file://0010-resolve-restrict-keyword-conflict.patch file://package_devel_gdb_patches_120-sigprocmask-invalid-call.patch

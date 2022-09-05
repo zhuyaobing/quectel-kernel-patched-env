@@ -1,0 +1,13 @@
+Package: packagegroup-base-bluetooth
+Version: 1.0-r83.alex2
+Description: Bluetooth support
+ Merge machine and distro options to create a basic machine task/package.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Depends: bluez5
+Recommends: kernel-module-bnep, kernel-module-bluetooth, kernel-module-hci-usb, kernel-module-rfcomm, kernel-module-sco, kernel-module-hci-uart, kernel-module-hci-vhci, kernel-module-hidp, kernel-module-l2cap
+Source: None

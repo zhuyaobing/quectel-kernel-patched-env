@@ -1,0 +1,13 @@
+Package: sre-iomanager
+Version: 1.0.0-r2
+Description: SRE Linux API proprietary parts
+ This recipe checks out and builds a deifined revision of the sre
+ iomanager code.
+Section: example
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-iomanager
+Depends: libgcc1 (>= 4.9.3), libdbus-1-3 (>= 1.8.20), libc6 (>= 2.22), libboost-thread1.58.0 (>= 1.58.0), libboost-system1.58.0 (>= 1.58.0), libstdc++6 (>= 4.9.3), libsre-shared0 (>= 1.0.0), boost
+Source: None

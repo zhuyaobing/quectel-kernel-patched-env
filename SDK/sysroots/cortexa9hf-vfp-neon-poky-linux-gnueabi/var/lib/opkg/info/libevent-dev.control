@@ -1,0 +1,16 @@
+Package: libevent-dev
+Version: 2.0.22-r0
+Description: An asynchronous event notification library - Development files
+ An asynchronous event notification library.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libevent
+Homepage: http://libevent.org/
+Depends: libevent (= 2.0.22-r0)
+Recommends: libc6-dev, libz-dev
+Source: http://downloads.sourceforge.net/levent/libevent-2.0.22-stable.tar.gz file://run-ptest

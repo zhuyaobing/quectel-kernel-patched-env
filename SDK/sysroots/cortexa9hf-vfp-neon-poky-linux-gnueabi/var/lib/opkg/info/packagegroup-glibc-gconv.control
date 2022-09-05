@@ -1,0 +1,12 @@
+Package: packagegroup-glibc-gconv
+Version: 1.0-r0
+Description: Packagegroup for needed gconv libraries
+ Packagegroup for needed gconv libraries.
+Section: console
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-glibc-gconv
+Depends: glibc-gconv-iso8859-6, glibc-gconv-iso8859-1, glibc-gconv-iso8859-9e, glibc-gconv-iso8859-5, glibc-gconv-iso8859-9, glibc-gconv-iso8859-8, glibc-gconv-iso8859-3, glibc-gconv-iso8859-4, glibc-gconv-iso8859-15, glibc-gconv-iso8859-14, glibc-gconv-iso8859-7, glibc-gconv-iso8859-16, glibc-gconv-iso8859-11, glibc-gconv-iso8859-10, glibc-gconv-iso8859-13, glibc-gconv-iso8859-2
+Source: None

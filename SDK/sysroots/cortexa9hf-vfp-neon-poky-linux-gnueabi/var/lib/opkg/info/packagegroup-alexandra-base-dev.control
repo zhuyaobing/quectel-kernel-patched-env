@@ -1,0 +1,15 @@
+Package: packagegroup-alexandra-base-dev
+Version: 1.0-r2
+Description: Software specific to Alexandra project - Development files
+ Software specific to Alexandra project.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-alexandra-base
+Depends: packagegroup-alexandra-base (= 1.0-r2)
+Recommends: alex-malc-beproxy-dev, alex-malc-systime-dev, alex-cslc-mqttsender-dev, sre-systemd-target-dev, sre-spider-dev, sre-ipcd-lib-dev
+Source: None

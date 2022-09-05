@@ -1,0 +1,13 @@
+Package: alex-cslc-pgnreqd-dbg
+Version: 13.1.0-r0
+Description: pgnreqd - Debugging files
+ Recipe to build PGN request daemon  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-pgnreqd
+Recommends: libc6-dbg, libstdc++-dbg, sre-lapi-dbg, libgcc-s-dbg, protobuf-dbg
+Source: None

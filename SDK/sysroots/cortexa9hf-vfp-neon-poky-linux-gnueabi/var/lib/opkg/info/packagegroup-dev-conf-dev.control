@@ -1,0 +1,15 @@
+Package: packagegroup-dev-conf-dev
+Version: 1.0-r2
+Description: Software specific to Alexandra project, VCM or TBM, debug variants - Development files
+ Software specific to Alexandra project, VCM or TBM, debug variants.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-dev-conf
+Depends: packagegroup-dev-conf (= 1.0-r2)
+Recommends: ca-certificates-dev, alex-cslc-devtools-dev
+Source: None

@@ -1,0 +1,16 @@
+Package: usbutils-dev
+Version: 008-r0.alex0
+Description: Host side USB console utilities - Development files
+ Contains the lsusb utility for inspecting the devices connected to the
+ USB bus.  This package contains symbolic links, header files, and related
+ items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: usbutils
+Homepage: http://www.linux-usb.org
+Depends: usbutils (= 008-r0.alex0)
+Recommends: libusb-dev, libz-dev, udev-dev, libc6-dev, systemd-dev, libusb-1.0-dev
+Source: http://kernel.org/pub/linux/utils/usb/usbutils/usbutils-008.tar.gz file://usb-devices-avoid-dependency-on-bash.patch file://Fix-NULL-pointer-crash.patch file://iconv.patch

@@ -1,0 +1,12 @@
+Package: nativesdk-u-boot-mkimage
+Version: v2015.07+git0+33711bdd4a-r0
+Description: U-Boot bootloader image creation tool
+ U-Boot bootloader image creation tool.
+Section: bootloader
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: x86_64-nativesdk
+OE: nativesdk-u-boot-mkimage
+Depends: nativesdk-libssl1.0.0 (>= 1.0.2h), nativesdk-libc6 (>= 2.22), nativesdk-libcrypto1.0.0 (>= 1.0.2h)
+Source: git://git.denx.de/u-boot.git;branch=master

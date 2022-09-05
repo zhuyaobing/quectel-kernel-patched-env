@@ -1,0 +1,6 @@
+[Match]
+Name=uap0
+Driver=wlan_sdio
+
+[Network]
+Address=10.0.0.1/24

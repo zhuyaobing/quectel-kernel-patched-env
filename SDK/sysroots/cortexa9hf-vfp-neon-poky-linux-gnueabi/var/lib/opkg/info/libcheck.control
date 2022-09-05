@@ -1,0 +1,14 @@
+Package: libcheck
+Version: 0.10.0-r0
+Description: Check - unit testing framework for C code
+ Check - unit testing framework for C code.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libcheck
+Homepage: http://check.sourceforge.net/
+Depends: gawk, libc6 (>= 2.22)
+Replaces: check (<= 0.9.5)
+Source: http://downloads.sourceforge.net/check/check-0.10.0.tar.gz

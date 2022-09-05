@@ -1,0 +1,11 @@
+Package: os-release
+Version: 1.0-r0
+Description: Operating system identification
+ The /etc/os-release file contains operating system identification data.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: os-release
+Source: None

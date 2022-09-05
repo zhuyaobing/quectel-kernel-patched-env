@@ -1,0 +1,16 @@
+Package: liburcu-dev
+Version: 0.8.7-r0
+Description: Userspace RCU (read-copy-update) library - Development files
+ Userspace RCU (read-copy-update) library.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+ & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: liburcu
+Homepage: http://lttng.org/urcu
+Depends: liburcu (= 0.8.7-r0)
+Recommends: libc6-dev
+Source: http://lttng.org/files/urcu/userspace-rcu-0.8.7.tar.bz2 file://Revert-Blacklist-ARM-gcc-4.8.0-4.8.1-4.8.2.patch file://aarch64.patch file://0001-uatomic-Specify-complete-types-for-atomic-function-c.patch

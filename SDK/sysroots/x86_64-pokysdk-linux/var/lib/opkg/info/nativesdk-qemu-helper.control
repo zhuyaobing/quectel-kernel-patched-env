@@ -1,0 +1,12 @@
+Package: nativesdk-qemu-helper
+Version: 1.0-r9
+Description: Qemu helper scripts
+ Qemu helper scripts.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: x86_64-nativesdk
+OE: nativesdk-qemu-helper
+Depends: nativesdk-libc6 (>= 2.22), nativesdk-qemu
+Source: file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-internal file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-addptable2image file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-gen-tapdevs file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-ifup file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-ifdown file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/oe-find-native-sysroot file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-extract-sdk file:///data/jenkins/workspace/alex-platform_CI_master/sources/poky/scripts/runqemu-export-rootfs file://tunctl.c file://raw2flash.c

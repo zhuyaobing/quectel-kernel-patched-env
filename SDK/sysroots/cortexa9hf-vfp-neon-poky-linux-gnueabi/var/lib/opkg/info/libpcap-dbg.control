@@ -1,0 +1,16 @@
+Package: libpcap-dbg
+Version: 1.6.2-r0
+Description: Interface for user-level network packet capture - Debugging files
+ Libpcap provides a portable framework for low-level network monitoring.
+ Libpcap can provide network statistics collection, security monitoring
+ and network debugging.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libpcap
+Homepage: http://www.tcpdump.org/
+Recommends: libc6-dbg
+Source: http://www.tcpdump.org/release/libpcap-1.6.2.tar.gz file://aclocal.patch file://libpcap-pkgconfig-support.patch

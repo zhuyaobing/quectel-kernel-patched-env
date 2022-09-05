@@ -1,0 +1,12 @@
+Package: sre-ipcd
+Version: 13.2.2-r1
+Description: IPC Daemon
+ Recipe to build ipcd daemon.
+Section: example
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-ipcd
+Depends: libgcc1 (>= 4.9.3), protobuf (>= 2.6.1+git0+bba83652e1), libc6 (>= 2.22), libcslcipc1 (>= 13.2.2), libstdc++6 (>= 4.9.3), sre-lapi (>= 13.3.0-2-g7c58342)
+Source: None

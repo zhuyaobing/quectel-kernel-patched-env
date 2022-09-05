@@ -1,0 +1,13 @@
+/usr/bin/opkg-list-fields
+/usr/bin/opkg-compare-versions.sh
+/usr/bin/opkg-show-deps
+/usr/bin/opkg-compare-indexes
+/usr/bin/opkg-unbuild
+/usr/bin/opkg-extract-file
+/usr/bin/arfile.py
+/usr/bin/opkg-buildpackage
+/usr/bin/opkg-diff
+/usr/bin/opkg.py
+/usr/bin/opkg-make-index
+/usr/bin/opkg-build
+/usr/bin/opkg-compare-versions

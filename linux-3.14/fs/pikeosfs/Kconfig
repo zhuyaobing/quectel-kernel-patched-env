@@ -1,0 +1,5 @@
+config PIKEOSFS
+	tristate "PikeOS FS (EXPERIMENTAL)"
+	depends on P4
+	help
+	  pikeosfs allows to access PikeOS Volume Providers within Linux

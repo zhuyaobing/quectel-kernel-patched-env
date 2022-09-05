@@ -1,0 +1,12 @@
+Package: nativesdk-mxsldr
+Version: 0.0.0+git0+c40d804725-r0
+Description: nativesdk-mxsldr version 0.0.0+gitAUTOINC+c40d804725-r0
+ Freescale i.MX233/i.MX28 USB loader
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: x86_64-nativesdk
+OE: nativesdk-mxsldr
+Depends: nativesdk-libusb-1.0-0 (>= 1.0.19), nativesdk-libc6 (>= 2.22)
+Source: git://git.denx.de/mxsldr.git

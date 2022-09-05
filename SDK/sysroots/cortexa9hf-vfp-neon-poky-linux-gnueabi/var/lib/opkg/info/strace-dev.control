@@ -1,0 +1,15 @@
+Package: strace-dev
+Version: 4.10-r0
+Description: System call tracing tool - Development files
+ System call tracing tool.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: strace
+Homepage: http://strace.sourceforge.net
+Depends: strace (= 4.10-r0)
+Recommends: gawk-dev, bluez5-dev, libc6-dev, libaio-dev, coreutils-dev, grep-dev, make-dev
+Source: http://downloads.sourceforge.net/strace/strace-4.10.tar.xz file://0001-Add-linux-aarch64-arch_regs.h.patch file://git-version-gen file://strace-add-configure-options.patch file://Makefile-ptest.patch file://run-ptest file://Include-sys-stat.h-for-S_I-macros.patch file://Include-linux-ioctl.h-for-_IOC_-macros.patch

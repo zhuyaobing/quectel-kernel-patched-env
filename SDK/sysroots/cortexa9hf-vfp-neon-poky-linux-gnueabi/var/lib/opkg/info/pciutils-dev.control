@@ -1,0 +1,17 @@
+Package: pciutils-dev
+Version: 3.3.1-r0
+Description: PCI utilities - Development files
+ The PCI Utilities package contains a library for portable access to PCI
+ bus configuration space and several utilities based on this library.
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: pciutils
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Depends: libpci3, pciutils (= 3.3.1-r0)
+Recommends: libz-dev, udev-dev, libc6-dev, systemd-dev, kmod-dev, libkmod-dev, pciutils-ids-dev, libpci-dev
+Source: http://kernel.org/pub/software/utils/pciutils/pciutils-3.3.1.tar.xz file://configure.patch file://guess-fix.patch file://makefile.patch

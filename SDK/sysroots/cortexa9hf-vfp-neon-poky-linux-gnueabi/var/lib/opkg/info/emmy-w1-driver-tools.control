@@ -1,0 +1,12 @@
+Package: emmy-w1-driver-tools
+Version: 1.0-r0.alex1
+Description: SD8887 Tools for EMMY-W1
+ SD8887 Tools for EMMY-W1.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: emmy-w1-driver-tools
+Depends: alex-cslc-ecuvarc
+Source: file://configure_wifi.service file://configure_wifi.sh file://reset_wifi.service file://reset_wifi.sh

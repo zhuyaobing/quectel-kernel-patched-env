@@ -1,0 +1,2 @@
+/lib/systemd/system/move_tpa_logs.service
+/usr/bin/move_tpa_logs.sh

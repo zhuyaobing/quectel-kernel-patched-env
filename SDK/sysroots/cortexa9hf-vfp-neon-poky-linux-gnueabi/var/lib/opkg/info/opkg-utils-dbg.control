@@ -1,0 +1,14 @@
+Package: opkg-utils-dbg
+Version: 0.1.8+git0+53274f0875-r0
+Description: Additional utilities for the opkg package manager - Debugging files
+ Additional utilities for the opkg package manager.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: opkg-utils
+Homepage: http://code.google.com/p/opkg/
+Recommends: libc6-dbg
+Source: git://git.yoctoproject.org/opkg-utils

@@ -1,0 +1,14 @@
+Package: volatile-binds-dev
+Version: 1.0-r0
+Description: Volatile bind mount setup and configuration for read-only-rootfs - Development files
+ Volatile bind mount setup and configuration for read-only-rootfs  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: volatile-binds
+Depends: volatile-binds (= 1.0-r0)
+Source: file://mount-copybind file://COPYING.MIT file://volatile-binds.service.in

@@ -1,0 +1,13 @@
+Package: udev-rules-imx-dev
+Version: 1.0-r0
+Description: udev-rules-imx version 1.0-r0 - Development files
+ udev rules for Freescale i.MX SOCs  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: udev-rules-imx
+Depends: udev-rules-imx (= 1.0-r0)
+Source: file://10-imx.rules

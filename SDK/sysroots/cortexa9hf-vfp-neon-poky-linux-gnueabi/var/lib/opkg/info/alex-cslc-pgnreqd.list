@@ -1,0 +1,3 @@
+/etc/alex/pgnreqd.conf
+/usr/bin/pgnreqd
+/lib/systemd/system/pgnreqd.service

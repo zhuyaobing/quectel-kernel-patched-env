@@ -1,0 +1,14 @@
+Package: alex-cslc-vpnctld-dbg
+Version: 13.1.0-r0
+Description: VPN Control Daemon Utility - Debugging files
+ Recipe for the VPN Control Daemon, reposible for check of VPN
+ Connectivity and exchange of keys  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-vpnctld
+Recommends: libstdc++-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libcslccrypto-dbg, libc6-dbg
+Source: None

@@ -1,0 +1,15 @@
+Package: dstat
+Version: 0.7.2-r0
+Description: versatile resource statics tool
+ Dstat is a versatile replacement for vmstat, iostat, netstat and ifstat.
+ Dstat overcomes some of their limitations and adds some extra features,
+ more counters and flexibility. Dstat is handy for monitoring systems
+ during performance tuning tests, benchmarks or troubleshooting.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: dstat
+Homepage: http://dag.wiee.rs/home-made/dstat
+Source: git://github.com/dagwieers/dstat.git

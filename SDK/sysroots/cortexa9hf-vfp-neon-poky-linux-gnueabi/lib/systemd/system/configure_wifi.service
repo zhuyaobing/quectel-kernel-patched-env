@@ -1,0 +1,12 @@
+[Unit]
+Description=Sets up the config file for reset_wifi.sh to work properly
+Requires=ecuvard.service
+After=ecuvard.service
+ConditionFileNotEmpty=!/etc/reset_wifi.conf
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/reset_wifi.sh --init
+
+[Install]
+WantedBy=alex.target

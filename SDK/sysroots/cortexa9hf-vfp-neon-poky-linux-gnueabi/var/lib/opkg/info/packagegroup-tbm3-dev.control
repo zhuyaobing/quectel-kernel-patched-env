@@ -1,0 +1,15 @@
+Package: packagegroup-tbm3-dev
+Version: 1.0-r6
+Description: Software specific to Alexandra project, TBM3 variant - Development files
+ Software specific to Alexandra project, TBM3 variant.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-tbm3
+Depends: packagegroup-tbm3 (= 1.0-r6)
+Recommends: emmy-w1-driver-sdiouart-firmware-dev, alex-cslc-pgnreqd-dev, systemd-tbm3-conf-dev, sre-usblog-tele-args-dev, e2fsprogs-resize2fs-dev, sre-spider-tbm3-tele-conf-dev, emmy-w1-driver-tools-dev, nfs-tele-server-dev, alex-cslc-modemd-conf-dev, sre-usblog-move-tpa-logs-dev, wireguard-tools-tbm3-tele-keys-dev, packagegroup-alexandra-tele-dev, nfs-utils-dev
+Source: None

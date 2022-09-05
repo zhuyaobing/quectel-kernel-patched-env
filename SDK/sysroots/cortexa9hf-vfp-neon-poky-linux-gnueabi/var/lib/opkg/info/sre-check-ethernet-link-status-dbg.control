@@ -1,0 +1,12 @@
+Package: sre-check-ethernet-link-status-dbg
+Version: 1.0-r0
+Description: Check status of Ethernet link - Debugging files
+ Checks link status of Ethernet interface and reports it to CSP.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-check-ethernet-link-status
+Source: file://check_ethernet_link_status.service file://check_ethernet_link_status.sh

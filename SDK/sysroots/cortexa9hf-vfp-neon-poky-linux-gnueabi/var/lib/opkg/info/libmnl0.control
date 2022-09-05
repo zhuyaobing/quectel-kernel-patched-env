@@ -1,0 +1,16 @@
+Package: libmnl0
+Version: 1.0.4-r0
+Description: Minimalistic user-space Netlink utility library
+ Minimalistic user-space library oriented to Netlink developers, providing
+ functions for common tasks in parsing, validating, and constructing both
+ the Netlink header and TLVs.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libmnl
+Homepage: http://www.netfilter.org/projects/libmnl/index.html
+Depends: libc6 (>= 2.22)
+Provides: libmnl
+Source: http://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2;name=tar

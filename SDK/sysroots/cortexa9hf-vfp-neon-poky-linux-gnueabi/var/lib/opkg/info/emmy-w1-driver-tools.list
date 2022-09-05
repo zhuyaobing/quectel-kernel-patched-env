@@ -1,0 +1,4 @@
+/usr/sbin/reset_wifi.sh
+/lib/systemd/system/configure_wifi.service
+/lib/systemd/system/reset_wifi.service
+/usr/sbin/configure_wifi.sh

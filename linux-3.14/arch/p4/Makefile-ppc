@@ -1,0 +1,27 @@
+ELF_ARCH := powerpc
+ELF_FORMAT := elf32-powerpc
+HEADER_ARCH := powerpc
+ARCH_JIFFIES := "jiffies_64 + 4"
+
+SYS := arch-powerpc
+
+# PikeOS uses a slightly different notation for CPU arch and type
+PROC_SUBARCH := $(shell echo $(ELINOS_ARCH) | sed 's/60x/oea/'| sed 's/4xx/44x/')
+
+KBUILD_CFLAGS += -fno-builtin -msoft-float
+
+ifeq ($(PROC_SUBARCH), e500)
+KBUILD_CFLAGS += $(call cc-option,-mno-spe,)
+endif
+
+PIKEOS_ARCH := ppc
+PIKEOS_PROC := $(PROC_SUBARCH)
+PIKEOS_CFLAGS := -D__powerpc__ -Dpowerpc
+
+SUBARCH := powerpc
+
+# DTB targets
+boot := arch/p4/arch-powerpc/boot
+
+%.dtb: scripts
+	$(Q)$(MAKE) $(build)=$(boot)/dts $(boot)/dts/$@

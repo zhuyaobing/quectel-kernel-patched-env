@@ -1,0 +1,14 @@
+Package: sre-ipcd-dev
+Version: 13.2.2-r1
+Description: IPC Daemon - Development files
+ Recipe to build ipcd daemon.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-ipcd
+Depends: libcslcipc1, sre-ipcd (= 13.2.2-r1)
+Recommends: sre-lapi-dev, libgcc-s-dev, libstdc++-dev, libc6-dev, systemd-dev, protobuf-dev, sre-systemd-target-dev, sre-ipcd-lib-dev
+Source: None

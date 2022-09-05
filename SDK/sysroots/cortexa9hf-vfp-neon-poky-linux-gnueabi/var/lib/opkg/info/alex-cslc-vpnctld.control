@@ -1,0 +1,13 @@
+Package: alex-cslc-vpnctld
+Version: 13.1.0-r0
+Description: VPN Control Daemon Utility
+ Recipe for the VPN Control Daemon, reposible for check of VPN
+ Connectivity and exchange of keys
+Section: applications
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-vpnctld
+Depends: libgcc1 (>= 4.9.3), protobuf (>= 2.6.1+git0+bba83652e1), libc6 (>= 2.22), libcslccrypto1 (>= 13.1.0-2-g5ac4f01), libstdc++6 (>= 4.9.3), sre-systemd-target, sre-lapi (>= 13.3.0-2-g7c58342)
+Source: None

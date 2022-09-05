@@ -1,0 +1,13 @@
+Package: packagegroup-core-boot-dbg
+Version: 1.0-r17
+Description: Minimal boot requirements - Debugging files
+ The minimal set of packages required to boot the system  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-core-boot
+Recommends: systemd-dbg, base-passwd-dbg, udev-dbg, busybox-dbg, netbase-dbg, update-alternatives-opkg-dbg, base-files-dbg
+Source: None

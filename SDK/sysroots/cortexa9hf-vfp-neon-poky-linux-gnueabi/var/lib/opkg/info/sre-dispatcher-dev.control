@@ -1,0 +1,15 @@
+Package: sre-dispatcher-dev
+Version: 1.0.0-r2
+Description: SRE Linux API proprietary parts - Development files
+ This recipe checks out and builds a deifined revision of the sre
+ dispatcher code.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-dispatcher
+Depends: sre-dispatcher (= 1.0.0-r2)
+Recommends: boost-system-dev, libgcc-s-dev, boost-thread-dev, boost-dev, libsre-client-base-dev, libstdc++-dev, libc6-dev, libsre-shared-dev, dbus-lib-dev
+Source: None

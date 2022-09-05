@@ -1,0 +1,14 @@
+Package: packagegroup-base-dbg
+Version: 1.0-r83.alex2
+Description: Merge machine and distro options to create a basic machine task/package - Debugging files
+ Merge machine and distro options to create a basic machine task/package.
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Recommends: packagegroup-base-usbgadget-dbg, packagegroup-base-usbhost-dbg, packagegroup-base-apm-dbg, packagegroup-base-pci-dbg, packagegroup-distro-base-dbg, module-init-tools-dbg, packagegroup-base-nfs-dbg, packagegroup-base-ipv6-dbg, sysfsutils-dbg, packagegroup-machine-base-dbg
+Source: None

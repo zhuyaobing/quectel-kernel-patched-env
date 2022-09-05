@@ -1,0 +1,16 @@
+Package: inputproto-dev
+Version: 1:2.3.1-r0
+Description: XI: X Input extension headers - Development files
+ This package provides the wire protocol for the X Input extension.  The
+ extension supports input devices other then the core X keyboard and
+ pointer.  This package contains symbolic links, header files, and related
+ items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: inputproto
+Homepage: http://www.x.org
+Recommends: util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/proto/inputproto-2.3.1.tar.bz2

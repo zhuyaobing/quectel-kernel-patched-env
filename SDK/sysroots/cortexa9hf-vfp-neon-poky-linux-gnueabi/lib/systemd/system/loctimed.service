@@ -1,0 +1,18 @@
+[Unit]
+Description=loctimed - Local time daemon
+After=alex-boot.target
+Requires=alex-boot.target
+
+
+[Service]
+Type=notify
+Restart=always
+ExecStart=/usr/bin/loctimed
+
+
+
+
+[Install]
+WantedBy=alex-core.target
+
+

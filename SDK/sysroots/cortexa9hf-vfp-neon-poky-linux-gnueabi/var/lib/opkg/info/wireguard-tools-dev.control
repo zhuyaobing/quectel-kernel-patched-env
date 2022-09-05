@@ -1,0 +1,19 @@
+Package: wireguard-tools-dev
+Version: 0.0.20181119-r0
+Description: WireGuard is an extremely simple yet fast and modern VPN - Development files
+ WireGuard is a secure network tunnel, operating at layer 3, implemented
+ as a kernel virtual network interface for Linux, which aims to replace
+ both IPsec for most use cases, as well as popular user space and/or TLS-
+ based solutions like OpenVPN, while being more secure, more performant,
+ and easier to use.  This package contains symbolic links, header files,
+ and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9hf-vfp-neon
+OE: wireguard-tools
+Homepage: https://www.wireguard.io/
+Depends: wireguard-tools (= 0.0.20181119-r0)
+Recommends: bash-dev, libc6-dev, libmnl-dev, wireguard-tools-pub-keys-dev
+Source: https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20181119.zip file://tbm3.wg.privkey file://tbm3.wg.pubkey file://vcm.wg.privkey file://vcm.wg.pubkey

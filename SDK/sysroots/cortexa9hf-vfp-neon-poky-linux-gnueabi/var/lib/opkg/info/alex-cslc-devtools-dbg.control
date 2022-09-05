@@ -1,0 +1,13 @@
+Package: alex-cslc-devtools-dbg
+Version: 13.3.0-r0
+Description: Development and sysver tools - Debugging files
+ Recipe to build devtools.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-devtools
+Recommends: systemd-dbg, libmanproto-dbg, libcurl-dbg, libstdc++-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libcslccrypto-dbg, libc6-dbg, libjsoncpp-dbg, libmosquittopp1-dbg
+Source: None

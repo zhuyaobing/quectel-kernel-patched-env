@@ -1,0 +1,15 @@
+Package: packagegroup-core-standalone-sdk-target-dev
+Version: 1.0-r8
+Description: Target packages for the standalone SDK - Development files
+ Target packages for the standalone SDK.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-standalone-sdk-target
+Depends: packagegroup-core-standalone-sdk-target (= 1.0-r8)
+Recommends: websocketpp-dev, glibc-utils-dev, glibc-gconv-ibm850-dev, glibc-dev, date-staticdev-dev, libatomic-dev, glibc-thread-db-dev, glibc-gconv-cp1252-dev, libstdc++-dev, glibc-localedata-i18n-dev, libgcc-dev, bluesdk-dbg-staticdev-dev, bluesdk-staticdev-dev, glibc-gconv-iso8859-15-dev, glibc-gconv-iso8859-1-dev, libsegfault-dev
+Source: None

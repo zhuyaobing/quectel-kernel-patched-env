@@ -1,0 +1,18 @@
+Package: alsa-lib-dev
+Version: 1.0.29-r0
+Description: ALSA sound library - Development files
+ ALSA sound library.  This package contains symbolic links, header files,
+ and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1 & GPLv2+
+Architecture: cortexa9hf-vfp-neon-mx6qdl
+OE: alsa-lib
+Homepage: http://www.alsa-project.org
+Depends: alsa-lib (= 1.0.29-r0), libasound2
+Recommends: alsa-conf-base-dev, libc6-dev, libasound-dev, alsa-conf-dev
+Provides: alsa-dev
+Replaces: alsa-dev
+Conflicts: alsa-dev
+Source: ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.29.tar.bz2 file://Check-if-wordexp-function-is-supported.patch file://0001-build-Do-not-try-to-detect-cross-compiler.patch file://0001-add-conf-for-multichannel-support-in-imx.patch

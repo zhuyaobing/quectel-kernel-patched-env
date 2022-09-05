@@ -1,0 +1,57 @@
+[Unit]
+Description=Ping container
+Requires=multi-user.target
+
+
+[Service]
+;ExecStartPre=/bin/rm -fr /var/log/journal/888b8a1bb28d43fc8f83c9dddf849f10
+;ExecStart=/usr/bin/systemd-nspawn -D /home/root/cntroot -M pingcnt -j --keep-unit --register=no --bind-ro=/usr --bind-ro=/lib --bind-ro=/bin --bind-ro=/sbin --bind-ro=/etc/alex aleavesdrop -P -H 127.0.0.1 rt/io/kl15 
+;ExecStartPre=/bin/rm -fr /var/log/journal/888b8a1bb28d43fc8f83c9dddf849f10
+ExecStart=/usr/bin/systemd-nspawn \
+   -D /home/root/cntroot2 \
+   -M pingcnt -j --keep-unit --register=no \
+   --private-users=70000 \
+   --bind-ro=/lib \
+   --bind-ro=/usr/lib \
+   --bind-ro=/etc/hosts \
+   --bind-ro=/etc/nsswitch.conf \
+   --bind-ro=/etc/resolv.conf \
+   --bind-ro=/etc/alex \
+   --bind-ro=/dev/p4_time \
+   --bind-ro=/usr/bin/aleavesdrop \
+aleavesdrop -P rt/io/kl15
+; /ls -l /usr/bin/ipcd
+
+;aleavesdrop -P rt/io/kl15
+;ping -c5 google.de
+;
+;ExecStart=/usr/bin/systemd-nspawn -D /home/root/cntroot -M pingcnt -j --keep-unit --register=no ping 
+;ExecStart=/usr/bin/systemd-nspawn -D /home/root/cntroot -M pingcnt -j --keep-unit --register=no --bind-ro=/usr --bind-ro=/lib --bind-ro=/bin --bind-ro=/sbin --bind-ro=/etc/alex ping -c 50 127.0.0.1
+;ExecStart=/usr/bin/systemd-nspawn -D /home/root/cntroot -M pingcnt --link-journal=host --bind-ro=/usr --bind-ro=/lib --bind-ro=/bin --bind-ro=/sbin --bind-ro=/etc/alex ping -c 50 127.0.0.1
+Environment=SYSTEMD_LOG_LEVEL=debug
+#Restart=on-failure
+
+
+CPUAccounting=yes
+
+# 2..262144, defaults to 1024. CPU time available for a slice is split on units relative to their CPU share weight.
+# We run all services in system.slice. Non-container services will have CPUShares 1024, and container services can have higher or lower.
+CPUShares=50
+StartupCPUShares=50
+
+# 0%..200% on system with 2 CPUs. How much CPU time the unit shall get at most, relative to total CPU time available.
+CPUQuota=10%
+
+#############
+
+MemoryAccounting=yes
+
+MemoryLimit=100M
+
+#############  #############  #############
+
+[Install]
+
+#WantedBy=xxx.target
+
+# eof

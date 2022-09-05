@@ -1,0 +1,14 @@
+Package: alex-malc-cert-dev
+Version: 13.1.0-2-g5ac4f01-r0
+Description: MAN certificate handling service - Development files
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-cert
+Depends: alex-malc-cert (= 13.1.0-2-g5ac4f01-r0), libcslccrypto1
+Recommends: libmosquittopp1-dev, sre-lapi-dev, libgcc-s-dev, util-linux-libuuid-dev, libcurl-dev, openssl-dev, curl-dev, libcrypto-dev, libstdc++-dev, libcslccrypto-dev, libc6-dev, systemd-dev, alex-malc-cert-certificates-pack-dev, libjsoncpp-dev, protobuf-dev
+Source: None

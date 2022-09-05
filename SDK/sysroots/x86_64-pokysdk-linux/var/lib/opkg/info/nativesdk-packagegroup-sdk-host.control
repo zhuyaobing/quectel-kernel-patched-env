@@ -1,0 +1,12 @@
+Package: nativesdk-packagegroup-sdk-host
+Version: 1.0-r12
+Description: Host packages for the standalone SDK or external toolchain
+ Host packages for the standalone SDK or external toolchain.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: x86_64-nativesdk
+OE: nativesdk-packagegroup-sdk-host
+Depends: nativesdk-mxsldr, nativesdk-makedevs, nativesdk-qemu, nativesdk-qemu-helper, nativesdk-postinst-intercept, nativesdk-imx-usb-loader, nativesdk-cmake, nativesdk-automake, nativesdk-pkgconfig, nativesdk-smartpm, nativesdk-libtool, nativesdk-opkg-utils, nativesdk-shadow, nativesdk-googletest, nativesdk-elftosb, nativesdk-protobuf, nativesdk-autoconf, nativesdk-u-boot-mkimage, nativesdk-unfs3, nativesdk-pseudo, nativesdk-systemd-systemctl, nativesdk-opkg
+Source: None

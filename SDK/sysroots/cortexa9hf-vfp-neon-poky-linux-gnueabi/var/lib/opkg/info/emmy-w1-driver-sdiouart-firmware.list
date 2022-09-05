@@ -1,0 +1,7 @@
+/usr/sbin/load-emmy-uart.sh
+/lib/firmware/mrvl/LICENCE.Marvell.emmy-w1-driver-sdiouart-firmware
+/lib/firmware/
+/etc/modprobe.d/mrvl-sd8887-sdiouart.conf
+/lib/firmware/mrvl/sduart8887_combo_a2.bin
+/lib/systemd/system/load-emmy-uart.service
+/lib/firmware/mrvl/

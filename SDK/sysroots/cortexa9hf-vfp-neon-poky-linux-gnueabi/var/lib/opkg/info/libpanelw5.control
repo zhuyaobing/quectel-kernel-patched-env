@@ -1,0 +1,14 @@
+Package: libpanelw5
+Version: 5.9-r15.1
+Description: ncurses panelw library
+ ncurses panelw library
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: ncurses
+Homepage: http://www.gnu.org/software/ncurses/ncurses.html
+Depends: libncursesw5 (>= 5.9), libtinfo5 (>= 5.9), libc6 (>= 2.22)
+Provides: ncurses-libpanelw
+Source: http://downloads.yoctoproject.org/mirror/sources/ncurses-5.9-20150329.tgz file://tic-hang.patch file://config.cache

@@ -1,0 +1,13 @@
+Package: update-rc.d-dbg
+Version: 0.7-r5
+Description: manage symlinks in /etc/rcN.d - Debugging files
+ update-rc.d is a utilities that allows the management of symlinks to the
+ initscripts in the /etc/rcN.d directory structure.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: all
+OE: update-rc.d
+Source: git://github.com/philb/update-rc.d.git file://add-verbose.patch file://check-if-symlinks-are-valid.patch file://fix-to-handle-priority-numbers-correctly.patch

@@ -1,0 +1,2 @@
+/lib/systemd/system/check_ethernet_link_status.service
+/usr/sbin/check_ethernet_link_status.sh

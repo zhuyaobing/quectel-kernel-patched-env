@@ -1,0 +1,14 @@
+Package: os-release-dev
+Version: 1.0-r0
+Description: Operating system identification - Development files
+ The /etc/os-release file contains operating system identification data.
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: os-release
+Depends: os-release (= 1.0-r0)
+Source: None

@@ -1,0 +1,14 @@
+Package: libnfsidmap-dbg
+Version: 0.25-r0
+Description: NFS id mapping library - Debugging files
+ NFS id mapping library.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libnfsidmap
+Homepage: http://www.citi.umich.edu/projects/nfsv4/linux/
+Recommends: libc6-dbg
+Source: http://www.citi.umich.edu/projects/nfsv4/linux/libnfsidmap/libnfsidmap-0.25.tar.gz file://fix-ac-prereq.patch file://Set_nobody_user_group.patch file://0001-include-sys-types.h-for-getting-u_-typedefs.patch

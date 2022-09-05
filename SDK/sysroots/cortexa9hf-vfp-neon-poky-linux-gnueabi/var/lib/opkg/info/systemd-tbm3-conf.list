@@ -1,0 +1,8 @@
+/etc/systemd/network/50-ethext_tbm3.link
+/etc/systemd/network/50-ethint_tbm3.link
+/etc/systemd/network/ethext.vcm.netdev
+/etc/systemd/network/ethint_tbm3.network
+/etc/systemd/journald.conf.tbm3.volatile
+/etc/systemd/journald.conf.tbm3
+/etc/systemd/network/ethext_tbm3.network
+/etc/systemd/network/ethext.vcm.network

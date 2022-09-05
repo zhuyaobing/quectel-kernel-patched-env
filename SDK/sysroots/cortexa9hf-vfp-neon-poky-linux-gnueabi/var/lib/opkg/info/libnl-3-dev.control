@@ -1,0 +1,17 @@
+Package: libnl-3-dev
+Version: 1:3.2.25-r1
+Description: A library for applications dealing with netlink sockets - Development files
+ A library for applications dealing with netlink sockets.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: libnl
+Homepage: http://www.infradead.org/~tgr/libnl/
+Depends: libnl-idiag-3-200, libnl-route-3-200, libnl-3-cli, libnl-3-200 (= 1:3.2.25-r1), libnl-3-genl, libc6 (>= 2.22), libnl-nf-3-200
+Recommends: libnl-route-dev, libc6-dev, libnl-genl-dev, libnl-idiag-dev, libnl-cli-dev, libnl-nf-dev
+Provides: libnl-dev
+Source: http://www.infradead.org/~tgr/libnl/files/libnl-3.2.25.tar.gz file://fix-pktloc_syntax_h-race.patch file://fix-pc-file.patch

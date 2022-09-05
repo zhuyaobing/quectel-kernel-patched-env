@@ -1,0 +1,13 @@
+Package: packagegroup-dev-conf-dbg
+Version: 1.0-r2
+Description: Software specific to Alexandra project, VCM or TBM, debug variants - Debugging files
+ Software specific to Alexandra project, VCM or TBM, debug variants.  This
+ package contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-dev-conf
+Recommends: ca-certificates-dbg, alex-cslc-devtools-dbg
+Source: None

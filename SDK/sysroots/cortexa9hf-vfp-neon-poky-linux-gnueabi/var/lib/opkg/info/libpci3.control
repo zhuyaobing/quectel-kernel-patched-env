@@ -1,0 +1,15 @@
+Package: libpci3
+Version: 3.3.1-r0
+Description: PCI utilities
+ The PCI Utilities package contains a library for portable access to PCI
+ bus configuration space and several utilities based on this library.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: pciutils
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Depends: systemd (>= 232), libz1 (>= 1.2.8), libc6 (>= 2.22)
+Provides: libpci
+Source: http://kernel.org/pub/software/utils/pciutils/pciutils-3.3.1.tar.xz file://configure.patch file://guess-fix.patch file://makefile.patch

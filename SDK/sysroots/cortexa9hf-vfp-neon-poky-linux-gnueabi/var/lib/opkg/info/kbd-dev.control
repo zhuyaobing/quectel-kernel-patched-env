@@ -1,0 +1,15 @@
+Package: kbd-dev
+Version: 2.0.2-r0
+Description: Keytable files and keyboard utilities - Development files
+ Keytable files and keyboard utilities.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: kbd
+Depends: kbd (= 2.0.2-r0)
+Recommends: libc6-dev, update-alternatives-opkg-dev, libcheck-dev
+Source: http://kernel.org/pub/linux/utils/kbd/kbd-2.0.2.tar.xz file://uclibc-stdarg.patch file://0003-Only-inluclude-kernel-headers-with-glibc.patch

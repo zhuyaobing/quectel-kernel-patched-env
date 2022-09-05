@@ -1,0 +1,17 @@
+Package: asio-dev
+Version: 1.10.1-r0
+Description: asio version 1.10.1-r0 - Development files
+ Asio is a cross-platform C++ library for network and low-level
+ I/O programming that provides developers with a consistent asynchronous
+ model using a modern C++ approach.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSL-1.0
+Architecture: cortexa9hf-vfp-neon
+OE: asio
+Homepage: http://think-async.com/Asio
+Depends: asio (= 1.10.1-r0)
+Recommends: boost-dev
+Source: http://downloads.sourceforge.net/asio/asio-1.10.1.tar.bz2

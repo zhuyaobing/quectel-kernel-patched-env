@@ -1,0 +1,15 @@
+Package: libarchive13
+Version: 3.1.2-r0
+Description: Support for reading various archive formats
+ C library and command-line tools for reading and writing tar, cpio, zip,
+ ISO, and other archive formats
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libarchive
+Homepage: http://www.libarchive.org/
+Depends: libxml2 (>= 2.9.2), libz1 (>= 1.2.8), libc6 (>= 2.22), libbz2-0 (>= 1.0.6), libattr1 (>= 2.4.47)
+Provides: libarchive
+Source: http://libarchive.org/downloads/libarchive-3.1.2.tar.gz file://libarchive-CVE-2013-0211.patch file://pkgconfig.patch file://libarchive-CVE-2015-2304.patch file://mkdir.patch

@@ -1,0 +1,13 @@
+Package: alex-cslc-mqttsender-dbg
+Version: 13.3.0-r0
+Description: mqttsender - Sender for small set of topics - Debugging files
+ mqttsender - Sender for small set of topics  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-mqttsender
+Recommends: libc6-dbg, libstdc++-dbg, sre-lapi-dbg, libgcc-s-dbg, protobuf-dbg
+Source: None

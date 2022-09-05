@@ -1,0 +1,12 @@
+Package: sre-check-eth-interface
+Version: 1.0-r0
+Description: Check status of eth interface
+ Checks status of Ethernet interface and reports it to CSP.
+Section: system
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-check-eth-interface
+Depends: alex-cslc-mqttsender
+Source: file://check_eth_interface.service file://check_eth_interface.sh

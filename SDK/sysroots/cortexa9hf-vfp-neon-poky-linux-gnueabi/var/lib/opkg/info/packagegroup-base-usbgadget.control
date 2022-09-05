@@ -1,0 +1,12 @@
+Package: packagegroup-base-usbgadget
+Version: 1.0-r83.alex2
+Description: USB gadget support
+ Merge machine and distro options to create a basic machine task/package.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Recommends: kernel-module-pxa27x_udc, kernel-module-g-file-storage, kernel-module-g-ether, kernel-module-gadgetfs, kernel-module-g-serial
+Source: None

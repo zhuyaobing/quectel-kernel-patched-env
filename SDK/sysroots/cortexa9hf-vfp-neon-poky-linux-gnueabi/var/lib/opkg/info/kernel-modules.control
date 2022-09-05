@@ -1,0 +1,11 @@
+Package: kernel-modules
+Version: 3.14.52-r0.alex1
+Description: Linux Kernel provided and supported by Freescale
+ Kernel modules meta package
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: alexandra
+OE: linux-imx
+Source: git://git.freescale.com/imx/linux-2.6-imx.git;branch=imx_3.14.52_1.1.0_ga file://defconfig file://0004-mmc-sdhci-esdhc-imx-Fixup-runtime-PM-conditions-duri.patch file://git file://0001-Add-IEEE1722-support.patch file://0002-Use-ldb-native-mode.patch file://linux-imx_3.10.17_freja-imx6q-machine.patch file://imx6q-alexandra.dts

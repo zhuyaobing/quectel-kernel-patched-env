@@ -1,0 +1,15 @@
+Package: sysfsutils-dbg
+Version: 2.1.0-r5
+Description: Tools for working with sysfs - Debugging files
+ Tools for working with the sysfs virtual filesystem.  The tool 'systool'
+ can query devices by bus, class and topology.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: sysfsutils
+Homepage: http://linux-diag.sourceforge.net/Sysfsutils.html
+Recommends: libc6-dbg, libsysfs-dbg
+Source: http://downloads.sourceforge.net/linux-diag/sysfsutils-2.1.0.tar.gz file://sysfsutils-2.0.0-class-dup.patch file://obsolete_automake_macros.patch file://separatebuild.patch

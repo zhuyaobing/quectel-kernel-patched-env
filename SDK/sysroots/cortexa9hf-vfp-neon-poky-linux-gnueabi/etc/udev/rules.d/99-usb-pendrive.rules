@@ -1,0 +1,2 @@
+KERNEL=="sd?1", SUBSYSTEM=="block", SUBSYSTEMS=="usb", ACTION=="add", RUN+="/usr/bin/mqttsender usb_drive_connected:%k"
+KERNEL=="sd?1", SUBSYSTEM=="block", SUBSYSTEMS=="usb", ACTION=="remove", RUN+="/usr/bin/mqttsender usb_drive_disconnected:%k"

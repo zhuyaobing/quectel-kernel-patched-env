@@ -1,0 +1,4 @@
+/usr/share/log.public.pem
+/usr/bin/extract_log.sh
+/lib/systemd/system/log_extractor.service
+/etc/alex/partition.args

@@ -1,0 +1,15 @@
+Package: alex-cslc-udsifd-dev
+Version: 13.1.1-r0
+Description: udsifd - Daemon which handles UDS interface allocations and requests - Development files
+ udsifd - Daemon which handles UDS interface allocations and requests
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-udsifd
+Depends: alex-cslc-udsifd (= 13.1.1-r0)
+Recommends: libmosquittopp1-dev, sre-lapi-dev, libgcc-s-dev, libc6-dev, libstdc++-dev, sre-ipcd-dev, protobuf-dev, sre-systemd-target-dev, sre-ipcd-lib-dev
+Source: None

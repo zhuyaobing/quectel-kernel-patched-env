@@ -1,0 +1,14 @@
+Package: sre-systemd-target-dev
+Version: 2.0.0-r0
+Description: The alex systemd target - Development files
+ Recipe to install the systemd target on the alex platform  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-systemd-target
+Depends: sre-systemd-target (= 2.0.0-r0)
+Source: file://alex-boot.target file://alex-core.target file://alex-standalone.target file://alex.target

@@ -1,0 +1,2 @@
+# we don't have own uapi files, take all from the SUBARCH
+include arch/$(SUBARCH)/include/uapi/asm/Kbuild

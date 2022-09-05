@@ -1,0 +1,12 @@
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/crtbegin.o
+/usr/lib/arm-poky-linux
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/libgcc.a
+/lib/libgcc_s.so
+/usr/lib/arm-poky-linux-gnueabi/
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/crtbeginS.o
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/crtbeginT.o
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/libgcc_eh.a
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/crtendS.o
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/libgcov.a
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/
+/usr/lib/arm-poky-linux-gnueabi/4.9.3/crtend.o

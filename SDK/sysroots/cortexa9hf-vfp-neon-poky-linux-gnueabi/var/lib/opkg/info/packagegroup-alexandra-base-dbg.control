@@ -1,0 +1,13 @@
+Package: packagegroup-alexandra-base-dbg
+Version: 1.0-r2
+Description: Software specific to Alexandra project - Debugging files
+ Software specific to Alexandra project.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-alexandra-base
+Recommends: alex-malc-beproxy-dbg, sre-spider-dbg, sre-systemd-target-dbg, sre-ipcd-lib-dbg, alex-malc-systime-dbg, alex-cslc-mqttsender-dbg
+Source: None

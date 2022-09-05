@@ -1,0 +1,15 @@
+Package: libsre-shared0
+Version: 1.0.0-r1
+Description: SRE Linux API proprietary parts
+ This recipe checks out a deifined revision of the sre shared code. There
+ is another recipe in the sre-platform layer that uses the resulting
+ binaries from this one
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-shared
+Depends: libgcc1 (>= 4.9.3), dbus-1, libstdc++6 (>= 4.9.3), crpcut, libc6 (>= 2.22), boost
+Provides: sre-shared
+Source: None

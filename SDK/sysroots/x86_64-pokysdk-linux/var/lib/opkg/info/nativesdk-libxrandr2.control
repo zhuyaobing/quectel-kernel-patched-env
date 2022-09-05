@@ -1,0 +1,17 @@
+Package: nativesdk-libxrandr2
+Version: 1:1.5.0-r0
+Description: XRandR: X Resize, Rotate and Reflect extension library
+ The X Resize, Rotate and Reflect Extension, called RandR for short,
+ brings the ability to resize, rotate and reflect the root window of a
+ screen. It is based on the X Resize and Rotate Extension as specified in
+ the Proceedings of the 2001 Usenix Technical Conference [RANDR].
+Section: x11/libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: x86_64-nativesdk
+OE: nativesdk-libxrandr
+Homepage: http://www.x.org
+Depends: nativesdk-libxcb1 (>= 1.11), nativesdk-libxdmcp6 (>= 1.1.2), nativesdk-libxau6 (>= 1.0.8), nativesdk-libxext6 (>= 1.3.3), nativesdk-libxrender1 (>= 0.9.9), nativesdk-libx11-6 (>= 1.6.3), nativesdk-libc6 (>= 2.22)
+Provides: nativesdk-libxrandr
+Source: http://xorg.freedesktop.org/releases/individual/lib/libXrandr-1.5.0.tar.bz2

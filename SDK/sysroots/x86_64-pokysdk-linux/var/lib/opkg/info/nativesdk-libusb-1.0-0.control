@@ -1,0 +1,14 @@
+Package: nativesdk-libusb-1.0-0
+Version: 1.0.19-r0
+Description: Userspace library to access USB (version 1.0)
+ Userspace library to access USB (version 1.0).
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: x86_64-nativesdk
+OE: nativesdk-libusb1
+Homepage: http://libusb.sf.net
+Depends: nativesdk-libc6 (>= 2.22)
+Provides: nativesdk-libusb1
+Source: http://downloads.sourceforge.net/libusb/libusb-1.0.19.tar.bz2

@@ -1,0 +1,25 @@
+# ignore other actions than 'add'
+ACTION!="add", GOTO="extusb_end"
+
+# ignore events other than bus number 001 (external USB)
+SUBSYSTEM=="usb", ATTR{busnum}!="1", GOTO="extusb_end"
+
+# block devices that are connected via usb hub
+DEVPATH=="/devices/soc0/soc.0/2100000.aips-bus/2184000.usb/ci_hdrc.0/usb1/1-1/1-1.[0-9]/*",  RUN+="/bin/sh -c 'echo 1-1 > /sys/devices/soc0/soc.0/2100000.aips-bus/2184000.usb/ci_hdrc.0/usb1/1-1/driver/unbind'"
+
+# ignore generic SUBSYSTEM 'usb' events
+DEVPATH=="/devices/soc0/soc.0/2100000.aips-bus/2184000.usb/ci_hdrc.0/usb1/1-1/1-1:1.[0-9]", SUBSYSTEM=="usb", GOTO="extusb_end"
+
+# allow usb-serial
+SUBSYSTEM=="usb-serial", GOTO="extusb_end"
+# allow scsi (external drive)
+SUBSYSTEM=="scsi", GOTO="extusb_end"
+
+# ignore deep rules - allowed device and blocked devices should already be 
+# handled by previous other/earlier related events
+DEVPATH=="/devices/soc0/soc.0/2100000.aips-bus/2184000.usb/ci_hdrc.0/usb1/1-1/1-1:1.[0-9]/*/*/*", GOTO="extusb_end"
+
+# block everything
+DEVPATH=="/devices/soc0/soc.0/2100000.aips-bus/2184000.usb/ci_hdrc.0/usb1/1-1/1-1:1.[0-9]/*", RUN+="/bin/sh -c 'echo 1-1 > /sys/devices/soc0/soc.0/2100000.aips-bus/2184000.usb/ci_hdrc.0/usb1/1-1/driver/unbind'"
+
+LABEL="extusb_end"

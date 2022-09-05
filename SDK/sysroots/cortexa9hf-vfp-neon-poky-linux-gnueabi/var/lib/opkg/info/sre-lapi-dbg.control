@@ -1,0 +1,13 @@
+Package: sre-lapi-dbg
+Version: 13.3.0-2-g7c58342-r0
+Description: The alex linux API - Debugging files
+ Recipe for the alex application communiction linux api  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-lapi
+Recommends: systemd-dbg, boost-system-dbg, libstdc++-dbg, libgcc-s-dbg, protobuf-dbg, libc6-dbg, libmosquitto1-dbg, boost-filesystem-dbg, libmosquittopp1-dbg, util-linux-libuuid-dbg
+Source: None

@@ -1,0 +1,14 @@
+Package: glibc-locale-dbg
+Version: 2.22-r0
+Description: Locale data from glibc - Debugging files
+ Locale data from glibc.  This package contains ELF symbols and related
+ sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Recommends: glibc-gconv-libksc-dbg, glibc-gconv-libjisx0213-dbg, glibc-gconv-libgb-dbg, glibc-gconv-libisoir165-dbg, glibc-gconv-libjis-dbg, libc6-dbg, glibc-gconv-libcns-dbg
+Source: None

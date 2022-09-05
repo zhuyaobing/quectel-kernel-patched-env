@@ -1,0 +1,16 @@
+Package: xz-dev
+Version: 5.2.1-r0
+Description: Utilities for managing LZMA compressed files - Development files
+ Utilities for managing LZMA compressed files.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: xz
+Homepage: http://tukaani.org/xz/
+Depends: xz (= 5.2.1-r0), liblzma5
+Recommends: libc6-dev, liblzma-dev
+Source: http://tukaani.org/xz/xz-5.2.1.tar.gz

@@ -1,0 +1,5 @@
+/lib/systemd/system/modemd.service
+/etc/systemd/network/usb0.network
+/usr/bin/mdmctl.sh
+/usr/bin/modemd
+/etc/udev/rules.d/70-ublox-modem-at.rules

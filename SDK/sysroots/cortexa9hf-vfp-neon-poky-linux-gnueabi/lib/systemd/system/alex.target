@@ -1,0 +1,8 @@
+[Unit]
+Description=The Alexandra target
+After=alex-core.target
+Requires=alex-core.target
+AllowIsolate=yes
+
+[Install]
+WantedBy=alex-core.target

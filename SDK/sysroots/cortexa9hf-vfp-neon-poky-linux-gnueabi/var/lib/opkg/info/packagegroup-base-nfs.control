@@ -1,0 +1,13 @@
+Package: packagegroup-base-nfs
+Version: 1.0-r83.alex2
+Description: NFS network filesystem support
+ Merge machine and distro options to create a basic machine task/package.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Depends: rpcbind
+Recommends: kernel-module-nfs
+Source: None

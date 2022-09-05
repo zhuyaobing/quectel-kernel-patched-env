@@ -1,0 +1,2 @@
+KERNELS=="usb1", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="add", RUN+="/usr/bin/mqttsender usb_connected:on"
+KERNELS=="usb1", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="remove", RUN+="/usr/bin/mqttsender usb_connected:off"

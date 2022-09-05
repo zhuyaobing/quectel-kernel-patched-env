@@ -1,0 +1,15 @@
+[Unit]
+Description=Alexandra spider
+Requires=network.target mosquitto.service
+After=mosquitto.service
+
+[Service]
+ExecStart=/usr/bin/spider --config /etc/alex/spider.conf
+Type=notify
+WatchdogSec=20s
+Restart=on-failure
+Nice=-10
+
+[Install]
+WantedBy=alex-boot.target
+

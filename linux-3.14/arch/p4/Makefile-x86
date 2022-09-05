@@ -1,0 +1,82 @@
+HEADER_ARCH := x86
+SYS := arch-x86
+
+ARCH_JIFFIES := "jiffies_64"
+
+# PikeOS uses a slightly different notation for CPU arch and type
+PIKEOS_ARCH := x86
+
+ifeq ($(CONFIG_X86_32),y)
+	ELF_ARCH := i386
+	ELF_FORMAT := elf32-i386
+
+	ifeq ($(CONFIG_P4_X86_I686),y)
+	PIKEOS_PROC := i686
+	else
+	# pre PikeOS 4.0
+	PIKEOS_PROC := i586
+	endif
+
+	PIKEOS_CFLAGS := -D__i386__
+
+	# flags taken from native version, keep in sync
+	CHECKFLAGS += -D__i386__
+
+	biarch := $(call cc-option,-m32)
+	KBUILD_AFLAGS += $(biarch)
+	KBUILD_CFLAGS += $(biarch)
+
+	# prevent gcc from keeping the stack 16 byte aligned. Taken from i386.
+	KBUILD_CFLAGS += $(call cc-option,-mpreferred-stack-boundary=2)
+
+	# First of all, tune CFLAGS for the specific CPU. This actually sets cflags-y.
+	include $(srctree)/arch/x86/Makefile_32.cpu
+	KBUILD_CFLAGS += $(cflags-y)
+else
+	ELF_ARCH := i386:x86-64
+	ELF_FORMAT := elf64-x86-64
+
+	PIKEOS_PROC := amd64
+	PIKEOS_CFLAGS := -D__x86_64__
+
+	# flags taken from native version, keep in sync
+	CHECKFLAGS += -D__x86_64__ -m64
+
+	KBUILD_AFLAGS += -m64
+	KBUILD_CFLAGS += -m64
+
+        # FIXME - should be integrated in Makefile.cpu (Makefile_32.cpu)
+        cflags-$(CONFIG_MK8) += $(call cc-option,-march=k8)
+        cflags-$(CONFIG_MPSC) += $(call cc-option,-march=nocona)
+
+        cflags-$(CONFIG_MCORE2) += \
+                $(call cc-option,-march=core2,$(call cc-option,-mtune=generic))
+	cflags-$(CONFIG_MATOM) += $(call cc-option,-march=atom) \
+		$(call cc-option,-mtune=atom,$(call cc-option,-mtune=generic))
+        cflags-$(CONFIG_GENERIC_CPU) += $(call cc-option,-mtune=generic)
+        KBUILD_CFLAGS += $(cflags-y)
+
+	KBUILD_CFLAGS += -fno-builtin -mno-red-zone
+
+	# we need to use the small code model because we run as an application
+	CFLAGS_KERNEL += -mcmodel=small
+
+	# modules start address is located behind the physical RAM (could be > 2GB)
+	CFLAGS_MODULE += -mcmodel=large
+
+	# -funit-at-a-time shrinks the kernel .text considerably
+	# unfortunately it makes reading oopses harder.
+	KBUILD_CFLAGS += $(call cc-option,-funit-at-a-time)
+
+	# this works around some issues with generating unwind tables in older gccs
+	# newer gccs do it by default
+	KBUILD_CFLAGS += -maccumulate-outgoing-args
+endif
+
+
+
+###
+# Syscall table generation
+
+archheaders:
+	$(Q)$(MAKE) $(build)=arch/x86/syscalls all

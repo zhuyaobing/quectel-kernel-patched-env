@@ -1,0 +1,16 @@
+Package: kbproto-dev
+Version: 1:1.0.7-r0
+Description: XKB: X Keyboard extension headers - Development files
+ This package provides the wire protocol for the X Keyboard extension.
+ This extension is used to control options related to keyboard handling
+ and layout.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: kbproto
+Homepage: http://www.x.org
+Recommends: util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/proto/kbproto-1.0.7.tar.bz2

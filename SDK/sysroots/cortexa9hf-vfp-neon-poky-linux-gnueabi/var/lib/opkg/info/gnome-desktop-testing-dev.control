@@ -1,0 +1,16 @@
+Package: gnome-desktop-testing-dev
+Version: 2014.1-r1
+Description: Test runner for GNOME-style installed tests - Development files
+ Test runner for GNOME-style installed tests.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: gnome-desktop-testing
+Homepage: https://wiki.gnome.org/GnomeGoals/InstalledTests
+Depends: gnome-desktop-testing (= 2014.1-r1)
+Recommends: libc6-dev, libglib-2.0-dev, libffi-dev, libz-dev
+Source: http://ftp.gnome.org/pub/GNOME/sources/gnome-desktop-testing/2014.1/gnome-desktop-testing-2014.1.tar.xz file://0001-gsystem-subprocess.c-Enable-GNU-extensions-in-system.patch

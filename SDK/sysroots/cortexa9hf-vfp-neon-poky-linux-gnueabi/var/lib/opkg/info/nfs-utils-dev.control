@@ -1,0 +1,16 @@
+Package: nfs-utils-dev
+Version: 1.3.1-r0.alex3
+Description: userspace utilities for kernel nfs - Development files
+ The nfs-utils package provides a daemon for the kernel NFS server and
+ related tools.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & GPLv2+ & BSD
+Architecture: cortexa9hf-vfp-neon
+OE: nfs-utils
+Homepage: http://nfs.sourceforge.net/
+Depends: nfs-utils (= 1.3.1-r0.alex3)
+Recommends: tcp-wrappers-dev, base-passwd-dev, shadow-dev, util-linux-dev, util-linux-libmount-dev, shadow-sysroot-dev, base-files-dev, libwrap-dev, rpcbind-dev, update-rc.d-dev, libc6-dev, libevent-dev, nfs-utils-client-dev, util-linux-libblkid-dev, libcap-dev, bash-dev, libnfsidmap-dev, sqlite3-dev, python-dev, initscripts-dev
+Source: http://kernel.org/pub/linux/utils/nfs-utils/1.3.1/nfs-utils-1.3.1.tar.xz file://0001-configure-Allow-to-explicitly-disable-nfsidmap.patch file://nfs-utils-1.2.3-sm-notify-res_init.patch file://nfsserver file://nfscommon file://nfs-utils.conf file://nfs-server.service file://nfs-mountd.service file://nfs-statd.service file://proc-fs-nfsd.mount file://nfs-utils-Do-not-pass-CFLAGS-to-gcc-while-building.patch file://nfs-utils-debianize-start-statd.patch file://bugfix-adjust-statd-service-name.patch file://nfs-server-service.patch;patchdir=/data/jenkins/workspace/alex-platform_CI_master/build/tmp/work/cortexa9hf-vfp-neon-poky-linux-gnueabi/nfs-utils/1.3.1-r0.alex3 file://nfs-utils.conf.patch;patchdir=/data/jenkins/workspace/alex-platform_CI_master/build/tmp/work/cortexa9hf-vfp-neon-poky-linux-gnueabi/nfs-utils/1.3.1-r0.alex3 file://sysctl-nfs.conf

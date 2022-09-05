@@ -1,0 +1,16 @@
+Package: opkg-utils-dev
+Version: 0.1.8+git0+53274f0875-r0
+Description: Additional utilities for the opkg package manager - Development files
+ Additional utilities for the opkg package manager.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: opkg-utils
+Homepage: http://code.google.com/p/opkg/
+Depends: opkg-utils (= 0.1.8+git0+53274f0875-r0)
+Recommends: python-pickle-dev, python-compression-dev, python-io-dev, libc6-dev, python-shell-dev, python-logging-dev, python-math-dev, python-subprocess-dev, python-fcntl-dev, python-textutils-dev, python-stringold-dev, python-dev, python-crypt-dev
+Source: git://git.yoctoproject.org/opkg-utils

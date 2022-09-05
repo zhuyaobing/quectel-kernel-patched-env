@@ -1,0 +1,14 @@
+Package: fsl-alsa-plugins-dev
+Version: 1.0.25-r0
+Description: fsl-alsa-plugins version 1.0.25-r0 - Development files
+ Freescale alsa-lib plugins  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: alexandra
+OE: fsl-alsa-plugins
+Depends: fsl-alsa-plugins (= 1.0.25-r0)
+Recommends: libc6-dev, libasound-dev, alsa-lib-dev
+Source: http://www.freescale.com/lgfiles/NMG/MAD/YOCTO//fsl-alsa-plugins-1.0.25.tar.gz file://0001-asrc_pair-update-output-buffer-size.patch

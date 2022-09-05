@@ -1,0 +1,14 @@
+Package: crpcut-dbg
+Version: 1.9.2-r0
+Description: The unit test framework crpcut - Debugging files
+ The unit test framework crpcut.  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-2-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: crpcut
+Homepage: http://sourceforge.net/projects/crpcut
+Recommends: libc6-dbg, libstdc++-dbg, libgcc-s-dbg
+Source: http://downloads.sourceforge.net/project/crpcut/crpcut/1.9.2/crpcut-1.9.2.tar.bz2 file://remove-examples.patch

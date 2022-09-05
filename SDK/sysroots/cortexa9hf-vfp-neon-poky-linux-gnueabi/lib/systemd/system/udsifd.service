@@ -1,0 +1,13 @@
+[Unit]
+Description = The Alexandra UDS interface daemon
+After       = alex-boot.target
+Requires    = alex-boot.target
+
+[Service]
+Type        = simple 
+ExecStart   = /usr/bin/udsifd
+Restart     = on-failure
+
+[Install]
+WantedBy    = alex-core.target
+

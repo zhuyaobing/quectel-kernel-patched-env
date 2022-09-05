@@ -1,0 +1,14 @@
+Package: rpcbind
+Version: 0.2.3-r0
+Description: Universal Addresses to RPC Program Number Mapper
+ The rpcbind utility is a server that converts RPC                program
+ numbers into universal addresses.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: rpcbind
+Homepage: http://sourceforge.net/projects/rpcbind/
+Depends: systemd (>= 232), libc6 (>= 2.22), libtirpc1 (>= 0.2.5), base-files, shadow, base-passwd
+Source: http://downloads.sourceforge.net/rpcbind/rpcbind-0.2.3.tar.bz2 file://init.d file://0001-Avoid-use-of-glibc-sys-cdefs.h-header.patch file://remove-sys-queue.patch file://rpcbind.conf file://rpcbind.socket file://rpcbind.service file://cve-2015-7236.patch

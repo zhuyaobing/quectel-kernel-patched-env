@@ -1,0 +1,18 @@
+[Unit]
+Description=ws_server - SRE Alexandra Websocket Server
+After=alex-core.target
+Requires=alex-core.target
+
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/ws_server -c /etc/alex/ws_server%i.conf
+
+
+
+
+[Install]
+WantedBy=alex.target
+
+

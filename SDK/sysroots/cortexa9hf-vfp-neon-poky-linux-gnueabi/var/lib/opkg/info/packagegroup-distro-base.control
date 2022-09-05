@@ -1,0 +1,13 @@
+Package: packagegroup-distro-base
+Version: 1.0-r83.alex2
+Description: poky extras
+ Merge machine and distro options to create a basic machine task/package.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-base
+Depends: packagegroup-core-boot
+Recommends: kernel-module-af-packet
+Source: None

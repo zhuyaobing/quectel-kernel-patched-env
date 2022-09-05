@@ -1,0 +1,12 @@
+Package: sre-lapi
+Version: 13.3.0-2-g7c58342-r0
+Description: The alex linux API
+ Recipe for the alex application communiction linux api
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-lapi
+Depends: libgcc1 (>= 4.9.3), systemd (>= 232), protobuf (>= 2.6.1+git0+bba83652e1), libc6 (>= 2.22), libmosquitto1 (>= 1.5.10), mosquitto, libboost-system1.58.0 (>= 1.58.0), libstdc++6 (>= 4.9.3), libboost-filesystem1.58.0 (>= 1.58.0), libmosquittopp1 (>= 1.5.10), libuuid1 (>= 2.29.1), bash
+Source: None

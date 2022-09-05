@@ -1,0 +1,15 @@
+Package: alex-cslc-mqttsender-dev
+Version: 13.3.0-r0
+Description: mqttsender - Sender for small set of topics - Development files
+ mqttsender - Sender for small set of topics  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-mqttsender
+Depends: alex-cslc-mqttsender (= 13.3.0-r0)
+Recommends: libc6-dev, sre-lapi-dev, protobuf-dev, libgcc-s-dev, libstdc++-dev
+Source: None

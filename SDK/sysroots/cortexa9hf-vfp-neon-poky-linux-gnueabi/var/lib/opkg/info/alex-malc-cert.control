@@ -1,0 +1,12 @@
+Package: alex-malc-cert
+Version: 13.1.0-2-g5ac4f01-r0
+Description: MAN certificate handling service
+ .
+Section: applications
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-cert
+Depends: libgcc1 (>= 4.9.3), systemd, protobuf (>= 2.6.1+git0+bba83652e1), libcrypto1.0.0 (>= 1.0.2h), alex-malc-cert-certificates-pack, libstdc++6 (>= 4.9.3), libjsoncpp11 (>= 1.7.7), openssl, sre-lapi (>= 13.3.0-2-g7c58342), libcurl4 (>= 7.44.0), libcslccrypto1 (>= 13.1.0-2-g5ac4f01), libc6 (>= 2.22), curl, libmosquittopp1 (>= 1.5.10), libuuid1 (>= 2.29.1)
+Source: None

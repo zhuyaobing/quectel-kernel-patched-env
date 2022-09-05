@@ -1,0 +1,13 @@
+Package: strace
+Version: 4.10-r0
+Description: System call tracing tool
+ System call tracing tool.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: strace
+Homepage: http://strace.sourceforge.net
+Depends: libc6 (>= 2.22)
+Source: http://downloads.sourceforge.net/strace/strace-4.10.tar.xz file://0001-Add-linux-aarch64-arch_regs.h.patch file://git-version-gen file://strace-add-configure-options.patch file://Makefile-ptest.patch file://run-ptest file://Include-sys-stat.h-for-S_I-macros.patch file://Include-linux-ioctl.h-for-_IOC_-macros.patch

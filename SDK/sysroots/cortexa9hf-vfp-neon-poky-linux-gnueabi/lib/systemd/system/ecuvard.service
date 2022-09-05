@@ -1,0 +1,18 @@
+[Unit]
+Description=The Alexandra ECU Variable daemon
+After=ipcd.service
+Requires=ipcd.service
+
+
+[Service]
+Type=notify
+Restart=on-failure
+ExecStart=/usr/bin/ecuvard
+
+
+
+
+[Install]
+WantedBy=alex-boot.target
+
+

@@ -1,0 +1,13 @@
+Package: alex-malc-beproxy-dbg
+Version: 13.3.0-r0
+Description: Backend Proxy - Debugging files
+ Recipe for the backend proxy  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-beproxy
+Recommends: libmanproto-dbg, libstdc++-dbg, sre-ipcd-lib-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libcslccrypto-dbg, libc6-dbg, libjsoncpp-dbg, boost-serialization-dbg, libmosquittopp1-dbg
+Source: None

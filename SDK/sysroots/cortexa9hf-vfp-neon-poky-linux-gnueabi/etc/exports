@@ -1,0 +1,4 @@
+/common/tpa 10.6.0.2(rw,sync,no_root_squash)
+/handover/tpalogs 10.6.0.2(rw,sync,no_root_squash)
+/handover/tpa 10.6.0.2(ro,async,no_root_squash)
+/tmp/shared 10.6.0.2(fsid=1,ro,async,no_root_squash)

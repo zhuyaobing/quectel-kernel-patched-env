@@ -1,0 +1,6 @@
+[Match]
+Driver=fec
+
+[Link]
+MACAddress=02:7d:fa:00:ba:00
+Name=ethext

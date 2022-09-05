@@ -1,0 +1,12 @@
+Package: nativesdk-elftosb
+Version: 10.12.01-r4
+Description: nativesdk-elftosb version 10.12.01-r4
+ Helper utility for freescale imx platforms
+Section: bootloader
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: x86_64-nativesdk
+OE: nativesdk-elftosb
+Depends: nativesdk-libstdc++6 (>= 4.9.3), nativesdk-libc6 (>= 2.22), nativesdk-libgcc1 (>= 4.9.3)
+Source: http://repository.timesys.com/buildsources/e/elftosb/elftosb-10.12.01/elftosb-10.12.01.tar.gz file://cross-build.patch file://don-t-use-full-path-for-headers.patch

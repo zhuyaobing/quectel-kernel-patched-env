@@ -1,0 +1,15 @@
+Package: libarchive-dbg
+Version: 3.1.2-r0
+Description: Support for reading various archive formats - Debugging files
+ C library and command-line tools for reading and writing tar, cpio, zip,
+ ISO, and other archive formats  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libarchive
+Homepage: http://www.libarchive.org/
+Recommends: libbz2-dbg, libz-dbg, libc6-dbg, libattr-dbg, libxml2-dbg
+Source: http://libarchive.org/downloads/libarchive-3.1.2.tar.gz file://libarchive-CVE-2013-0211.patch file://pkgconfig.patch file://libarchive-CVE-2015-2304.patch file://mkdir.patch

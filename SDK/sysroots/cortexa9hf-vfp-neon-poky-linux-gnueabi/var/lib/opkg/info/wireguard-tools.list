@@ -1,0 +1,3 @@
+/usr/bin/wg-quick
+/usr/bin/wg
+/lib/systemd/system/wg-quick@.service

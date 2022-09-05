@@ -1,0 +1,14 @@
+Package: alex-cslc-pgnreqd-dev
+Version: 13.1.0-r0
+Description: pgnreqd - Development files
+ Recipe to build PGN request daemon  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-pgnreqd
+Depends: alex-cslc-pgnreqd (= 13.1.0-r0)
+Recommends: sre-lapi-dev, libgcc-s-dev, libstdc++-dev, libc6-dev, protobuf-dev, sre-systemd-target-dev
+Source: None

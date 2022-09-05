@@ -1,0 +1,2 @@
+# Force is used to overwrite the default spider.conf
+    ln -s -f spider-tbm3-tele.conf $D/etc/alex/spider.conf

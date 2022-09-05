@@ -1,0 +1,12 @@
+Package: packagegroup-core-standalone-sdk-target
+Version: 1.0-r8
+Description: Target packages for the standalone SDK
+ Target packages for the standalone SDK.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-standalone-sdk-target
+Depends: websocketpp-dev, bluesdk-dbg-staticdev, glibc-dbg, glibc-thread-db, libatomic-dev, glibc, glibc-gconv-ibm850, libstdc++-dev, glibc-gconv-cp1252, libstdc++, libgcc-dev, libsegfault, libgcc, glibc-localedata-i18n, date-staticdev, libatomic, glibc-gconv-iso8859-15, glibc-utils, glibc-dev, glibc-gconv-iso8859-1, bluesdk-staticdev
+Source: None

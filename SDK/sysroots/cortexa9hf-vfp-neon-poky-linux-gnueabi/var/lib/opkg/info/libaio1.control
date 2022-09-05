@@ -1,0 +1,14 @@
+Package: libaio1
+Version: 0.3.110-r0
+Description: Asynchronous I/O library
+ Asynchronous input/output library that uses the kernels native interface
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libaio
+Homepage: http://lse.sourceforge.net/io/aio.html
+Depends: libc6 (>= 2.22)
+Provides: libaio
+Source: ftp://ftp.debian.org/debian/pool/main/liba/libaio/libaio_0.3.110.orig.tar.gz file://generic-arch-dectection-for-padding-defines.patch file://00_arches.patch file://destdir.patch file://libaio_fix_for_x32.patch file://libaio_fix_for_mips_syscalls.patch file://system-linkage.patch

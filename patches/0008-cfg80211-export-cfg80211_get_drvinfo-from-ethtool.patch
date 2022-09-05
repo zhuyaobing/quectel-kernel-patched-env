@@ -1,0 +1,55 @@
+From 04f1767b2df84809f64deffe4179a1188f6706be Mon Sep 17 00:00:00 2001
+From: Hamad Kadmany <hkadmany@codeaurora.org>
+Date: Thu, 23 Oct 2014 16:12:21 +0300
+Subject: cfg80211: export cfg80211_get_drvinfo from ethtool
+
+The function is useful for re-use by drivers
+implementing their own ethtool
+
+Change-Id: I08360e8ee333021988c0974684f003fece20ff96
+Signed-off-by: Hamad Kadmany <hkadmany@codeaurora.org>
+[imaund@codeaurora.org: Resolved trivial context conflicts.]
+Signed-off-by: Ian Maund <imaund@codeaurora.org>
+---
+ include/net/cfg80211.h | 2 ++
+ net/wireless/ethtool.c | 4 ++--
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/include/net/cfg80211.h b/include/net/cfg80211.h
+index 525858b..8e7e4e7 100644
+--- a/include/net/cfg80211.h
++++ b/include/net/cfg80211.h
+@@ -4799,6 +4799,8 @@ void cfg80211_authorization_event(struct net_device *dev,
+ 				  const u8 *key_replay_ctr,
+ 				  gfp_t gfp);
+ 
++void cfg80211_get_drvinfo(struct net_device *dev, struct ethtool_drvinfo *info);
++
+ /* Logging, debugging and troubleshooting/diagnostic helpers. */
+ 
+ /* wiphy_printk helpers, similar to dev_printk */
+diff --git a/net/wireless/ethtool.c b/net/wireless/ethtool.c
+index e37862f..821b798 100644
+--- a/net/wireless/ethtool.c
++++ b/net/wireless/ethtool.c
+@@ -4,8 +4,7 @@
+ #include "ethtool.h"
+ #include "rdev-ops.h"
+ 
+-static void cfg80211_get_drvinfo(struct net_device *dev,
+-					struct ethtool_drvinfo *info)
++void cfg80211_get_drvinfo(struct net_device *dev, struct ethtool_drvinfo *info)
+ {
+ 	struct wireless_dev *wdev = dev->ieee80211_ptr;
+ 
+@@ -23,6 +22,7 @@ static void cfg80211_get_drvinfo(struct net_device *dev,
+ 	strlcpy(info->bus_info, dev_name(wiphy_dev(wdev->wiphy)),
+ 		sizeof(info->bus_info));
+ }
++EXPORT_SYMBOL(cfg80211_get_drvinfo);
+ 
+ static int cfg80211_get_regs_len(struct net_device *dev)
+ {
+-- 
+cgit v1.1
+

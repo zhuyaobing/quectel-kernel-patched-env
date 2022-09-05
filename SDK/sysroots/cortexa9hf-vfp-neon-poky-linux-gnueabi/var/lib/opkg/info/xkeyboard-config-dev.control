@@ -1,0 +1,19 @@
+Package: xkeyboard-config-dev
+Version: 2.15-r0
+Description: Keyboard configuration database for X Window - Development files
+ The non-arch keyboard configuration database for X Window.  The goal is
+ to provide the consistent, well-structured, frequently released open
+ source of X keyboard configuration data for X Window System
+ implementations.  The project is targeted to XKB-based systems.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT & MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: xkeyboard-config
+Homepage: http://freedesktop.org/wiki/Software/XKeyboardConfig
+Depends: xkeyboard-config (= 2.15-r0)
+Recommends: util-macros-dev
+Source: http://xorg.freedesktop.org/releases/individual/data/xkeyboard-config/xkeyboard-config-2.15.tar.bz2

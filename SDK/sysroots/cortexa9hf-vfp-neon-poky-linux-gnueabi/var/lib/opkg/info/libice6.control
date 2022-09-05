@@ -1,0 +1,18 @@
+Package: libice6
+Version: 1:1.0.9-r0
+Description: ICE: Inter-Client Exchange library
+ The Inter-Client Exchange (ICE) protocol provides a generic framework for
+ building protocols on top of reliable, byte-stream transport connections.
+ It provides basic mechanisms for setting up and shutting down
+ connections, for performing authentication, for negotiating versions, and
+ for reporting errors.
+Section: x11/libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT-style
+Architecture: cortexa9hf-vfp-neon
+OE: libice
+Homepage: http://www.x.org
+Depends: libc6 (>= 2.22)
+Provides: libice
+Source: http://xorg.freedesktop.org/releases/individual/lib/libICE-1.0.9.tar.bz2

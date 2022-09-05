@@ -1,0 +1,13 @@
+Package: glibc-localedata-i18n
+Version: 2.22-r0
+Description: locale definition for i18n
+ locale definition for i18n
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Depends: glibc-localedata-translit-neutral, glibc-localedata-iso14651-t1
+Source: None

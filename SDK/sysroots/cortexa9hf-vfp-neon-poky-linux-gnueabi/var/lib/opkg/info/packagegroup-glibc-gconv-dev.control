@@ -1,0 +1,15 @@
+Package: packagegroup-glibc-gconv-dev
+Version: 1.0-r0
+Description: Packagegroup for needed gconv libraries - Development files
+ Packagegroup for needed gconv libraries.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-glibc-gconv
+Depends: packagegroup-glibc-gconv (= 1.0-r0)
+Recommends: glibc-gconv-iso8859-3-dev, glibc-gconv-iso8859-9-dev, glibc-gconv-iso8859-10-dev, glibc-gconv-iso8859-9e-dev, glibc-gconv-iso8859-4-dev, glibc-gconv-iso8859-1-dev, glibc-gconv-iso8859-8-dev, glibc-gconv-iso8859-16-dev, glibc-gconv-iso8859-15-dev, glibc-gconv-iso8859-6-dev, glibc-gconv-iso8859-13-dev, glibc-gconv-iso8859-7-dev, glibc-gconv-iso8859-5-dev, glibc-gconv-iso8859-14-dev, glibc-gconv-iso8859-2-dev, glibc-gconv-iso8859-11-dev
+Source: None

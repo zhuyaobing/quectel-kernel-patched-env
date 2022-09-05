@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: libnfsidmap
+Description: Library that handles mapping between names and ids for NFSv4.
+Requires:
+Version: 0.25
+Libs: -L/usr/lib -lnfsidmap
+Cflags: -I/usr/include

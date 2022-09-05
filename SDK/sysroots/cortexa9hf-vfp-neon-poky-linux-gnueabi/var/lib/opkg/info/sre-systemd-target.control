@@ -1,0 +1,11 @@
+Package: sre-systemd-target
+Version: 2.0.0-r0
+Description: The alex systemd target
+ Recipe to install the systemd target on the alex platform
+Section: system
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-systemd-target
+Source: file://alex-boot.target file://alex-core.target file://alex-standalone.target file://alex.target

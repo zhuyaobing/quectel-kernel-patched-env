@@ -1,0 +1,13 @@
+Package: sre-demo-app-dbg
+Version: 3.0.0-r0
+Description: SRE MQTT App - Debugging files
+ Recipe to build the MQTT app.  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-demo-app
+Recommends: libc6-dbg, libstdc++-dbg, sre-lapi-dbg, libgcc-s-dbg, protobuf-dbg
+Source: None

@@ -1,0 +1,3 @@
+/usr/bin/ipcd
+/etc/alex/ipcd.conf
+/lib/systemd/system/ipcd.service

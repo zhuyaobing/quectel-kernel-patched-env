@@ -1,0 +1,13 @@
+Package: packagegroup-core-standalone-sdk-target-dbg
+Version: 1.0-r8
+Description: Target packages for the standalone SDK - Debugging files
+ Target packages for the standalone SDK.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-standalone-sdk-target
+Recommends: libsegfault-dbg, glibc-utils-dbg, glibc-gconv-ibm850-dbg, glibc-dbg, glibc-localedata-i18n-dbg, libatomic-dbg, libstdc++-dbg, glibc-gconv-cp1252-dbg, glibc-gconv-iso8859-15-dbg, glibc-thread-db-dbg, websocketpp-dbg, bluesdk-dbg-staticdev-dbg, glibc-gconv-iso8859-1-dbg, libgcc-dbg, date-staticdev-dbg, bluesdk-staticdev-dbg
+Source: None

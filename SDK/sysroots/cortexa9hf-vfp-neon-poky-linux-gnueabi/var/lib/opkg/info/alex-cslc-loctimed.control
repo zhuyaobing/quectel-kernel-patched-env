@@ -1,0 +1,13 @@
+Package: alex-cslc-loctimed
+Version: 13.1.0-r0
+Description: Local time manager deamon
+ Recipe for the local time manager that publish time zone messages to the
+ mqtt broker
+Section: applications
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-cslc-loctimed
+Depends: libgcc1 (>= 4.9.3), sre-lapi (>= 13.3.0-2-g7c58342), libstdc++6 (>= 4.9.3), protobuf (>= 2.6.1+git0+bba83652e1), libc6 (>= 2.22)
+Source: http://euartif01.stoneridge.com:8081/artifactory/sre-ext-src-mirror-local/com/stoneridge/src-mirror/alex/tarballs//zddatabase-20180911.tar.bz2;name=zddb https://data.iana.org/time-zones/releases/tzdata2018e.tar.gz;downloadfilename=tzdata2018e.tar.gz;name=ianadb;subdir=tzdata

@@ -1,0 +1,13 @@
+Package: python-dbus
+Version: 1.2.0-r0
+Description: Python bindings for the DBus inter-process communication system
+ Python bindings for the DBus inter-process communication system.
+Section: devel/python
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: python-dbus
+Homepage: http://www.freedesktop.org/Software/dbus
+Depends: libdbus-glib-1-2 (>= 0.104), libffi6 (>= 3.2.1), python-threading, libdbus-1-3 (>= 1.8.20), libz1 (>= 1.2.8), libglib-2.0-0 (>= 2.44.1), python-io, python-logging, libc6 (>= 2.22), python-xml, python-stringold
+Source: http://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.0.tar.gz

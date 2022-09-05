@@ -1,0 +1,16 @@
+Package: libtirpc-dev
+Version: 0.2.5-r0
+Description: Transport-Independent RPC library - Development files
+ Libtirpc is a port of Suns Transport-Independent RPC library to Linux
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libtirpc
+Homepage: http://sourceforge.net/projects/libtirpc/
+Depends: libtirpc1 (= 0.2.5-r0)
+Recommends: libc6-dev
+Source: http://downloads.sourceforge.net/libtirpc/libtirpc-0.2.5.tar.bz2;name=libtirpc http://distfiles.gentoo.org/distfiles/libtirpc-glibc-nfs.tar.xz;name=glibc-nfs file://libtirpc-0.2.1-fortify.patch

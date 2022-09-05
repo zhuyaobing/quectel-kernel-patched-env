@@ -1,0 +1,16 @@
+Package: pciutils-dbg
+Version: 3.3.1-r0
+Description: PCI utilities - Debugging files
+ The PCI Utilities package contains a library for portable access to PCI
+ bus configuration space and several utilities based on this library.
+ This package contains ELF symbols and related sources for debugging
+ purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: pciutils
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Recommends: systemd-dbg, libc6-dbg, libpci-dbg, libkmod-dbg, libz-dbg
+Source: http://kernel.org/pub/software/utils/pciutils/pciutils-3.3.1.tar.xz file://configure.patch file://guess-fix.patch file://makefile.patch

@@ -1,0 +1,15 @@
+Package: libgdbm-dbg
+Version: 1.8.3-r4
+Description: Key/value database library with extensible hashing - Debugging files
+ Key/value database library with extensible hashing.  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: gdbm
+Homepage: http://www.gnu.org/software/gdbm/
+Recommends: libc6-dbg
+Provides: gdbm-dbg
+Source: http://ftp.gnu.org/gnu/gdbm/gdbm-1.8.3.tar.gz file://makefile.patch file://libtool-mode.patch file://ldflags.patch

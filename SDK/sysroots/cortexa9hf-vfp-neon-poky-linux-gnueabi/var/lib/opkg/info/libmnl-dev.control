@@ -1,0 +1,17 @@
+Package: libmnl-dev
+Version: 1.0.4-r0
+Description: Minimalistic user-space Netlink utility library - Development files
+ Minimalistic user-space library oriented to Netlink developers, providing
+ functions for common tasks in parsing, validating, and constructing both
+ the Netlink header and TLVs.  This package contains symbolic links,
+ header files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9hf-vfp-neon
+OE: libmnl
+Homepage: http://www.netfilter.org/projects/libmnl/index.html
+Depends: libmnl0 (= 1.0.4-r0)
+Recommends: libc6-dev
+Source: http://www.netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2;name=tar

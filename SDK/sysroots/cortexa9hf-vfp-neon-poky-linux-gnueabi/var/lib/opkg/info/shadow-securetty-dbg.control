@@ -1,0 +1,12 @@
+Package: shadow-securetty-dbg
+Version: 4.2.1-r3.alex0
+Description: Provider of the machine specific securetty file - Debugging files
+ Provider of the machine specific securetty file.  This package contains
+ ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: shadow-securetty
+Source: file://securetty file://add-ttyFPX.patch

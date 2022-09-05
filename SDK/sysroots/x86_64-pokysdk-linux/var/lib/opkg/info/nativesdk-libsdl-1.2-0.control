@@ -1,0 +1,16 @@
+Package: nativesdk-libsdl-1.2-0
+Version: 1.2.15-r3
+Description: Simple DirectMedia Layer
+ Simple DirectMedia Layer is a cross-platform multimedia library designed
+ to provide low level access to audio, keyboard, mouse, joystick, 3D
+ hardware via OpenGL, and 2D video framebuffer.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1
+Architecture: x86_64-nativesdk
+OE: nativesdk-libsdl
+Homepage: http://www.libsdl.org
+Depends: nativesdk-libxcb1 (>= 1.11), nativesdk-libxdmcp6 (>= 1.1.2), nativesdk-libxau6 (>= 1.0.8), nativesdk-libxext6 (>= 1.3.3), nativesdk-libxrender1 (>= 0.9.9), nativesdk-libxrandr2 (>= 1.5.0), nativesdk-libc6 (>= 2.22), nativesdk-libx11-6 (>= 1.6.3)
+Provides: nativesdk-libsdl
+Source: http://www.libsdl.org/release/SDL-1.2.15.tar.gz file://configure_tweak.patch file://libsdl-1.2.15-xdata32.patch file://pkgconfig.patch

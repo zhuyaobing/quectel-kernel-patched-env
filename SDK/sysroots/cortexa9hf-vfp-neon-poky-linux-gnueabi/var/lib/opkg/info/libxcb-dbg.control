@@ -1,0 +1,16 @@
+Package: libxcb-dbg
+Version: 1.11-r0
+Description: XCB: The X protocol C binding library - Debugging files
+ The X protocol C-language Binding (XCB) is a replacement for Xlib
+ featuring a small footprint, latency hiding, direct access to the
+ protocol, improved threading support, and extensibility.  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: libxcb
+Homepage: http://xcb.freedesktop.org
+Recommends: libc6-dbg, libxdmcp-dbg, libxau-dbg
+Source: http://xcb.freedesktop.org/dist/libxcb-1.11.tar.bz2 file://xcbincludedir.patch file://disable-check.patch file://gcc-mips-pr68302-mips-workaround.patch

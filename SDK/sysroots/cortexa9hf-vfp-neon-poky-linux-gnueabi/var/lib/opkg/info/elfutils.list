@@ -1,0 +1,9 @@
+/usr/bin/eu-ranlib
+/usr/bin/eu-unstrip
+/usr/bin/eu-make-debug-archive
+/usr/bin/eu-strings
+/usr/bin/eu-elfcmp
+/usr/bin/eu-findtextrel
+/usr/bin/eu-objdump
+/usr/bin/eu-ar
+/usr/bin/eu-elflint

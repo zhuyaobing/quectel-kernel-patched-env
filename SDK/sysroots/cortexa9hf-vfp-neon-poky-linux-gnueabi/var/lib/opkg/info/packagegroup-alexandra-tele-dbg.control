@@ -1,0 +1,13 @@
+Package: packagegroup-alexandra-tele-dbg
+Version: 1.0-r8
+Description: Software specific to Alexandra project - Debugging files
+ Software specific to Alexandra project.  This package contains ELF
+ symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-alexandra-tele
+Recommends: sre-usblog-dbg, alex-cslc-udsifd-dbg, alex-cslc-servicetuner-dbg, hostapd-dbg, alex-cslc-vpnctld-dbg, packagegroup-base-bluetooth-dbg, alex-cslc-loctimed-dbg, alex-cslc-ecuvarc-dbg, alex-malc-cert-dbg, sre-ipcd-dbg, packagegroup-base-wifi-dbg, sre-demo-app-dbg, sre-udev-dbg, alex-cslc-gnssmgr-dbg, sre-check-ethernet-link-status-dbg, alex-cslc-ecuvard-dbg, packagegroup-glibc-gconv-dbg, sre-check-eth-interface-dbg, wireguard-tools-dbg
+Source: None

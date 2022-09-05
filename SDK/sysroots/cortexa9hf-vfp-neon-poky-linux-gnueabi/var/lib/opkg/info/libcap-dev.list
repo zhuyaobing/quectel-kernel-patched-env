@@ -1,0 +1,3 @@
+/lib/libcap.so
+/usr/include/sys/capability.h
+/usr/lib/pkgconfig/libcap.pc

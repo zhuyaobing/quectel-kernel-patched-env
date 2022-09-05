@@ -1,0 +1,15 @@
+Package: packagegroup-core-boot-dev
+Version: 1.0-r17
+Description: Minimal boot requirements - Development files
+ The minimal set of packages required to boot the system  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: alexandra
+OE: packagegroup-core-boot
+Depends: packagegroup-core-boot (= 1.0-r17)
+Recommends: base-passwd-dev, udev-dev, base-files-dev, netbase-dev, systemd-dev, busybox-dev, update-alternatives-opkg-dev
+Source: None

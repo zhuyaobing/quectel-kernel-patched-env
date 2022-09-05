@@ -1,0 +1,14 @@
+Package: alex-malc-systime-dev
+Version: 13.3.0-r0r1
+Description: Alexandra System Time Daemon - Development files
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: alex-malc-systime
+Depends: alex-malc-systime (= 13.3.0-r0r1)
+Recommends: libmosquittopp1-dev, sre-lapi-dev, libgcc-s-dev, libstdc++-dev, libc6-dev, systemd-dev, protobuf-dev
+Source: file://systimemgr-tpa.conf

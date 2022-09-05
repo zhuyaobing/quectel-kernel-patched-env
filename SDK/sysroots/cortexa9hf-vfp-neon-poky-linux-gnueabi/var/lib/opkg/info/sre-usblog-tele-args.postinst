@@ -1,0 +1,2 @@
+# Force is used to overwrite the default partition.args
+    ln -s -f tele.args $D/etc/alex/partition.args

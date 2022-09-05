@@ -1,0 +1,64 @@
+ELF_ARCH := arm
+HEADER_ARCH := arm
+ARCH_JIFFIES := "jiffies_64"
+
+SYS := arch-arm
+
+# PikeOS uses a slightly different notation for CPU arch and type
+PIKEOS_ARCH := arm
+
+# PikeOS uses a slightly different notation for CPU type
+pikeos-proc-$(CONFIG_P4_ARM_V5) :=v5le
+pikeos-proc-$(CONFIG_P4_ARM_V6) :=v6sf
+pikeos-proc-$(CONFIG_P4_ARM_V7) :=v7hf
+
+PIKEOS_PROC := $(pikeos-proc-y)
+
+PIKEOS_CFLAGS := -D__arm__
+
+# sync the following lines with arch/arm/Makefile
+
+# Explicitly specifiy 32-bit ARM ISA since toolchain default can be -mthumb:
+KBUILD_CFLAGS	+=$(call cc-option,-marm,)
+
+# Never generate .eh_frame
+KBUILD_CFLAGS	+= $(call cc-option,-fno-dwarf2-cfi-asm)
+
+ifeq ($(CONFIG_FRAME_POINTER),y)
+KBUILD_CFLAGS	+=-fno-omit-frame-pointer -mapcs -mno-sched-prolog
+endif
+
+comma = ,
+
+arch-$(CONFIG_CPU_32v7)		:=-D__LINUX_ARM_ARCH__=7 $(call cc-option,-march=armv7-a,-march=armv5t -Wa$(comma)-march=armv7-a)
+arch-$(CONFIG_CPU_32v6)		:=-D__LINUX_ARM_ARCH__=6 $(call cc-option,-march=armv6,-march=armv5t -Wa$(comma)-march=armv6)
+# Only override the compiler option if ARMv6. The ARMv6K extensions are
+# always available in ARMv7
+ifeq ($(CONFIG_CPU_32v6),y)
+arch-$(CONFIG_CPU_32v6K)	:=-D__LINUX_ARM_ARCH__=6 $(call cc-option,-march=armv6k,-march=armv5t -Wa$(comma)-march=armv6k)
+endif
+arch-$(CONFIG_CPU_32v5)		:=-D__LINUX_ARM_ARCH__=5 $(call cc-option,-march=armv5te,-march=armv4t)
+
+ifeq ($(CONFIG_AEABI),y)
+CFLAGS_ABI	:=-mabi=aapcs-linux -mno-thumb-interwork
+else
+CFLAGS_ABI	:=$(call cc-option,-mapcs-32,-mabi=apcs-gnu) $(call cc-option,-mno-thumb-interwork,)
+endif
+
+# do not specify FPU options (e.g. -msoft-float) because it is taken from the
+# default compiler settings so it can link against the PikeOS libraries
+KBUILD_CFLAGS	+= $(CFLAGS_ABI) $(arch-y) $(call cc-option,-mshort-load-bytes,$(call cc-option,-malignment-traps,))
+KBUILD_AFLAGS	+= $(CFLAGS_ABI) $(arch-y) -include asm/unified.h
+
+# use R_ARM_ABS32 for module relocations (see arch-arm/module.c)
+CFLAGS_MODULE	+= -mlong-calls
+
+# DTB targets
+boot := arch/arm/boot
+MACHINE  :=
+
+%.dtb: scripts
+	$(Q)$(MAKE) $(build)=$(boot)/dts MACHINE=$(MACHINE) $(boot)/dts/$@
+
+dtbs: scripts
+	$(Q)$(MAKE) $(build)=$(boot)/dts MACHINE=$(MACHINE) dtbs

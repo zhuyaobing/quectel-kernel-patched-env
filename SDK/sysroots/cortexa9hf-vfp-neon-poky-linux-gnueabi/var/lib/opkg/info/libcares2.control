@@ -1,0 +1,14 @@
+Package: libcares2
+Version: 1.10.0-r0
+Description: c-ares version 1.10.0-r0
+ C library for asynchronous DNS requests (including name resolves)
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9hf-vfp-neon
+OE: c-ares
+Homepage: http://c-ares.haxx.se/
+Depends: libc6 (>= 2.22)
+Provides: c-ares
+Source: http://c-ares.haxx.se/download/c-ares-1.10.0.tar.gz

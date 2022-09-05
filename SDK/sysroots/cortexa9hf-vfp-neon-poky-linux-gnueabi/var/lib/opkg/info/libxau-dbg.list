@@ -1,0 +1,16 @@
+/usr/src/debug/libxau/
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuDispose.c
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/include/X11/Xauth.h
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuLock.c
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/include/X11/
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuRead.c
+/usr/lib/.debug/libXau.so.6.0.0
+/usr/src/debug/libxau/1_1.0.8-r0/
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuWrite.c
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuUnlock.c
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuGetBest.c
+/usr/lib/.debug/
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuGetAddr.c
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/AuFileName.c
+/usr/src/debug/libxau/1_1.0.8-r0/libXau-1.0.8/include/

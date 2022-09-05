@@ -1,0 +1,15 @@
+Package: libnfsidmap-dev
+Version: 0.25-r0
+Description: NFS id mapping library - Development files
+ NFS id mapping library.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: libnfsidmap
+Homepage: http://www.citi.umich.edu/projects/nfsv4/linux/
+Depends: libnfsidmap0 (= 0.25-r0)
+Recommends: libc6-dev
+Source: http://www.citi.umich.edu/projects/nfsv4/linux/libnfsidmap/libnfsidmap-0.25.tar.gz file://fix-ac-prereq.patch file://Set_nobody_user_group.patch file://0001-include-sys-types.h-for-getting-u_-typedefs.patch

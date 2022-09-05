@@ -1,0 +1,13 @@
+Package: sre-ipcd-dbg
+Version: 13.2.2-r1
+Description: IPC Daemon - Debugging files
+ Recipe to build ipcd daemon.  This package contains ELF symbols and
+ related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-ipcd
+Recommends: systemd-dbg, libstdc++-dbg, sre-ipcd-lib-dbg, libgcc-s-dbg, protobuf-dbg, sre-lapi-dbg, libc6-dbg
+Source: None

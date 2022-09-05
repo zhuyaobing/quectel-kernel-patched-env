@@ -1,0 +1,13 @@
+Package: crpcut
+Version: 1.9.2-r0
+Description: The unit test framework crpcut
+ The unit test framework crpcut.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-2-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: crpcut
+Homepage: http://sourceforge.net/projects/crpcut
+Depends: libgcc1 (>= 4.9.3), libstdc++6 (>= 4.9.3), libc6 (>= 2.22)
+Source: http://downloads.sourceforge.net/project/crpcut/crpcut/1.9.2/crpcut-1.9.2.tar.bz2 file://remove-examples.patch

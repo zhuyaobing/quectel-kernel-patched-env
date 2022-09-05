@@ -1,0 +1,15 @@
+Package: update-alternatives-opkg
+Version: 0.1.8+git0+53274f0875-r0
+Description: Utility for managing the alternatives system
+ Additional utilities for the opkg package manager.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9hf-vfp-neon
+OE: opkg-utils
+Homepage: http://code.google.com/p/opkg/
+Provides: update-alternatives-cworth, update-alternatives
+Replaces: update-alternatives-cworth
+Conflicts: update-alternatives-cworth
+Source: git://git.yoctoproject.org/opkg-utils

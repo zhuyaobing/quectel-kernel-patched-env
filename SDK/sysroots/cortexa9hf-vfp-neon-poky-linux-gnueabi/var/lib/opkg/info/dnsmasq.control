@@ -1,0 +1,16 @@
+Package: dnsmasq
+Version: 2.75-r0.alex0
+Description: Lightweight, easy to configure DNS forwarder and DHCP server
+ Lightweight, easy to configure DNS forwarder and DHCP server.
+Section: net
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 | GPLv3
+Architecture: cortexa9hf-vfp-neon
+OE: dnsmasq
+Homepage: http://www.thekelleys.org.uk/dnsmasq/doc.html
+Depends: libc6 (>= 2.22)
+Provides: dnsmasq-systemd
+Replaces: dnsmasq-systemd
+Conflicts: dnsmasq-systemd
+Source: http://www.thekelleys.org.uk/dnsmasq/dnsmasq-2.75.tar.gz;name=dnsmasq-2.75 file://init file://dnsmasq.conf file://dnsmasq.service file://lua.patch file://dnsmasq.conf file://dnsmasq.service

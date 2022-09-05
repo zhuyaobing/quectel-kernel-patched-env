@@ -1,0 +1,16 @@
+Package: libmosquitto1
+Version: 1.5.10-r0.alex2
+Description: Open source MQTT v3.1 and 3.1.1 implemention
+ Mosquitto is an open source (BSD licensed) message broker that implements
+ the MQ Telemetry Transport protocol version 3.1. MQTT provides a
+ lightweight method of carrying out messaging using a publish/subscribe
+ model.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9hf-vfp-neon
+OE: mosquitto
+Homepage: http://mosquitto.org/
+Depends: libssl1.0.0 (>= 1.0.2h), libc6 (>= 2.22), libcrypto1.0.0 (>= 1.0.2h)
+Source: http://mosquitto.org/files/source/mosquitto-1.5.10.tar.gz file://0001-remove-strip-options.patch file://mosquitto.service file://mosquitto-vcm.conf file://mosquitto-vcm-novpn.conf file://mosquitto-tbm3-tele.conf file://mosquitto-tbm3-tele-novpn.conf file://mosquitto-n2-tele.conf file://mosquitto-tpa.conf file://mosquitto-mmt.conf file://mosquitto-mmt.service file://passwd-vcm file://acl-vcm file://passwd-tpa file://acl-tpa file://update_mosq_acl.sh file://update-mosq-acl@.service

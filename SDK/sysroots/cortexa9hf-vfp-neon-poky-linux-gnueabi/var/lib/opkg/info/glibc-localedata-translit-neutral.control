@@ -1,0 +1,13 @@
+Package: glibc-localedata-translit-neutral
+Version: 2.22-r0
+Description: locale definition for translit-neutral
+ locale definition for translit-neutral
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9hf-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Depends: glibc-localedata-translit-fraction, glibc-localedata-translit-compat, glibc-localedata-translit-cjk-compat, glibc-localedata-translit-small, glibc-localedata-translit-wide, glibc-localedata-translit-circle, glibc-localedata-translit-narrow, glibc-localedata-translit-font
+Source: None

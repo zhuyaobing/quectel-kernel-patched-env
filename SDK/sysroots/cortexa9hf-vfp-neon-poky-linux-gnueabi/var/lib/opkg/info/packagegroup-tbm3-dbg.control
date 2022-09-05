@@ -1,0 +1,13 @@
+Package: packagegroup-tbm3-dbg
+Version: 1.0-r6
+Description: Software specific to Alexandra project, TBM3 variant - Debugging files
+ Software specific to Alexandra project, TBM3 variant.  This package
+ contains ELF symbols and related sources for debugging purposes.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: Proprietary
+Architecture: all
+OE: packagegroup-tbm3
+Recommends: emmy-w1-driver-sdiouart-firmware-dbg, wireguard-tools-tbm3-tele-keys-dbg, sre-usblog-tele-args-dbg, alex-cslc-pgnreqd-dbg, nfs-tele-server-dbg, systemd-tbm3-conf-dbg, alex-cslc-modemd-conf-dbg, e2fsprogs-resize2fs-dbg, sre-spider-tbm3-tele-conf-dbg, packagegroup-alexandra-tele-dbg, sre-usblog-move-tpa-logs-dbg, nfs-utils-dbg, emmy-w1-driver-tools-dbg
+Source: None

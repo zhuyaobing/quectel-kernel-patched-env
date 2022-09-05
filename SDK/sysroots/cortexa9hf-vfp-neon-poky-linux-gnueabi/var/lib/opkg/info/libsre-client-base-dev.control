@@ -1,0 +1,17 @@
+Package: libsre-client-base-dev
+Version: 1.0.0-r2
+Description: SRE Linux API proprietary parts - Development files
+ This recipe checks out a deifined revision of the sre shared code. There
+ is another recipe in the sre-platform layer that uses the resulting
+ binaries from this one  This package contains symbolic links, header
+ files, and related items necessary for software development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-con-base
+Depends: libsre-client-base0 (= 1.0.0-r2)
+Recommends: libc6-dev, boost-dev, libsre-shared-dev, libstdc++-dev, libgcc-s-dev
+Provides: sre-con-base-dev
+Source: None

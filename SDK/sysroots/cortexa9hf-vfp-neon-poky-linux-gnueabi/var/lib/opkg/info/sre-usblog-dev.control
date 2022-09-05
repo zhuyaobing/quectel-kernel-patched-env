@@ -1,0 +1,15 @@
+Package: sre-usblog-dev
+Version: 13.1.1-r0
+Description: USB Log Extractor - Development files
+ Copies logs from systemd-journald to USB drive  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: CLOSED
+Architecture: cortexa9hf-vfp-neon
+OE: sre-usblog
+Depends: sre-usblog (= 13.1.1-r0)
+Recommends: openssl-dev, sre-systemd-target-dev, sre-usblog-tele-args-dev, alex-cslc-ecuvarc-dev
+Source: file://vcm.args file://tele.args file://tpa.args

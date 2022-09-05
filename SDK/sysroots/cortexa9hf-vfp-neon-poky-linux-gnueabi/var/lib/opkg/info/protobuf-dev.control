@@ -1,0 +1,18 @@
+Package: protobuf-dev
+Version: 2.6.1+git0+bba83652e1-r0
+Description: Protocol Buffers - structured data serialisation mechanism - Development files
+ Protocol Buffers are a way of encoding structured data in an efficient
+ yet extensible format. Google uses Protocol Buffers for almost all of its
+ internal RPC protocols and file formats.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-3-Clause
+Architecture: cortexa9hf-vfp-neon
+OE: protobuf
+Homepage: https://github.com/google/protobuf
+Depends: protobuf (= 2.6.1+git0+bba83652e1-r0)
+Recommends: libc6-dev, libgcc-s-dev, libstdc++-dev, libz-dev
+Source: git://github.com/google/protobuf.git
